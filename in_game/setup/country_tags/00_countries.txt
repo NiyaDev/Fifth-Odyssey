@@ -1,0 +1,2 @@
+
+EYS = "countries/elysium.txt"

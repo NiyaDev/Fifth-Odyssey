@@ -1,0 +1,7 @@
+EYS = {
+  color = map_BYZ
+	color2 = rgb {0, 191, 80}
+
+  culture_definition = greek_culture
+  religion_definition = orthodox
+}

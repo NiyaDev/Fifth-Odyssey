@@ -1,0 +1,11 @@
+﻿{
+	"name":	"Fifth Odyssey",
+	"id":	"niya.fifthodyssey",
+	"version":	"0.1",
+	"supported_game_version":	"1.1",
+	"short_description":	"The year is 1337 AD. Nobles of The Eastern Roman empire eye the growing power of the Ottoman Turks with fear. Their fears are left ignored by the Emperor who only sees land to reclaim.\n\nAs tensions rise, a group of nobles pool their wealth and populations together to plan an escape eastward. Aside from passing the Pillars of Hercules, there is no plan, only survival.\n\nWhat will they find in the open ocean?",
+	"tags":	["Advancements", "Alternative history", "Culture & Art", "Diplomacy", "Events", "Gameplay", "Government and Estates", "International Organizations"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

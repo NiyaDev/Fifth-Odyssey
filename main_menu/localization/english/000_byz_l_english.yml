@@ -1,0 +1,15 @@
+﻿l_english:
+ # Events
+ fifth_odyssey_events.1.title: "The Fifth Odyssey"
+ fifth_odyssey_events.1.desc: "The year is 1337 AD. Nobles of The Eastern Roman empire eye the growing power of the Ottoman Turks with fear. Their fears are left ignored by the Emperor who only sees land to reclaim.\n\nAs tensions rise, a group of nobles pool their wealth and populations together to plan an escape eastward. Aside from passing the Pillars of Hercules, there is no plan, only survival.\n\nWhat will they find in the open ocean?"
+ fifth_odyssey_events.1.a: "Our fears are unfounded. Let us remain."
+ fifth_odyssey_events.1.b: "Fly you fools!"
+ fifth_odyssey_events.1.e: "To Elysium we go!"
+
+ # Countries
+ EYS: "Elysium"
+ EYS_ADJ: "Elysian"
+
+ # Locations
+elyseia: "Elyseia"
+

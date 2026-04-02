@@ -1,0 +1,57 @@
+﻿namespace = fifth_odyssey_events
+
+
+fifth_odyssey_events.1 = {
+  type = country_event
+  title = fifth_odyssey_events.1.title
+  desc = fifth_odyssey_events.1.desc
+  trigger = {
+    tag = BYZ
+    from = 1337.4.2
+    monthly_chance = 100
+  }
+
+  option = {
+    name = fifth_odyssey_events.1.a
+  }
+  option = {
+    name = fifth_odyssey_events.1.b
+    high_risk_option = yes
+
+    # Create Elysium and give it it's capital
+    location:patawomeck = {
+      change_location_owner = c:EYS
+      add_core = c:EYS
+      change_control = 100
+      change_location_rank = location_rank:town
+
+      # Pops
+      add_pop = {
+        culture = root.culture
+        religion = root.religion
+        type = pop_type:peasants
+        size = 0.5
+      }
+      #if = {}
+
+      rename_location = elyseia
+      create_market = {
+        builder = c:EYS
+        location = location:elyseia
+        price = 0.1
+        instant = yes
+      }
+    }
+
+    # Create market in capital
+    
+
+    
+    # Visual
+    custom_tooltip = {
+			text = fifth_odyssey_events.1.e
+			change_player = c:EYS
+		}
+    ai_chance = { factor = -1 }
+  }
+}
