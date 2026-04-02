@@ -1,0 +1,8 @@
+
+nobles_leaving = {
+  global_nobles_estate_power = 0.2
+}
+clergy_leaving = {}
+burghers_leaving = {}
+commoners_leaving = {}
+

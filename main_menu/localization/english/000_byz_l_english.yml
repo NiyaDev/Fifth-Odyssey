@@ -6,6 +6,19 @@
  fifth_odyssey_events.1.b: "Fly you fools!"
  fifth_odyssey_events.1.e: "To Elysium we go!"
 
+ fifth_odyssey_events.startup.1.title: "Danger on the horizon"
+ fifth_odyssey_events.startup.1.desc: "The year is 1337 AD. The people of The Eastern Roman empire eye the growing power of the Ottoman Turks with fear. Their fears, however, are left ignored by the Emperor who only sees land to reclaim.\n\nAs tensions rise, a group of the people prepare for the worst, some ideas are put forward of an exodus past the Pillars of Hercules.\n\nWhat will they find in the open ocean?"
+ fifth_odyssey_events.startup.1.a: "The [estates:nobles_estate.GetFullName] have the wealth and the lineages"
+ fifth_odyssey_events.startup.1.aa: "The most neutral experience"
+ fifth_odyssey_events.startup.1.b: "The $clergy$ have god on their side"
+ fifth_odyssey_events.startup.1.bb: "Don't know what i'm going to do with this one yet"
+ fifth_odyssey_events.startup.1.c: "The $burghers$ have control of the docks and connections"
+ fifth_odyssey_events.startup.1.cc: "The easiest experience"
+ fifth_odyssey_events.startup.1.d: "The $commoners$ have the most to lose"
+ fifth_odyssey_events.startup.1.dd: "The hardest one. Revolts will happen"
+ fifth_odyssey_events.startup.1.e: "The $tribesmen$... Wait, who?"
+ fifth_odyssey_events.startup.1.ee: "How did you get $tribesmen$?"
+
  # Countries
  EYS: "Elysium"
  EYS_ADJ: "Elysian"

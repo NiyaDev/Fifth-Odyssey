@@ -1,0 +1,69 @@
+namespace = fifth_odyssey_events
+
+fifth_odyssey_events.startup.1 = {
+  type = country_event
+  title = fifth_odyssey_events.startup.1.title
+  desc = fifth_odyssey_events.startup.1.desc
+  
+  trigger = {
+    tag = BYZ
+  }
+
+  option = { # Nobles
+    name = fifth_odyssey_events.startup.1.a
+
+    #add_country_modifier = {
+    #  mode = add_or_replace
+    #  modifier = nobles_leaving
+    #  years = 10
+    #}
+
+    c:EYS = {
+      change_government_type = government_type:monarchy
+    }
+
+    custom_tooltip = { text = fifth_odyssey_events.startup.1.aa }
+  }
+
+  option = { # Clergy
+    name = fifth_odyssey_events.startup.1.b
+
+    c:EYS = {
+      change_government_type = government_type:theocracy
+    }
+
+    custom_tooltip = { text = fifth_odyssey_events.startup.1.bb}
+  }
+
+  option = { # Burghers
+    name = fifth_odyssey_events.startup.1.c
+
+    c:EYS = {
+      change_government_type = government_type:republic
+    }
+
+    custom_tooltip = { text = fifth_odyssey_events.startup.1.cc }
+  }
+
+  option = { # Commoners
+    name = fifth_odyssey_events.startup.1.d
+
+    c:EYS = {
+      change_government_type = government_type:republic
+      add_reform = government_reform:peasant_republic_reform
+    }
+
+    custom_tooltip = { text = fifth_odyssey_events.startup.1.dd }
+  }
+
+  option = { # Tribesmen
+    name = fifth_odyssey_events.startup.1.e
+    trigger = { country_has_estate = estate_type:tribes_estate }
+
+    c:EYS = {
+      change_government_type = government_type:steppe_horde
+    }
+
+    custom_tooltip = { text = fifth_odyssey_events.startup.1.ee }
+  }
+}

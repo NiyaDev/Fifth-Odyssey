@@ -22,7 +22,7 @@ fifth_odyssey_events.1 = {
     location:patawomeck = {
       change_location_owner = c:EYS
       add_core = c:EYS
-      change_control = 100
+      change_control = 1
       change_location_rank = location_rank:town
 
       # Pops
@@ -30,9 +30,8 @@ fifth_odyssey_events.1 = {
         culture = root.culture
         religion = root.religion
         type = pop_type:peasants
-        size = 0.5
+        size = 1
       }
-      #if = {}
 
       rename_location = elyseia
       create_market = {
@@ -43,10 +42,6 @@ fifth_odyssey_events.1 = {
       }
     }
 
-    # Create market in capital
-    
-
-    
     # Visual
     custom_tooltip = {
 			text = fifth_odyssey_events.1.e
@@ -55,3 +50,4 @@ fifth_odyssey_events.1 = {
     ai_chance = { factor = -1 }
   }
 }
+
