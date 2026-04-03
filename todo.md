@@ -5,7 +5,8 @@
   - Clergy    - Theocracy         | akilasiewakik
   - Burghers  - Merchant Republic | guantanamo
   - Commoners - Peasant Republic  | patawomeck
-  - Tribesmen - Clan              | roanoke
+  - Tribesmen - Steppe Horde      | roanoke
+- Only noble content for now
 
 
 #### Events leading to exile:

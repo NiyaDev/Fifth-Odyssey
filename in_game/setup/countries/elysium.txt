@@ -1,6 +1,35 @@
-EYS = {
-  color = map_BYZ
-	color2 = rgb {0, 191, 80}
+
+
+FO0 = { # Rhomania (Nobles)
+  color = rgb {255, 17, 21}
+
+  culture_definition = greek_culture
+  religion_definition = orthodox
+}
+
+FO1 = { # Ekklisia (Clergy)
+  color = rgb {214, 149, 195}
+
+  culture_definition = greek_culture
+  religion_definition = orthodox
+}
+
+FO2 = { # Karchidóna (Burghers)
+  color = rgb {193, 140, 87}
+
+  culture_definition = greek_culture
+  religion_definition = orthodox
+}
+
+FO3 = { # Ilýsion (Commoners)
+  color = rgb {0, 191, 80}
+
+  culture_definition = greek_culture
+  religion_definition = orthodox
+}
+
+FO4 = { # Várvaros (Tribesmen)
+  color = rgb {45, 41, 38}
 
   culture_definition = greek_culture
   religion_definition = orthodox

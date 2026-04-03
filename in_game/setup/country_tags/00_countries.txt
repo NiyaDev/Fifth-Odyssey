@@ -1,2 +1,0 @@
-
-EYS = "countries/elysium.txt"

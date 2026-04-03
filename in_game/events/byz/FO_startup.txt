@@ -1,0 +1,144 @@
+namespace = fifth_odyssey_events
+
+fifth_odyssey_events.1 = {
+  type = country_event
+  title = fifth_odyssey_events.1.title
+  desc = fifth_odyssey_events.1.desc
+  fire_only_once = yes
+
+  trigger = {
+    tag = BYZ
+    can_see_situation = situation:rise_of_the_ottomans
+    monthly_chance = 100
+  }
+
+  option = { # Don't play with content
+    name = fifth_odyssey_events.1.a
+    ai_chance = { factor = 1 }
+  }
+  option = { # YAY content!
+    name = fifth_odyssey_events.1.b
+    set_variable = {
+      name = fo_enabled
+      value = true
+    }
+    trigger_event_silently = {
+      id = fifth_odyssey_events.2
+    }
+  }
+}
+
+fifth_odyssey_events.2 = {
+  type = country_event
+  title = fifth_odyssey_events.2.title
+  desc = fifth_odyssey_events.2.desc
+
+  fire_only_once = yes
+
+  option = {
+    name = fifth_odyssey_events.2.a
+    trigger_event_silently = {
+      id = fifth_odyssey_events.10
+    }
+  }
+}
+
+
+fifth_odyssey_events.10 = {
+  type = country_event
+  title = fifth_odyssey_events.10.title
+  desc = fifth_odyssey_events.10.desc
+  
+  trigger = {
+    tag = BYZ
+  }
+
+  option = { # Nobles
+    name = fifth_odyssey_events.10.a
+
+    # Create Rhómania
+    location:patawomeck = {
+      change_location_owner = c:FO0
+      add_core = c:FO0
+      change_control = 1
+      change_location_rank = location_rank:town
+    }
+    change_player = c:FO0
+
+    c:FO0 = { change_government_type = government_type:monarchy }
+
+    custom_tooltip = { text = fifth_odyssey_events.10.aa }
+  }
+
+  option = { # Clergy
+    name = fifth_odyssey_events.10.b
+
+    # Create Ekklisia
+    location:akilasiewakik = {
+      change_location_owner = c:FO1
+      add_core = c:FO1
+      change_control = 1
+      change_location_rank = location_rank:town
+    }
+    change_player = c:FO1
+
+    c:FO1 = { change_government_type = government_type:theocracy }
+
+    custom_tooltip = { text = fifth_odyssey_events.10.bb}
+  }
+
+  option = { # Burghers
+    name = fifth_odyssey_events.10.c
+
+    # Create Karchidona
+    location:guantanamo = {
+      change_location_owner = c:FO2
+      add_core = c:FO2
+      change_control = 1
+      change_location_rank = location_rank:town
+    }
+    change_player = c:FO2
+
+    c:FO2 = { change_government_type = government_type:republic }
+
+    custom_tooltip = { text = fifth_odyssey_events.10.cc }
+  }
+
+  option = { # Commoners
+    name = fifth_odyssey_events.10.d
+
+    # Create Ilýsion
+    location:patawomeck = {
+      change_location_owner = c:FO3
+      add_core = c:FO3
+      change_control = 1
+      change_location_rank = location_rank:town
+    }
+    change_player = c:FO3
+
+    c:FO3 = {
+      change_government_type = government_type:republic
+      add_reform = government_reform:peasant_republic_reform
+    }
+
+    custom_tooltip = { text = fifth_odyssey_events.10.dd }
+  }
+
+  option = { # Tribesmen
+    name = fifth_odyssey_events.10.e
+    trigger = { country_has_estate = estate_type:tribes_estate }
+
+    # Create Várvaros
+    location:roanoke = {
+      change_location_owner = c:FO4
+      add_core = c:FO4
+      change_control = 1
+      change_location_rank = location_rank:town
+    }
+    change_player = c:FO4
+
+    c:FO4 = { change_government_type = government_type:steppe_horde }
+
+    custom_tooltip = { text = fifth_odyssey_events.10.ee }
+  }
+}

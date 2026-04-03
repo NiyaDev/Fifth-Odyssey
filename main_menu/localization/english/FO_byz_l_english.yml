@@ -1,0 +1,46 @@
+﻿l_english:
+ # Events
+ fifth_odyssey_events.11.title: "The Fifth Odyssey"
+ fifth_odyssey_events.11.desc: "The year is 1337 AD. The people of The Eastern Roman empire eye the growing power of the Ottoman Turks with fear. Their fears are left ignored by the Emperor who only sees land to reclaim.\n\nAs tensions rise, a group of nobles pool their wealth and populations together to plan an escape eastward. Aside from passing the Pillars of Hercules, there is no plan, only survival.\n\nWhat will they find in the open ocean?"
+ fifth_odyssey_events.11.a: "Our fears are unfounded. Let us remain."
+ fifth_odyssey_events.11.b: "Fly you fools!"
+ fifth_odyssey_events.11.e: "To Elysium we go!"
+
+ fifth_odyssey_events.1.title: "Fifth's Odyssey"
+ fifth_odyssey_events.1.desc: "The year is 1337 and the Empire is a shadow of its former self. A bureaucracy eating itself from the inside while the serbians push from the northwest, the Bulgarians from the northeast, the people of greece are coming to resent our rule and to the southeast the Turks grow in power, threatening our rule.\n\nThe emperor himself is sure of a revival, the rising of the Purple Pheonix where we will take back the empire. Even the most fervant supporters are hesitant and unrest is growing. What will her enemies do to the citizens of the empire? Will we get to live in peace? Subjegated as slaves? or slaughtered where we stand?"
+ fifth_odyssey_events.1.a: "We're worrying too much..."
+ fifth_odyssey_events.1.b: "We must do something?"
+
+ fifth_odyssey_events.2.title: "A plan?"
+ fifth_odyssey_events.2.desc: "Old greek stories have been unearthed, written in a language similar but different to our own. Stories written by the greeks of antiquity about a land far beyond the Pillars of Hercules. A land who's hubris caused them to get buried beneath the waves. Could that actually happen? Or is it the superstitions of our precursers getting the better of them."
+ fifth_odyssey_events.2.a: "Perhaps there's some truth to them"
+
+ fifth_odyssey_events.10.title: "Who shall leave"
+ fifth_odyssey_events.10.desc: "In a future update the leaving sequence will be more tailored to fit which you choose.\nRight now you just choose one.\n\nHave fun!"
+ fifth_odyssey_events.10.a: "We must protect the lineage of the Empire!"
+ fifth_odyssey_events.10.aa: "The Nobles will prepare the exile"
+ fifth_odyssey_events.10.b: "The Church must not fall to the star and crescent!"
+ fifth_odyssey_events.10.bb: "The Clergy will prepare the exile"
+ fifth_odyssey_events.10.c: "The wealth of the empire must not fall into enemy hands!"
+ fifth_odyssey_events.10.cc: "The Burghers will prepare the exile"
+ fifth_odyssey_events.10.d: "The Greek people refuse to be ruled by foreigners!"
+ fifth_odyssey_events.10.dd: "The Commoners will prepare the exile"
+ fifth_odyssey_events.10.e: "We must return back to the old ways!"
+ fifth_odyssey_events.10.ee: "The Tribemen will prepare the exile"
+
+ # Countries
+ FO0: "Rhómania"
+ FO0_ADJ: "Romaniótis"
+ FO1: "Ekklisia"
+ FO1_ADJ: "Ekklisiótis"
+ FO2: "Karchidona"
+ FO2_ADJ: "Karchidónios"
+ FO3: "Ilýsion"
+ FO3_ADJ: "Ilýsio"
+ FO4: "Várvaros"
+ FO4_ADJ: "Varvariótis"
+
+
+ # Locations
+elyseia: "Elyseia"
+
