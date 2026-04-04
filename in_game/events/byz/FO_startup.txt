@@ -1,4 +1,4 @@
-namespace = fifth_odyssey_events
+﻿namespace = fifth_odyssey_events
 
 fifth_odyssey_events.1 = {
   type = country_event
@@ -40,6 +40,8 @@ fifth_odyssey_events.2 = {
     trigger_event_silently = {
       id = fifth_odyssey_events.10
     }
+    #save_scope_as = estate_type:nobles_estate
+    
   }
 }
 
@@ -56,16 +58,17 @@ fifth_odyssey_events.10 = {
   option = { # Nobles
     name = fifth_odyssey_events.10.a
 
-    # Create Rhómania
-    location:patawomeck = {
-      change_location_owner = c:FO0
-      add_core = c:FO0
-      change_control = 1
-      change_location_rank = location_rank:town
-    }
-    change_player = c:FO0
+    activate_situation = situation:fo_noble_flight
 
-    c:FO0 = { change_government_type = government_type:monarchy }
+    # Create Rhómania
+    #location:patawomeck = {
+    #  change_location_owner = c:FO0
+    #  add_core = c:FO0
+    #  change_control = 1
+    #  change_location_rank = location_rank:town
+    #}
+    #change_player = c:FO0
+    #c:FO0 = { change_government_type = government_type:monarchy }
 
     custom_tooltip = { text = fifth_odyssey_events.10.aa }
   }

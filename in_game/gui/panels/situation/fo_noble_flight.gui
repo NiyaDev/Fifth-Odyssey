@@ -1,0 +1,8 @@
+
+situation_panel = {
+
+  blockoverride "situation_panel_main_content" {
+    
+  }
+
+}

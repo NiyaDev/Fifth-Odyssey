@@ -28,6 +28,17 @@
  fifth_odyssey_events.10.e: "We must return back to the old ways!"
  fifth_odyssey_events.10.ee: "The Tribemen will prepare the exile"
 
+ # Situations
+ fo_noble_flight: "The flight of the Nobles"
+ fo_noble_flight_desc: "The Nobles of the empire have decided to flee in order to escape the encrouching threats."
+ fo_noble_flight_test: "TEST_BUTTON"
+ fo_noble_flight_test_desc: "TEST_BUTTON_DESC"
+ fo_noble_flight_leave: "Flee the Empire"
+ fo_noble_flight_leave_desc: "It is time for us to leave the Empire.\nHopefully we have all we need for the journey."
+ 
+ # Modifiers
+ STATIC_MODIFIER_NAME_noble_flight: "Noble Flight"
+
  # Countries
  FO0: "Rhómania"
  FO0_ADJ: "Romaniótis"
