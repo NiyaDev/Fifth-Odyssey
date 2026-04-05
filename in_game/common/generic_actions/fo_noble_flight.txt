@@ -7,7 +7,14 @@ fo_noble_flight_test = {
     scope:actor = {
       at_war = no
       is_during_bankruptcy = no
+      "estate(estate_type:nobles_estate)" = {
+      	estate_gold > {
+      		value = 20
+      		multiply = 1
+      	}
+      }
     }
+
   }
 
   select_trigger = {
@@ -33,12 +40,21 @@ fo_noble_flight_test = {
   }
 
   effect = {
+  	situation:fo_noble_flight = {
+  		set_variable = {
+				name = fo_noble_flight_wealth
+				value = {
+					add = var:fo_noble_flight_wealth
+					add = 20
+				}
+			}
+		}
     scope:actor = {
       "estate(estate_type:nobles_estate)" = {
 		  	estate_add_gold = {
 		  		value = {
-		  			add = 100
-		  			multiply = -2
+		  			add = -20
+		  			multiply = 1
 		  		}
 		  	}
 		  }

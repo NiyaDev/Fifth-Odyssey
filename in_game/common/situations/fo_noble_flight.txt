@@ -12,13 +12,28 @@ fo_noble_flight = {
   #  NOT = { country_exists = c:FO3 }
   #  NOT = { country_exists = c:FO4 }
   #}
-  #can_end = {
-  #  situation:fo_noble_flight.var:fo_colony_settled = yes
-  #}
+  can_end = {
+    situation:fo_noble_flight.var:fo_colony_settled = yes
+  }
 
   visible = {
     exists = c:BYZ
     tag = BYZ
+  }
+
+  on_start = {
+    set_variable = {
+      name = fo_noble_flight_wealth
+      value = 0
+    }
+    set_variable = {
+      name = fo_noble_flight_greekfire
+      value = no
+    }
+  }
+
+  on_monthly = {
+    
   }
 
   tooltip = {
