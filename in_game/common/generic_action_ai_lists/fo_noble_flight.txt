@@ -5,7 +5,9 @@ fo_noble_flight_list = {
   }
 
   actions = {
-    fo_noble_flight_test
+    fo_noble_flight_funding
+    fo_noble_flight_sell_burghers
+    fo_noble_flight_sell_clergy
     fo_noble_flight_leave
   }
 }

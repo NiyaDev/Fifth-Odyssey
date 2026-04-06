@@ -1,5 +1,83 @@
 
-#### v0.1: The trials of first landing
+### v0.1: The trials of first landing
+#### Institutions
+##### Renaissance
+- Location modifier for growing
+##### New World
+- Global variable that stops it from spawning
+- Maybe able to spawn in exile empire?
+##### Global Trade
+- Change to add exile regions
+##### Manufacturies
+- Change to add exile regions
+##### Military Revolution
+- Change to add exile regions
+##### Scientific Revolution
+- Change to add exile regions
+##### Enlightenment
+- Change to add exile regions
+##### Industrialization
+- Change to add exile regions
+
+
+#### The flight of the nobles
+##### General
+- ~~Forces leave after 5 years~~
+- Show current leader choice for exodus
+
+##### Actions
+- ~~Selling titles to Burghers~~
+  - ~~+Ducats -NoblePower +BurgherPower~~
+- ~~Selling land to the Clergy~~
+  ~~- +Ducats -NoblePower +ClergyPower~~
+- Financing Shipwrights
+  - EVENT:
+    - Combat ship   - Defense while sailing     - 40d
+    - Resource ship - +0.01 dev & 10duc         - 50d
+    - Pop ship      - +240 commoners +10 nobles - 30d
+- Secretly produce greek fire (Requires recipe)
+- Pay off dock workers
+- Organize departure
+
+##### Events
+- CHOICE: Choose head of exodus
+  - Romaboo - Boss bitch
+  - Byzaboo - 
+  - Alexander LARPer
+- Trade money for either GreekFire or ByzSilk. other event is 4x expensive.
+- Trade money for Greek fire recipe
+- Trade money for ByzSilk
+- CHOICE: Get cache of old documents
+  - Renaissance after landing
+  - get Aquaducts early
+- CHAIN: Take Flight
+  - ACTION: Take to the ships
+    - If dock  workers not paid off, lose 25% pops & resources
+    - If not organized, lose 25% pops & resources
+  - CHOICE: Sailing across med
+    - Pay off Venetians, -ducats
+    - Fight, start war w/venice
+      - GreekFire: Auto win
+      - Else: chances to win based on cambat ship count
+  - LORE: Pillars of Hercules
+  - CHOICE: Moorish raiders
+    - Give them resources
+    - Fight, Winning gives dev + moroccan slave pops
+      - GreekFire: Auto win
+      - Else: chances to win based on cambat ship count
+  - CHOICE: Portuguese sailors
+    - Tell them where your going (Colonization like normal)
+    - Lie and say you fell (Stop New World until re-contact)
+  - CHOICE: Storm
+    - Pray to God (Stay orthodox)
+    - Pray to Poseidon (Change to Helennic)
+  - LORE: Landing
+  - FINISH
+
+
+
+
+
 - Choose which estate exiles
   - Nobles    - Monarchy          | patawomeck
   - Clergy    - Theocracy         | akilasiewakik
@@ -8,34 +86,6 @@
   - Tribesmen - Steppe Horde      | roanoke
 - Only noble content for now
 
-
-#### Events leading to exile:
-I'm not going to copy them, i'm using them as an example of how it may go
-- Welcome to the Third Odyssey
-  - +Roman Flight
-    - No war
-    - +Unrest
-    - +Stability cost (How do i do something like this? +Decay? a flat negative)
-    - -Manpower (Not needed in 5)
-    - -Sailors (same)
-    - -Fort Maintenance (Forts are free, but that wont matter?)
-    - Leader's Stats go down 5 each
-    - Athens is released
-- Books and Fire
-  - +Artist Gerogios Sphrantzes wants to bring books
-  - +MilEng Johannes Grandt wants greek fire
-- Silk of the Empire
-  - New heir
-- Fate of the Morean Despotate
-  - Sell to Venice:
-    - +Venice opinion
-  - Sell to Genoa:
-    - +Genoan opinion
-  - Free them:
-    - +Stability
-    - +ducats
-
-That's enough, i got the idea
 
 #### Leading events Ideas:
 Since the plan is a group of nobles are escaping rather than the royals, its more about using the resources they've got

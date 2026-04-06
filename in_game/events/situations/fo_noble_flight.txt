@@ -1,0 +1,51 @@
+namespace = fo_noble_flight
+
+fo_noble_flight.1 = {
+  type = country_event
+  category = situation_event
+  title = fo_noble_flight.1.title
+  desc = fo_noble_flight.1.desc
+  fire_only_once = yes
+
+  immediate = {
+    situation:fo_noble_flight = {
+      set_variable = {
+        name = spawned_characters
+        value = yes
+      }
+    }
+    scope:actor = {
+      create_character = {
+        religion = scope:recipient.religion
+        culture = scope:recipient.culture
+        age = { 24 31 }
+        female = yes
+        estate_type = estate_type:nobles_estate
+      }
+    }
+  }
+
+  # Roman
+  option = {
+    name = fo_noble_flight.1.a
+    scope:actor = {
+      create_character = {
+        religion = scope:recipient.religion
+        culture = scope:recipient.culture
+        age = { 24 31 }
+        female = yes
+        estate_type = estate_type:nobles_estate
+      }
+    }
+  }
+
+  # Greek
+  option = {
+    name = fo_noble_flight.1.b
+  }
+
+  # Macedonian
+  option = {
+    name = fo_noble_flight.c
+  }
+}

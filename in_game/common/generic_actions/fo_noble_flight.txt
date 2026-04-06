@@ -1,5 +1,5 @@
 
-fo_noble_flight_test = {
+fo_noble_flight_funding = {
   type = situation
   show_message = no
   
@@ -16,6 +16,11 @@ fo_noble_flight_test = {
     }
 
   }
+
+	cooldown = {
+		type = funding_cooldown_key
+		months = 4
+	}
 
   select_trigger = {
 		looking_for_a = situation
@@ -34,10 +39,6 @@ fo_noble_flight_test = {
 			situation_is_active = yes
 		}
 	}
-
-  cooldown = {
-    months = 12
-  }
 
   effect = {
   	situation:fo_noble_flight = {
@@ -61,6 +62,119 @@ fo_noble_flight_test = {
 		}
   }
 }
+
+fo_noble_flight_sell_burghers = {
+	type = situation
+	show_message = no
+
+	allow = {
+		scope:actor = {
+      at_war = no
+      is_during_bankruptcy = no
+      "estate_power(estate_type:nobles_estate)" > 0.30
+    }
+	}
+
+	cooldown = {
+		type = sell_burghers_cooldown_key
+		months = 4
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:fo_noble_flight = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:fo_noble_flight = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		situation:fo_noble_flight = {
+  		set_variable = {
+				name = fo_noble_flight_wealth
+				value = {
+					add = var:fo_noble_flight_wealth
+					add = 20
+				}
+			}
+		}
+    scope:actor = {
+			add_country_modifier = {
+				mode = add
+				modifier = fo_noble_flight_burghers
+				years = -1
+				recalculate_immediately = yes
+			}
+		}
+	}
+}
+
+fo_noble_flight_sell_clergy = {
+	type = situation
+	show_message = no
+
+	allow = {
+		scope:actor = {
+      at_war = no
+      is_during_bankruptcy = no
+      "estate_power(estate_type:nobles_estate)" > 0.30
+    }
+	}
+
+	cooldown = {
+		type = sell_clergy_key
+		months = 4
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:fo_noble_flight = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:fo_noble_flight = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		situation:fo_noble_flight = {
+  		set_variable = {
+				name = fo_noble_flight_wealth
+				value = {
+					add = var:fo_noble_flight_wealth
+					add = 20
+				}
+			}
+		}
+    scope:actor = {
+			add_country_modifier = {
+				mode = add
+				modifier = fo_noble_flight_clergy
+				years = -1
+				recalculate_immediately = yes
+			}
+		}
+	}
+}
+
 
 fo_noble_flight_leave = {
   type = situation

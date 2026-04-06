@@ -1,19 +1,8 @@
-﻿
-fo_noble_flight = {
+﻿fo_noble_flight = {
   monthly_spawn_chance = 0
 
-  #can_start = {
-  #  country_exists = c:BYZ
-  #  current_date > 1337.4.1
-
-  #  NOT = { country_exists = c:FO0 }
-  #  NOT = { country_exists = c:FO1 }
-  #  NOT = { country_exists = c:FO2 }
-  #  NOT = { country_exists = c:FO3 }
-  #  NOT = { country_exists = c:FO4 }
-  #}
   can_end = {
-    situation:fo_noble_flight.var:fo_colony_settled = yes
+    current_year > 1342
   }
 
   visible = {
@@ -22,6 +11,7 @@ fo_noble_flight = {
   }
 
   on_start = {
+    trigger_event_non_silently = fo_noble_flight.1
     set_variable = {
       name = fo_noble_flight_wealth
       value = 0

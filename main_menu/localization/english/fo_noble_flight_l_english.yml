@@ -1,0 +1,35 @@
+﻿
+l_english:
+ #Info
+ fo_noble_flight: "The flight of the Nobles"
+ fo_noble_flight_desc: "The Nobles of the empire have decided to flee in order to escape the encrouching threats."
+ 
+ FO_NOBLE_FLIGHT_MONEY: "Current treasury: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_wealth').GetValue|2]"
+ FO_NOBLE_FLIGHT_SPECIAL: "Special goods:"
+ FO_NOBLE_FLIGHT_SPECIAL_GOODS: "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_greekfire').GetValue|2] - Greek Fire\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_byzsilk').GetValue|2] - Byzantine Silk\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_ancientknowledge').GetValue|2] - Ancient Tomes"
+
+ # Actions
+ fo_noble_flight_test: "TEST_BUTTON"
+ fo_noble_flight_test_desc: "TEST_BUTTON_DESC"
+
+ fo_noble_flight_funding: "Gather funds"
+ fo_noble_flight_funding_desc: "Leverage members of exodus party for money"
+
+ fo_noble_flight_leave: "Flee the Empire"
+ fo_noble_flight_leave_desc: "It is time for us to leave the Empire.\nHopefully we have all we need for the journey."
+
+ fo_noble_flight_sell_burghers: "Sell titles to $burghers$"
+ fo_noble_flight_sell_burghers_desc: "Sell titles to the $burghers$. Trading our own influence for money."
+
+ fo_noble_flight_sell_clergy: "Sell land to the $clergy$"
+ fo_noble_flight_sell_clergy_desc: "Sell land to the $clergy$. Trading our power for money."
+
+ fo_noble_flight_: ""
+ fo_noble_flight__desc: ""
+
+ fo_noble_flight_: ""
+ fo_noble_flight__desc: ""
+
+ STATIC_MODIFIER_NAME_fo_noble_flight_burghers: "Sold titles to the Burghers"
+ STATIC_MODIFIER_NAME_fo_noble_flight_clergy: "Sold land to the Clergy"
+

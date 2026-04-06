@@ -1,6 +1,34 @@
 
 situation_panel = {
+  ## Main Image ##
+  blockoverride "situation_panel_image" {
+    using = one_country_header_template
+		
+		blockoverride "CountryContext" {
+			datacontext = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('current_leader').GetCharacter]"
+		}
+		# blockoverride "history_button_anchor" {}
+		blockoverride "character_portrait_anchor" {
+			parentanchor = bottom|left
+		}
+		blockoverride "character_religion_visibility" {
+			visible = no
+		}
+		blockoverride "character_name_maximumsize" {
+			maximumsize = { 270 -1 }
+		}
+		blockoverride "country_header_extra" {
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				margin = { 10 10 }
+				spacing = 8
+				expand = {}
+			}
+		}
+  }
 
+  ## Main Content ##
   blockoverride "situation_panel_main_content" {
     situation_card_header_button = {
       blockoverride "card_header_button_icon_texture" {
