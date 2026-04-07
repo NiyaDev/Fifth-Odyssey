@@ -46,6 +46,151 @@ fo_noble_flight.1 = {
 
   # Macedonian
   option = {
-    name = fo_noble_flight.c
+    name = fo_noble_flight.1.c
   }
 }
+
+fo_noble_flight.10 = {
+  type = country_event
+  category = situation_event
+  title = fo_noble_flight.10.title
+  desc = fo_noble_flight.10.desc
+
+  # Combat ships
+  option = {
+    name = fo_noble_flight.10.a
+
+    trigger = {
+      situation:fo_noble_flight.var:fo_noble_flight_wealth > 40
+    }
+
+    situation:fo_noble_flight = {
+  		set_variable = {
+				name = fo_noble_flight_wealth
+				value = {
+					add = var:fo_noble_flight_wealth
+					add = -40
+				}
+			}
+			set_variable = {
+			  name = fo_noble_flight_combat
+			  value = {
+			    add = var:fo_noble_flight_combat
+			    add = 1
+			  }
+			}
+		}
+		custom_tooltip = { text = fo_noble_flight.10.aa }
+  }
+
+  # Resource ships
+  option = {
+    name = fo_noble_flight.10.b
+
+    trigger = {
+      situation:fo_noble_flight.var:fo_noble_flight_wealth > 50
+    }
+
+    situation:fo_noble_flight = {
+  		set_variable = {
+				name = fo_noble_flight_wealth
+				value = {
+					add = var:fo_noble_flight_wealth
+					add = -50
+				}
+			}
+			set_variable = {
+			  name = fo_noble_flight_resource
+			  value = {
+			    add = var:fo_noble_flight_resource
+			    add = 1
+			  }
+			}
+		}
+		custom_tooltip = { text = fo_noble_flight.10.bb }
+  }
+
+  # Pop ship
+  option = {
+    name = fo_noble_flight.10.c
+
+    trigger = {
+      situation:fo_noble_flight.var:fo_noble_flight_wealth > 30
+    }
+
+    situation:fo_noble_flight = {
+  		set_variable = {
+				name = fo_noble_flight_wealth
+				value = {
+					add = var:fo_noble_flight_wealth
+					add = -30
+				}
+			}
+			set_variable = {
+			  name = fo_noble_flight_pop
+			  value = {
+			    add = var:fo_noble_flight_pop
+			    add = 1
+			  }
+			}
+		}
+		custom_tooltip = { text = fo_noble_flight.10.cc }
+  }
+}
+
+fo_noble_flight.100 = {
+  type = country_event
+  category = situation_event
+  title = fo_noble_flight.100.title
+  desc = fo_noble_flight.100.desc
+  
+  option = {
+    # Create Rhómania
+    location:patawomeck = {
+      change_location_owner = c:FO0
+      add_core = c:FO0
+      change_control = 1
+      change_location_rank = location_rank:town
+
+      # Development
+      development = {
+      	add = situation:fo_noble_flight.var:dev_output
+      }
+
+      # Pops
+      add_pop = {
+        culture = root.culture
+        religion = root.religion
+        type = pop_type:peasants
+        size = {
+        	value = situation:fo_noble_flight.var:fo_noble_flight_pop
+        	multiply = 0.245
+        }
+      }
+      add_pop = {
+        culture = root.culture
+        religion = root.religion
+        type = pop_type:nobles
+        size = {
+         	value = situation:fo_noble_flight.var:fo_noble_flight_pop
+        	multiply = 0.005
+        }
+      }
+      #rename_location = elyseia
+    }
+    create_market = {
+      builder = c:FO0
+      location = location:patawomeck
+      price = 0.1
+      instant = yes
+    }
+    change_player = c:FO0
+    c:FO0 = {
+    	change_government_type = government_type:monarchy
+    	add_gold = {
+    		value = situation:fo_noble_flight.var:dev_money
+    	}
+    }
+  }
+}
+

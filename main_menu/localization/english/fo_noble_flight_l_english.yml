@@ -5,8 +5,9 @@ l_english:
  fo_noble_flight_desc: "The Nobles of the empire have decided to flee in order to escape the encrouching threats."
  
  FO_NOBLE_FLIGHT_MONEY: "Current treasury: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_wealth').GetValue|2]"
- FO_NOBLE_FLIGHT_SPECIAL: "Special goods:"
- FO_NOBLE_FLIGHT_SPECIAL_GOODS: "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_greekfire').GetValue|2] - Greek Fire\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_byzsilk').GetValue|2] - Byzantine Silk\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_ancientknowledge').GetValue|2] - Ancient Tomes"
+ FO_NOBLE_FLIGHT_SPECIAL: "Exodus fleet:"
+ #FO_NOBLE_FLIGHT_SPECIAL_GOODS: "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_combat').GetValue|2] - Combat ships\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_resource').GetValue|2] - Resource transports\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_pop').GetValue|2] - Population transport"
+ FO_NOBLE_FLIGHT_SPECIAL_GOODS: "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_combat').GetValue|2] - Combat ships\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('dev_output').GetValue|2] - Development on landing\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('dev_money').GetValue|2] - Money on landing\n\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('population_nob').GetValue|2] - Nobles\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('population_comm').GetValue|2] - Commoners"
 
  # Actions
  fo_noble_flight_test: "TEST_BUTTON"
@@ -24,12 +25,23 @@ l_english:
  fo_noble_flight_sell_clergy: "Sell land to the $clergy$"
  fo_noble_flight_sell_clergy_desc: "Sell land to the $clergy$. Trading our power for money."
 
- fo_noble_flight_: ""
- fo_noble_flight__desc: ""
+ fo_noble_flight_buying_ships: "Finance shipwrights"
+ fo_noble_flight_buying_ships_desc: "Purchase different ship types for the exodus fleet"
 
  fo_noble_flight_: ""
  fo_noble_flight__desc: ""
 
+ # Static Modifiers
  STATIC_MODIFIER_NAME_fo_noble_flight_burghers: "Sold titles to the Burghers"
  STATIC_MODIFIER_NAME_fo_noble_flight_clergy: "Sold land to the Clergy"
+
+ # Events
+ fo_noble_flight.10.title: "Financing shipwrights"
+ fo_noble_flight.10.desc: "The burgher shipwrights are more than willing to build ships with no questions asked. For the right price.\nNow the only question is what type of ship to construct."
+ fo_noble_flight.10.a: "Light ship"
+ fo_noble_flight.10.aa: "Construct a light ship to protect the transport ships"
+ fo_noble_flight.10.b: "Resource transport"
+ fo_noble_flight.10.bb: "Construct a transport ship designed to carry heavy loads of valuables to help us wherever we land"
+ fo_noble_flight.10.c: "Population transport"
+ fo_noble_flight.10.cc: "Construct a transport ship designed to carry as many people as possible"
 

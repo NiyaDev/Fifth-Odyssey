@@ -2,7 +2,7 @@
   monthly_spawn_chance = 0
 
   can_end = {
-    current_year > 1342
+    current_year > 1339
   }
 
   visible = {
@@ -23,7 +23,39 @@
   }
 
   on_monthly = {
-    
+    situation:fo_noble_flight = {
+      # Resource ships
+      set_variable = {
+        name = dev_output
+        value = {
+          add = var:fo_noble_flight_resource
+          multiply = 0.05
+        }
+      }
+      set_variable = {
+        name = dev_money
+        value = {
+          add = var:fo_noble_flight_resource
+          multiply = 5
+        }
+      }
+
+      # Population ships
+      set_variable = {
+        name = population_comm
+        value = {
+          add = var:fo_noble_flight_pop
+          multiply = 245
+        }
+      }
+      set_variable = {
+        name = population_nob
+        value = {
+          add = var:fo_noble_flight_pop
+          multiply = 5
+        }
+      }
+    }
   }
 
   tooltip = {

@@ -37,6 +37,7 @@ fo_startup.2 = {
   type = country_event
   title = fo_startup.2.title
   desc = fo_startup.2.desc
+  fire_only_once = yes
 
   option = {
     name = fo_startup.2.a

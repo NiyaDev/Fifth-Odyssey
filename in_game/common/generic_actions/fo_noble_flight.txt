@@ -1,3 +1,4 @@
+namespace = fo_noble_flight
 
 fo_noble_flight_funding = {
   type = situation
@@ -5,8 +6,6 @@ fo_noble_flight_funding = {
   
   allow = {
     scope:actor = {
-      at_war = no
-      is_during_bankruptcy = no
       "estate(estate_type:nobles_estate)" = {
       	estate_gold > {
       		value = 20
@@ -24,16 +23,10 @@ fo_noble_flight_funding = {
 
   select_trigger = {
 		looking_for_a = situation
-		interaction_source_list = {
-			situation:fo_noble_flight = {
-				add_to_list = source
-			}
-		}
+		interaction_source_list = { situation:fo_noble_flight = { add_to_list = source } }
 		target_flag = recipient
 		name = "choose_situation"
-		column = {
-			data = name
-		}
+		column = { data = name }
 		visible = {
 			situation:fo_noble_flight = this
 			situation_is_active = yes
@@ -59,6 +52,9 @@ fo_noble_flight_funding = {
 		  		}
 		  	}
 		  }
+		  estate_satisfaction:nobles_estate = {
+		  	subtract = 0.1
+		  }
 		}
   }
 }
@@ -69,10 +65,14 @@ fo_noble_flight_sell_burghers = {
 
 	allow = {
 		scope:actor = {
-      at_war = no
-      is_during_bankruptcy = no
       "estate_power(estate_type:nobles_estate)" > 0.30
     }
+    "estate(estate_type:burghers_estate)" = {
+      	estate_gold > {
+      		value = 20
+      		multiply = 1
+      	}
+      }
 	}
 
 	cooldown = {
@@ -82,16 +82,10 @@ fo_noble_flight_sell_burghers = {
 
 	select_trigger = {
 		looking_for_a = situation
-		interaction_source_list = {
-			situation:fo_noble_flight = {
-				add_to_list = source
-			}
-		}
+		interaction_source_list = { situation:fo_noble_flight = { add_to_list = source } }
 		target_flag = recipient
 		name = "choose_situation"
-		column = {
-			data = name
-		}
+		column = { data = name }
 		visible = {
 			situation:fo_noble_flight = this
 			situation_is_active = yes
@@ -115,6 +109,14 @@ fo_noble_flight_sell_burghers = {
 				years = -1
 				recalculate_immediately = yes
 			}
+			"estate(estate_type:burghers_estate)" = {
+		  	estate_add_gold = {
+		  		value = {
+		  			add = -20
+		  			multiply = 1
+		  		}
+		  	}
+		  }
 		}
 	}
 }
@@ -125,10 +127,14 @@ fo_noble_flight_sell_clergy = {
 
 	allow = {
 		scope:actor = {
-      at_war = no
-      is_during_bankruptcy = no
       "estate_power(estate_type:nobles_estate)" > 0.30
     }
+    "estate(estate_type:clergy_estate)" = {
+      	estate_gold > {
+      		value = 20
+      		multiply = 1
+      	}
+      }
 	}
 
 	cooldown = {
@@ -138,16 +144,10 @@ fo_noble_flight_sell_clergy = {
 
 	select_trigger = {
 		looking_for_a = situation
-		interaction_source_list = {
-			situation:fo_noble_flight = {
-				add_to_list = source
-			}
-		}
+		interaction_source_list = { situation:fo_noble_flight = { add_to_list = source } }
 		target_flag = recipient
 		name = "choose_situation"
-		column = {
-			data = name
-		}
+		column = { data = name }
 		visible = {
 			situation:fo_noble_flight = this
 			situation_is_active = yes
@@ -171,10 +171,46 @@ fo_noble_flight_sell_clergy = {
 				years = -1
 				recalculate_immediately = yes
 			}
+			"estate(estate_type:clergy_estate)" = {
+		  	estate_add_gold = {
+		  		value = {
+		  			add = -20
+		  			multiply = 1
+		  		}
+		  	}
+		  }
 		}
 	}
 }
 
+fo_noble_flight_buying_ships = {
+	type = situation
+	show_message = no
+
+	allow = {
+	}
+
+	cooldown = {
+		type = buy_ships_key
+		months = 2
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = { situation:fo_noble_flight = { add_to_list = source } }
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:fo_noble_flight = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = { trigger_event_non_silently = { id = fo_noble_flight.10 } }
+	}
+}
 
 fo_noble_flight_leave = {
   type = situation
@@ -189,16 +225,10 @@ fo_noble_flight_leave = {
 
   select_trigger = {
 		looking_for_a = situation
-		interaction_source_list = {
-			situation:fo_noble_flight = {
-				add_to_list = source
-			}
-		}
+		interaction_source_list = { situation:fo_noble_flight = { add_to_list = source } }
 		target_flag = recipient
 		name = "choose_situation"
-		column = {
-			data = name
-		}
+		column = { data = name }
 		visible = {
 			situation:fo_noble_flight = this
 			situation_is_active = yes
@@ -207,6 +237,7 @@ fo_noble_flight_leave = {
 
   effect = {
     end_situation = situation:fo_noble_flight
+		scope:actor = { trigger_event_non_silently = { id = fo_noble_flight.100 } }
   }
 }
 
