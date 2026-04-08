@@ -14,27 +14,15 @@ fo_noble_flight.1 = {
         value = yes
       }
     }
-    scope:actor = {
-      create_character = {
-        religion = scope:recipient.religion
-        culture = scope:recipient.culture
-        age = { 24 31 }
-        female = yes
-        estate_type = estate_type:nobles_estate
-      }
-    }
   }
 
   # Roman
   option = {
     name = fo_noble_flight.1.a
-    scope:actor = {
-      create_character = {
-        religion = scope:recipient.religion
-        culture = scope:recipient.culture
-        age = { 24 31 }
-        female = yes
-        estate_type = estate_type:nobles_estate
+    situation:fo_noble_flight = {
+      set_variable = {
+        name = current_leader
+        value = character:fo_romaboo
       }
     }
   }
@@ -42,11 +30,23 @@ fo_noble_flight.1 = {
   # Greek
   option = {
     name = fo_noble_flight.1.b
+    situation:fo_noble_flight = {
+      set_variable = {
+        name = current_leader
+        value = character:fo_byzaboo
+      }
+    }
   }
 
   # Macedonian
   option = {
     name = fo_noble_flight.1.c
+    situation:fo_noble_flight = {
+      set_variable = {
+        name = current_leader
+        value = character:fo_alexaboo
+      }
+    }
   }
 }
 
@@ -112,6 +112,7 @@ fo_noble_flight.10 = {
 
   # Pop ship
   option = {
+
     name = fo_noble_flight.10.c
 
     trigger = {
@@ -145,6 +146,8 @@ fo_noble_flight.100 = {
   desc = fo_noble_flight.100.desc
   
   option = {
+    name = fo_noble_flight.100.a
+
     # Create Rhómania
     location:patawomeck = {
       change_location_owner = c:FO0
@@ -186,6 +189,9 @@ fo_noble_flight.100 = {
     }
     change_player = c:FO0
     c:FO0 = {
+      ruler = {
+        create_character = situation:fo_noble_flight.var:current_leader
+      }
     	change_government_type = government_type:monarchy
     	add_gold = {
     		value = situation:fo_noble_flight.var:dev_money

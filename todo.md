@@ -30,14 +30,11 @@
   - ~~+Ducats -NoblePower +BurgherPower~~
 - ~~Selling land to the Clergy~~
   ~~- +Ducats -NoblePower +ClergyPower~~
-- Financing Shipwrights
-  - EVENT:
-    - Combat ship   - Defense while sailing     - 40d
-    - Resource ship - +0.01 dev & 10duc         - 50d
-    - Pop ship      - +240 commoners +10 nobles - 30d
-- Secretly produce greek fire (Requires recipe)
-- Pay off dock workers
-- Organize departure
+- ~~Financing Shipwrights~~
+  - ~~EVENT:~~
+    - ~~Combat ship   - Defense while sailing     - 40d~~
+    - ~~Resource ship - +0.01 dev & 10duc         - 50d~~
+    - ~~Pop ship      - +240 commoners +10 nobles - 30d~~
 
 ##### Events
 - CHOICE: Choose head of exodus

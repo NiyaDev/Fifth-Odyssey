@@ -44,4 +44,7 @@ l_english:
  fo_noble_flight.10.bb: "Construct a transport ship designed to carry heavy loads of valuables to help us wherever we land"
  fo_noble_flight.10.c: "Population transport"
  fo_noble_flight.10.cc: "Construct a transport ship designed to carry as many people as possible"
-
+ 
+ fo_noble_flight.100.title: "Finalizing the journey"
+ fo_noble_flight.100.desc: "The time has come and the ships are stocked. The fleet, led by the Exodus and it's leader [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('current_leader').GetValue|2], finally leaves their stations across the empire meeting up off the coast of Achaea."
+ fo_noble_flight.100.a: "The journey has begun..."
