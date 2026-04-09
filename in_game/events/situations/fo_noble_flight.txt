@@ -2,7 +2,6 @@ namespace = fo_noble_flight
 
 fo_noble_flight.1 = {
   type = country_event
-  category = situation_event
   title = fo_noble_flight.1.title
   desc = fo_noble_flight.1.desc
   fire_only_once = yes
@@ -112,7 +111,6 @@ fo_noble_flight.10 = {
 
   # Pop ship
   option = {
-
     name = fo_noble_flight.10.c
 
     trigger = {
@@ -137,11 +135,17 @@ fo_noble_flight.10 = {
 		}
 		custom_tooltip = { text = fo_noble_flight.10.cc }
   }
+
+  # Cancel
+  option = {
+    name = fo_noble_flight.10.d
+
+    custom_tooltip = { text = fo_noble_flight.10.dd }
+  }
 }
 
 fo_noble_flight.100 = {
   type = country_event
-  category = situation_event
   title = fo_noble_flight.100.title
   desc = fo_noble_flight.100.desc
   
@@ -167,7 +171,7 @@ fo_noble_flight.100 = {
         type = pop_type:peasants
         size = {
         	value = situation:fo_noble_flight.var:fo_noble_flight_pop
-        	multiply = 0.245
+        	multiply = 0.49
         }
       }
       add_pop = {
@@ -176,10 +180,21 @@ fo_noble_flight.100 = {
         type = pop_type:nobles
         size = {
          	value = situation:fo_noble_flight.var:fo_noble_flight_pop
-        	multiply = 0.005
+        	multiply = 0.01
         }
       }
-      #rename_location = elyseia
+      if = {
+        limit = { situation:fo_noble_flight.var:current_leader = character:romaboo }
+        rename_location = new_rome
+      }
+      if = {
+        limit = { situation:fo_noble_flight.var:current_leader = character:romaboo }
+        rename_location = new_constantinople
+      }
+      if = {
+        limit = { situation:fo_noble_flight.var:current_leader = character:romaboo }
+        rename_location = new_pella
+      }
     }
     create_market = {
       builder = c:FO0
@@ -188,11 +203,11 @@ fo_noble_flight.100 = {
       instant = yes
     }
     change_player = c:FO0
+    situation:fo_noble_flight.var:current_leader = {
+      move_country = c:FO0
+    }
     c:FO0 = {
-      ruler = {
-        create_character = situation:fo_noble_flight.var:current_leader
-      }
-    	change_government_type = government_type:monarchy
+      set_new_ruler = situation:fo_noble_flight.var:current_leader
     	add_gold = {
     		value = situation:fo_noble_flight.var:dev_money
     	}

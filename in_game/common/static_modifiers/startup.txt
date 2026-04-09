@@ -1,7 +1,0 @@
-
-noble_flight = {}
-clergy_flight = {}
-burgher_flight = {}
-commoner_flight = {}
-tribal_flight = {}
-

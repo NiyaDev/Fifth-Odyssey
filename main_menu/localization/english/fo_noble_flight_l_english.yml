@@ -36,6 +36,11 @@ l_english:
  STATIC_MODIFIER_NAME_fo_noble_flight_clergy: "Sold land to the Clergy"
 
  # Events
+ fo_noble_flight.1.title: "Who shall lead us?"
+ fo_noble_flight.1.desc: "Among the Nobility of the empire, there are many of those with the abilities necesary to lead us to a new home. However, it is another question all together whether or not any are willing to leave everything behind even with the lingering threats. Three main candidates have been put forward.\n\n[GetCharacter('fo_romaboo').GetName]: The eldest Daughter of an up and coming family. What she lacks in resources she makes up for in a desire to prove herself and a deep knowledge of the old ways.\n[GetCharacter('fo_byzaboo').GetName]: A middle child of an old family that, if you take his word for it, is the true heirs of the Empire. The claims are dubious at best, but no one can say he is not dedicated.\n[GetCharacter('fo_alexaboo').GetName]: Despite not being a noble himself, he is possibly the greatest tactician in the Empire with some even comparing him to Alexander the Great himself. The sole reason he is not leading armies for the Emperor is because of his low status he is seen as \"Impure breeding\". For our situation, however, he may prove to be useful."
+ fo_noble_flight.1.a: "[GetCharacter('fo_romaboo').GetName], The Daughter of Rome"
+ fo_noble_flight.1.b: "[GetCharacter('fo_byzaboo').GetName], The Heir to the Empire"
+ fo_noble_flight.1.c: "[GetCharacter('fo_alexaboo').GetName], Alexander reborn"
  fo_noble_flight.10.title: "Financing shipwrights"
  fo_noble_flight.10.desc: "The burgher shipwrights are more than willing to build ships with no questions asked. For the right price.\nNow the only question is what type of ship to construct."
  fo_noble_flight.10.a: "Light ship"
@@ -44,7 +49,9 @@ l_english:
  fo_noble_flight.10.bb: "Construct a transport ship designed to carry heavy loads of valuables to help us wherever we land"
  fo_noble_flight.10.c: "Population transport"
  fo_noble_flight.10.cc: "Construct a transport ship designed to carry as many people as possible"
+ fo_noble_flight.10.d: "Stop building"
  
  fo_noble_flight.100.title: "Finalizing the journey"
  fo_noble_flight.100.desc: "The time has come and the ships are stocked. The fleet, led by the Exodus and it's leader [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('current_leader').GetValue|2], finally leaves their stations across the empire meeting up off the coast of Achaea."
  fo_noble_flight.100.a: "The journey has begun..."
+

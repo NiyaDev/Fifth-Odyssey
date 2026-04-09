@@ -1,10 +1,10 @@
 
 fo_noble_flight_burghers = {
-	global_nobles_estate_power = -0.4
-	global_burghers_estate_power = 0.4
+	global_nobles_estate_power = -0.25
+	global_burghers_estate_power = 0.25
 }
 fo_noble_flight_clergy = {
-	global_nobles_estate_power = -0.4
-	global_clergy_estate_power = 0.4
+	global_nobles_estate_power = -0.25
+	global_clergy_estate_power = 0.25
 }
 

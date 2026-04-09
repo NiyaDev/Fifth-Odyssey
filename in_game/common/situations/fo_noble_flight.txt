@@ -10,16 +10,9 @@
     tag = BYZ
   }
 
-  on_start = {
-    trigger_event_non_silently = fo_noble_flight.1
-    set_variable = {
-      name = fo_noble_flight_wealth
-      value = 0
-    }
-    set_variable = {
-      name = fo_noble_flight_greekfire
-      value = no
-    }
+  on_start = {}
+  on_end = {
+    c:BYZ = { trigger_event_non_silently = fo_noble_flight.100 }
   }
 
   on_monthly = {
@@ -29,14 +22,14 @@
         name = dev_output
         value = {
           add = var:fo_noble_flight_resource
-          multiply = 0.05
+          multiply = 0.1
         }
       }
       set_variable = {
         name = dev_money
         value = {
           add = var:fo_noble_flight_resource
-          multiply = 5
+          multiply = 25
         }
       }
 
@@ -45,14 +38,14 @@
         name = population_comm
         value = {
           add = var:fo_noble_flight_pop
-          multiply = 245
+          multiply = 490
         }
       }
       set_variable = {
         name = population_nob
         value = {
           add = var:fo_noble_flight_pop
-          multiply = 5
+          multiply = 10
         }
       }
     }

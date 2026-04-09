@@ -1,0 +1,60 @@
+
+countries = {
+  FO0 = { # Rhomania
+    starting_technology_level = 3
+    include = "expl_mediterranean"
+    discovered_areas = {}
+    include = "eastern_european_monarchy"
+    government = {
+      type = monarchy
+      heir_selection = cognatic_primogeniture
+
+      centralization_vs_decentralization = -20
+			traditionalist_vs_innovative = 0
+			spiritualist_vs_humanist = 0
+			aristocracy_vs_plutocracy = -80
+			serfdom_vs_free_subjects = -60
+			mercantilism_vs_free_trade = 70
+			belligerent_vs_conciliatory = 0
+			quality_vs_quantity = -5
+			offensive_vs_defensive = 50
+			land_vs_naval = 0
+			capital_economy_vs_traditional_economy = 60
+			individualism_vs_communalism = -30
+			outward_vs_inward = -70
+
+			privilege = {
+			  # Nobles
+			  # Clergy
+			  # Burghers
+			  # Commoners
+			  # Tribesmen
+			}
+			reforms = {
+			  
+			}
+    }
+    currency_data = {
+      gold = 0
+      stability = 0
+      prestige = 0
+      government_power = 100
+      inflation = 0
+      war_exhaustion = 0
+    }
+    liturgical_language = greek_language
+  }
+  FO1 = { # Ekklisia
+
+  }
+  FO2 = { # Karchidona
+
+  }
+  FO3 = { # Ilysion
+
+  }
+  FO4 = { # Varvaros
+
+  }
+}
+

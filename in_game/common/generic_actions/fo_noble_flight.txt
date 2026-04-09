@@ -13,7 +13,6 @@ fo_noble_flight_funding = {
       	}
       }
     }
-
   }
 
 	cooldown = {
@@ -187,8 +186,7 @@ fo_noble_flight_buying_ships = {
 	type = situation
 	show_message = no
 
-	allow = {
-	}
+	allow = {}
 
 	cooldown = {
 		type = buy_ships_key
@@ -216,12 +214,7 @@ fo_noble_flight_leave = {
   type = situation
   show_message = no
 
-  allow = {
-    scope:actor = {
-      at_war = no
-      is_during_bankruptcy = no
-    }
-  }
+  allow = {}
 
   select_trigger = {
 		looking_for_a = situation

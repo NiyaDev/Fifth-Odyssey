@@ -10,7 +10,7 @@
  STATIC_MODIFIER_NAME_noble_flight: "Noble Flight"
 
  # Countries
- FO0: "Rhómania"
+ FO0: "Nea Rhómania"
  FO0_ADJ: "Romaniótis"
  FO1: "Ekklisia"
  FO1_ADJ: "Ekklisiótis"
@@ -23,5 +23,8 @@
 
 
  # Locations
-elyseia: "Elyseia"
+ new_rome_gr: "Néa Rómi"
+ new_constantinople_gr: "Néa Konstantinoúpoli"
+ new_pella_gr: "Néa Pélla"
+ elyseia: "Elyseia"
 

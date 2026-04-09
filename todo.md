@@ -23,7 +23,8 @@
 #### The flight of the nobles
 ##### General
 - ~~Forces leave after 5 years~~
-- Show current leader choice for exodus
+- ~~Show current leader choice for exodus~~
+- Figure out why situation on_end doesnt trigger event
 
 ##### Actions
 - ~~Selling titles to Burghers~~
@@ -37,10 +38,10 @@
     - ~~Pop ship      - +240 commoners +10 nobles - 30d~~
 
 ##### Events
-- CHOICE: Choose head of exodus
-  - Romaboo - Boss bitch
-  - Byzaboo - 
-  - Alexander LARPer
+- ~~CHOICE: Choose head of exodus~~
+  - ~~Romaboo - Boss bitch~~
+  - ~~Byzaboo - LARPer~~
+  - ~~Alexander reborn~~
 - Trade money for either GreekFire or ByzSilk. other event is 4x expensive.
 - Trade money for Greek fire recipe
 - Trade money for ByzSilk
