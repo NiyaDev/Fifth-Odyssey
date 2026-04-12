@@ -19,12 +19,10 @@ new_world = {
 				OR = {
 					sub_continent = sub_continent:western_europe
 					sub_continent = sub_continent:north_africa
-					# Doesn't work?
-					province = province:tsenacommacah_province
-					province = province:akilasiewakik_province
-					province = province:baracoa_province
+					province_definition = province_definition:tsenacommacah_province
+					province_definition = province_definition:akilasiewakik_province
+					province_definition = province_definition:baracoa_province
 				}
-				# Owner doesn't have "afraid_of_the_edge"
 				has_owner = yes
 				is_port = yes
 				num_pop_type:burghers >= 2.0
@@ -36,6 +34,7 @@ new_world = {
 						has_discovered_area = area:south_macaronesia_area
 						has_discovered_area = area:bermuda_area
 					}
+					# Doesn't have "afraid_of_the_edge"
 				}
 			}
 		}

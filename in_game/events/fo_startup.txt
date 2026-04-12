@@ -63,6 +63,7 @@ fo_startup.3 = {
   # Clergy
   option = {
     name = fo_startup.3.b
+    limit = never
     
     #activate_situation = situation:fo_clergy_flight
     custom_tooltip = { text = fo_startup.3.bb }
@@ -72,6 +73,7 @@ fo_startup.3 = {
   # Burghers
   option = {
     name = fo_startup.3.c
+    limit = never
     
     #activate_situation = situation:fo_clergy_flight
     custom_tooltip = { text = fo_startup.3.cc }
@@ -81,6 +83,7 @@ fo_startup.3 = {
   # Commoners
   option = {
     name = fo_startup.3.d
+    limit = never
     
     #activate_situation = situation:fo_commoner_flight
     custom_tooltip = { text = fo_startup.3.dd }
@@ -90,6 +93,7 @@ fo_startup.3 = {
   # Tribesmen / Cossacks
   option = {
     name = fo_startup.3.e
+    limit = never
     
     #activate_situation = situation:fo_tribes_flight
     custom_tooltip = { text = fo_startup.3.ee }

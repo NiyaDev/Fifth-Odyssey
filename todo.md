@@ -19,12 +19,31 @@
 ##### Industrialization
 - Change to add exile regions
 
+#### Map
+- More area changes
+
 
 #### The flight of the nobles
 ##### General
 - ~~Forces leave after 5 years~~
 - ~~Show current leader choice for exodus~~
 - Figure out why situation on_end doesnt trigger event
+- Create new autocephalous patriarchate
+- Government Policies:
+  - Noble Exile colony
+    - -0.1? stability
+    - -0.5? tech growth
+    - -50% Institution Spread
+    - +100% Institution cost
+    - -50% Assimilation
+    - -50% Conversion
+    - -100% Tribesman settling
+- Modifiers:
+  - Works of Knowledge
+    - +0.5? Tech growth
+  - 
+- Advances:
+  - Greek Fire Infantry
 
 ##### Actions
 - ~~Selling titles to Burghers~~
@@ -73,7 +92,14 @@
   - FINISH
 
 
-
+##### Long term goals
+- 
+##### Post "Fate of the Pheonix"
+- Bureaucracies
+  - Development: - -Tax Eff, ~ +Development, + 
+  - Pop growth:  - -Tax Eff, ~ +Pop Growth,  + +Colonial Growth
+- Aquaducts
+  - Maybe lessen bonus and allow it to be built normally? Don't know if you cant build it.
 
 
 - Choose which estate exiles
