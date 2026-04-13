@@ -1,8 +1,8 @@
-new_world = {
-	age = age_3_discovery 
-
-	location = sevilla	#fallback for when no valid
-
+confessionalism = {
+	age = age_4_reformation 
+	
+	location = augsburg	#fallback for when no valid
+	
 	can_spawn = {
 		OR = {
 			AND = {
@@ -11,96 +11,49 @@ new_world = {
 			}
 			AND = {
 				has_game_rule = institution_spawn_fixed_historical
-				this = location:sevilla
+				this = location:augsburg
 			}
 			AND = {
 				has_game_rule = institution_spawn_plausible
+				OR = {
+					continent = continent:europe
+					sub_continent = sub_continent:north_africa
+				}
+
+				has_owner = yes
+				has_building_with_at_least_one_level = printing_press_shop
 				
 				OR = {
-					sub_continent = sub_continent:western_europe
-					sub_continent = sub_continent:north_africa
-					area = area:elysium_area
-					area = area:cuba_area
-					area = area:newfoundland_area
+					location_rank = location_rank:town
+					location_rank = location_rank:city
 				}
-				has_owner = yes
-				is_port = yes
-				num_pop_type:burghers >= 2.0
-				dominant_culture = owner.culture
+				
+				dominant_religion = owner.religion
+				dominant_religion = religion:catholic
+				
+				
+						
 				owner = {
-					OR = {
-						has_discovered_area = area:azores_area
-						has_discovered_area = area:canary_islands_area
-						has_discovered_area = area:south_macaronesia_area
-						has_discovered_area = area:bermuda_area
-					}
-					NOT = { has_country_modifier = fo_edge_fear }
+					societal_value:spiritualist_vs_humanist < -25
 				}
 			}
 		}
+	
+	
 	}
-
 	promote_chance = {
 		add = {
-			value = average_location_literacy
-		}
-		add = {
-			value = num_pop_type:burghers
-			multiply = 10
-		}
-	}
-	
-	#hardcoded spreads for optimisations..
-	spread_from_friendly_coast_border_location = institution_base_spread_from_friendly_neighbor_with_mid
-	spread_from_any_coast_border_location = institution_base_spread_from_neighbor_with_mid
-	spread_from_any_import = institution_trade_spread_value_mid
-	spread_from_any_export = institution_trade_spread_value_mid
-	spread_from_was_possible_spawn = institution_spread_from_was_possible_spawn_mid
-	spread_scale_on_control_if_owner_embraced = 2
-	spread_embraced_to_capital = institution_total_embraced_to_capital_mid
-	spread_to_market_member = institution_spread_to_market_member_mid
-}
-
-printing_press = { 
-	age = age_3_discovery 
-	
-	
-	location = mainz	#fallback for when no valid
-	can_spawn = {
-		OR = {
-			AND = {
-				has_game_rule = institution_spawn_random_city
-				location_rank = location_rank:city
-			}
-			AND = {
-				has_game_rule = institution_spawn_fixed_historical
-				this = location:mainz
-			}
-			AND = {
-				has_game_rule = institution_spawn_plausible
-				owner ?= {
-					produced_in_country:paper > 5
+			if = {
+				limit = {
+					num_pop_type:clergy > 10
 				}
-				has_institution = institution:renaissance
-				
-				num_pop_type:burghers > 1
-				has_building = building_type:university	
-				
-				owner = {
-					societal_value:traditionalist_vs_innovative > 20
-				}
+				value = average_location_literacy
+				multiply = 10
 			}
 		}
-		
-	}
-
-	promote_chance = {
 		add = {
-			value = average_location_literacy
-		}
-		add = {
-			value = average_location_literacy #Is there a market for printed things?
-			multiply = 10
+			value = num_pop_type:clergy
+			multiply = 5
 		}
 	}
 	
@@ -115,10 +68,10 @@ printing_press = {
 	spread_to_market_member = institution_spread_to_market_member_mid	
 }
 
-pike_and_shot = {
-	age = age_3_discovery 
+global_trade = {
+	age = age_4_reformation 
 	
-	location = innsbruck	#fallback for when no valid
+	location = lisbon	#fallback for when no valid
 	
 	can_spawn = {
 		OR = {
@@ -128,11 +81,13 @@ pike_and_shot = {
 			}
 			AND = {
 				has_game_rule = institution_spawn_fixed_historical
-				this = location:innsbruck
+				this = location:lisbon
 			}
 			AND = {
 				has_game_rule = institution_spawn_plausible
-				has_institution = institution:professional_armies
+				has_institution = institution:banking
+				has_institution = institution:new_world
+
 
 				OR = {
 					continent = continent:europe
@@ -142,23 +97,79 @@ pike_and_shot = {
 					area = area:newfoundland_area
 				}
 
-				owner ?= {
-					army_tradition > 20
-					has_advance = gunpowder_advance
-					has_advance = professional_armies_advance
-				}
-			
-				modifier:local_manpower > 0
-				
-				owner = {
-					societal_value:land_vs_naval < -20
+				is_market_center = yes
+				location_rank = location_rank:city
+				market = {
+					total_goods_value_traded > 500
 				}
 			}
 		}
-		
 	}
 	
 
+	promote_chance = {
+		add = {
+			value = average_location_literacy
+		}
+
+		add = {
+			value = num_pop_type:burghers
+			multiply = 5
+		
+		}
+		add = {
+			if = {
+				limit = { is_port = yes }
+				value = 5
+			}
+		}
+	}
+	
+	#hardcoded spreads for optimisations..
+	spread_from_friendly_coast_border_location = institution_base_spread_from_friendly_neighbor_with_mid
+	spread_from_any_coast_border_location = institution_base_spread_from_neighbor_with_mid
+	spread_from_any_import = institution_trade_spread_value_mid
+	spread_from_any_export = institution_trade_spread_value_mid
+	spread_from_was_possible_spawn = institution_spread_from_was_possible_spawn_mid
+	spread_scale_on_control_if_owner_embraced = 2
+	spread_embraced_to_capital = institution_total_embraced_to_capital_mid
+	spread_to_market_member = institution_spread_to_market_member_mid	
+}
+
+artillery_institution = {
+	age = age_4_reformation 
+	
+	
+	location = constantinople	#fallback for when no valid
+	can_spawn = {
+		OR = {
+			AND = {
+				has_game_rule = institution_spawn_random_city
+				location_rank = location_rank:city
+			}
+			AND = {
+				has_game_rule = institution_spawn_fixed_historical
+				this = location:constantinople
+			}
+			AND = {
+				has_game_rule = institution_spawn_plausible
+				has_institution = institution:professional_armies
+
+				OR = {
+					continent = continent:europe
+					sub_continent = sub_continent:north_africa
+				}
+
+				has_building_with_at_least_one_level = gun_smith
+				has_building_with_at_least_one_level = tools_guild
+				
+				owner = {
+					societal_value:offensive_vs_defensive < -20
+				}
+			}
+		}
+	}
+	
 	promote_chance = {
 		add = {
 			value = average_location_literacy
@@ -179,5 +190,9 @@ pike_and_shot = {
 	spread_embraced_to_capital = institution_total_embraced_to_capital_mid
 	spread_to_market_member = institution_spread_to_market_member_mid
 }
+
+
+
+
 
 

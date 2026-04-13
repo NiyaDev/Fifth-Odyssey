@@ -2,25 +2,24 @@
 ### v0.1: The trials of first landing
 #### Institutions
 ##### Renaissance
-- Location modifier for growing
+- ~~Location modifier for growing~~
+##### Banking / Professional Armies
+- ~~Change to add exile regions~~
 ##### New World
-- Global variable that stops it from spawning
-- Maybe able to spawn in exile empire?
+- ~~Global variable that stops it from spawning~~
+- ~~Maybe able to spawn in exile empire?~~
 ##### Global Trade
-- Change to add exile regions
-##### Manufacturies
-- Change to add exile regions
-##### Military Revolution
-- Change to add exile regions
-##### Scientific Revolution
-- Change to add exile regions
-##### Enlightenment
-- Change to add exile regions
-##### Industrialization
-- Change to add exile regions
+- ~~Change to add exile regions~~
+##### Age 5: Absolutism
+- ~~Change to add exile regions~~
+##### Age 6: Revolutions
+- ~~Change to add exile regions~~
 
 #### Map
 - More area changes
+
+#### Advances
+- Greek fire infantry
 
 
 #### The flight of the nobles
@@ -42,8 +41,6 @@
   - Works of Knowledge
     - +0.5? Tech growth
   - 
-- Advances:
-  - Greek Fire Infantry
 
 ##### Actions
 - ~~Selling titles to Burghers~~

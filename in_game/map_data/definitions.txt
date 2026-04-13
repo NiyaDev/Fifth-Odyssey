@@ -5906,7 +5906,7 @@ america = {
 				hochelaga_province = { hochelaga kemoimenahan ahkwesasne otennienontant makigotekw loigan_sibo lake_of_two_mountains }
 				laurentides_province = { kiwetin_sipi mikiwam outaragasipi tremblant_massif }
 				alsigontekw_province = { alsigontekw wolinak wabanaki arthabaska nebesek }
-				megantic_province = { nikitotegwak megantic maskikogamak coaticook memphremagog wigwomadenek wagowategok lake_memphremagog }
+				#megantic_province = { nikitotegwak megantic maskikogamak coaticook memphremagog wigwomadenek wagowategok lake_memphremagog }
 				maisouna_province = { ekwentondie yamachiche shawinigan mekinac matawin lake_saint_pierre}
 				outaouais_province = { nagatinong weskarini okaisipi quyon nichabau }
 			}
@@ -6406,6 +6406,35 @@ america = {
 					doeg manassas tegninateo
 				}
 			}
+			bathiakoilada_south_area = {
+				mosopeleacipi_province = {
+					mosopeleacipi tazewell bland  kallamuckee
+					cumberland_mountains_5
+				}
+				kituwa_province = {
+					kituwa nikwasi guaxule
+					tahkeeosteh italwa wattogee watauga 
+					shady_valley_wasteland cumberland_mountains_3 tanasee_ridge kuwohi
+					blue_ridge_mountains cumberland_mountains_2 nantahala_forest
+				}
+				hogohega_province = {
+					amoyeli_gunahita canasoga chiaha coste  hogohega great_smokies
+				}
+				coosa_province = {
+					coosa ulibahali apica talimachusi itaba utsutigway 
+					quanasee chattahoochee_forest
+				}
+				pelisipi_province = {
+					pelisipi shawnee xualae maniatique
+					cumberland_mountains
+					cumberland_mountains_4
+				}
+				tanasi_province = {
+					chalahume satapo tellico hiwasee chatanugi chestowee
+					walden_ridge
+					cohutta_mountains
+				}
+			}
 			bathiakoilada_area = {
 				wapocomo_province = {
 					antietam cacapon opequon wapocomo 
@@ -6422,18 +6451,10 @@ america = {
 					cumberland_mountains_8
 					blue_ridge_mountains_2
 				}
-				mosopeleacipi_province = {
-					mosopeleacipi tazewell bland  kallamuckee
-					cumberland_mountains_5
-				}
-				kituwa_province = {
-					kituwa nikwasi guaxule
-					tahkeeosteh italwa wattogee watauga 
-					shady_valley_wasteland cumberland_mountains_3 tanasee_ridge kuwohi
-					blue_ridge_mountains cumberland_mountains_2 nantahala_forest
-				}
-				hogohega_province = {
-					amoyeli_gunahita canasoga chiaha coste  hogohega great_smokies
+				wappacoma_province = {
+					wappacoma ashby conococheague
+					patna_us calicuas
+					cumberland_mountains_7
 				}
 			}
 			akrivounon_area = {
@@ -6452,6 +6473,9 @@ america = {
 				joara_province = {
 					joara iswa guaquili eswawpuddenah
 				}
+				catawba_province = {
+					catawba enoree pacolate amoyescheck
+				}
 			}
 			southely_area = {
 				roanoke_province = {
@@ -6469,30 +6493,143 @@ america = {
 					gowtano nooherooka kehaukee cherohenaka_nc pamticough
 				}
 			}
-
-			massachusetts_area = {
+			southern_coast_area = {
+				waccamaw_province = {
+					waccamaw winyah winnee peedee pocotaligo
+				}
+				santee_province = {
+					etiwan wando kiawah coosaw combahee wimbee santee
+				}
+				cofitachequi_province = {
+					cofitachequi hymahi talimeco ilasi
+				}
+				mocama_province = {
+					mocama tacatacaru tamathli icafui
+				}
+				ossabaw_province = {
+					tybee ossabaw sapelo canoochee
+				}
+			}
+			east_peninsula_area = {
+				timucua_province = {
+					timucua malapaz uriutina napituca
+				}
+				mayaca_province = {
+					mayaca utina itaraholata
+					crescent_lake george_lake_fl
+				}
+				jororo_province = {
+					jororo acuera surruque ho_bay
+					harris_lake apopka_lake
+				}
+				mayaimi_province = {
+					mayaimi ais guacata tequesta guarungube
+				}
+				okeechobee_province = {
+					tequemapo okeechobee caloosahatchee uriparacoxi
+					lake_okeechobee istokpoga_lake
+				}
+			}
+			west_peninsula_area = {
+				potano_province = {
+					potano vicela uqueten
+				}
+				tampa_province = {
+					tocaste guazoco mocozo ozita
+				}
+				apalachee_province = {
+					apalachee anhayca azile uzachile
+				}
+				pensacola_province = {
+					pensacola watappo choctawhatchee chatot
+				}
+			}
+			inner_forest_area = {
+				keowee_province = {
+					keowee oolenoy generostee
+				}
+				congaree_province = {
+					selkehatchie saluda congaree kosalu
+				}
+				tugaloo_province = {
+					tugaloo nacoochee estatoe etoho
+				}
+				kiokee_province = {
+					kiokee wahachee ogeechee ohoopee
+				}
+			}
+			south_inner_forest_area = {
+				capachequi_province = {
+					capachequi toa kasihta hitchauta pallachacola eufaula
+				}
+				ocute_province = {
+					ocute	ichisi altamaha cofaqui
+				}
+				hitchiti_province = {
+					sawokli alapaha mikasuki alapahoochee ocmulgee oconee hitchiti
+				}
+				coweta_province = {
+					coweta kealedji pakanahuili tussahaw
+				}
+				tuckabutche_province = {
+					tuckabutche tescuntee chatahoochee
+				}
+			}
+			east_river_valley_area = {
+				kanawha_province = {
+					moneton mohetan kanawha ouasioto pocatalico chinquetana weotowe tsalagi anigiduwagi
+				}
+				monongahela_province = {
+					wihlink monongahela onimgohow calicua 
+				}
+				allegheny_province = {
+					allegheny loyalhanna youghiogheny quemahoning conemaugh
+				}
+				erie_province = {
+					erie saucunk shenango tionesta kittaning punxsutawney
+				}
+			}
+			native_border_area = {
+				shamokin_province = {
+					shamokin mahoning mattawana juniata onojutta tuckahoe wallenpaupack massawomeck
+				}
+				lycoming_province = {
+					loyalsock lycoming tangasootack andastoerrhonon susquehannock
+				}
+				wyoming_province = {
+					scahentowanen lackawanna atrakwaye wappasening lackawaxen
+				}
+				muhheakantuck_province = {
+					poughkeepsie ponkhockie minisink kitchawanc
+				}
+				mahicannituck_province = {
+					mahicannituck horicon esquatak lenape
+				}
+			}
+			arkham_area = {
+				narraganset_province = {
+					seekonk woonsocket pawcatuck
+				}
 				massachusetts_province = {
 					shawmut naumkeag assabet quinsigamond weshacum
 				}
 				nauset_province = {
 					patuxet assonet nauset nantucket
 				}
+				merrimac_province = {
+					amoskeag nashua squamscott
+				}
+				pennacook_province = {
+					pennacook umbagog pemigewasset ossipee lake_winnipesaukee
+				}
+				casco_province = {
+					casco kennebunk androscoggin pequawket sebago_lake	ammoscongon anasagunticook
+				}
+			}
+			old_pine_area = {
 				agawam_province = {
 					agawam pocumtuck mahaiwe pontoosuck
 				}
-			}
-			southern_new_england_area = {
-				narraganset_province = {
-					seekonk woonsocket pawcatuck
-				}
-				#connecticut_province = {
-				#	saukiog siccanemos willimantic nehantuck
-				#}
-				#quinnipiac_province = {
-				#	quinnipiac rippowam scatacook
-				#}
-			}
-			vermont_area = {
 				winooski_province = {
 					winooski gwenaska koes nitamibontegw
 				}
@@ -6502,22 +6639,18 @@ america = {
 				cowasuk_province = {
 					ottauquechee ompompanusooc passumpsic cowasuck
 				}
-			}
-			new_hampshire_area = {
-				merrimac_province = {
-					amoskeag nashua squamscott
-				}
-				pennacook_province = {
-					pennacook umbagog pemigewasset ossipee lake_winnipesaukee
-				}
 				coos_province = {
 					monadnock sunapee coos ammonoosuc
 				}
-			}
-			maine_area = {
-				casco_province = {
-					casco kennebunk androscoggin pequawket sebago_lake	ammoscongon anasagunticook
+				megantic_province = {
+					nikitotegwak megantic maskikogamak coaticook memphremagog wigwomadenek wagowategok lake_memphremagog
 				}
+			}
+			
+			maine_area = {
+				#casco_province = {
+				#	casco kennebunk androscoggin pequawket sebago_lake	ammoscongon anasagunticook
+				#}
 				kennebec_province = {
 					kennebec sagadahoc messalonskee norridgewock
 				}
@@ -6532,20 +6665,6 @@ america = {
 				}
 				passamaquoddy_province = {
 					passamaquoddy machias nicatous maatawamkeag
-				}
-			}
-			hudson_area = {
-				#manhattan_province = {
-				#	manhattan tappan nochpeem
-				#}
-				#montauk_province = {
-				#	montauk unquachog massapequa
-				#}
-				muhheakantuck_province = {
-					poughkeepsie ponkhockie minisink kitchawanc
-				}
-				mahicannituck_province = {
-					mahicannituck horicon esquatak lenape
 				}
 			}
 			haudenosaunee_area = {
@@ -6576,249 +6695,21 @@ america = {
 					tiotoren kanentaweron thahnawate cattaraugus ahouenro
 				}
 			}
-			new_jersey_area = {
-				#raritan_province = {
-				#	raritan hackensack navisink piscopeek
-				#}
-				#kechemeche_province = {
-				#	tetamekanch kechemeche cohansey amintonck
-				#}
-				#assupink_province = {
-				#	assunpink muscotnetcong hopatcong
-				#}
-			}
 
-			pennsylvania_area = {
-				#shackamaxon_province = {
-				#	shackamaxon wawassan wyomissing
-				#}
-				#paxtang_province = {
-				#	paxtang connatachequa conewago
-				#	cumberland_mountains_9
-				#}
-				#lehigh_province = {
-				#	lehigh paunacussing tohickon
-				#	schuylkill
-				#}
-				#tesinigh_province = {
-				#	tesinigh attaock cocalico
-				#}
-				shamokin_province = {
-					shamokin mahoning mattawana juniata onojutta tuckahoe wallenpaupack massawomeck
-				}
-				wyoming_province = {
-					scahentowanen lackawanna atrakwaye wappasening lackawaxen
-				}
-				#delaware_province = {
-				#	minguannan tappahanna assawoman
-				#}
-			}
-			westsylvania_area = {
-				lycoming_province = {
-					loyalsock lycoming tangasootack andastoerrhonon susquehannock
-				}
-				allegheny_province = {
-					allegheny loyalhanna youghiogheny quemahoning conemaugh
-				}
-				erie_province = {
-					erie saucunk shenango tionesta kittaning punxsutawney
-				}
-			}
-
-			maryland_area = {
-				#nanticoke_province = {
-				#	wicomico chicamacomico matapeake
-				#}
-				#patapsco_province = {
-				#	patapsco wicontiss nentego patuxent
-				#}
-				#potomac_province = {
-				#	anacostia monocacy potapoco catoctin
-				#}
-				#wapocomo_province = {
-				#	antietam cacapon opequon wapocomo 
-				#}
-			}
-
-			virginia_area = {
-				#tsenacommacah_province = {
-				#	werowocomoco patawomeck wicocomico nanzatico rappahannock
-				#}
-				#chesapeake_province = {
-				#	kiskiack accomac nansemond chesapeake weyanock
-				#}
-				#powhatan_province = {
-				#	powhatan appamatuck cheroenhaka waqua pamunkey
-				#}
-				#doeg_province = {
-				#	doeg manassas tegninateo
-				#}
-				#monacan_province = {
-				#	rassawek mowhemencho appomattox monahassanugh massinacak monasukapanough
-				#}
-				#saponi_province = {
-				#	saponi nessoneick occaneechi pintahae meherrin
-				#}
-				#tutelo_province = {
-				#	mahock chiswell
-				#	tutelo torope mondongachate 
-				#	cumberland_mountains_6
-				#}
-				#shenandoah_province = {
-				#	onandagoa massanutten schinhandowi
-				#	shenandoah
-				#	shenandoah_mountains
-				#	cumberland_mountains_8
-				#	blue_ridge_mountains_2
-				#}
-				#mosopeleacipi_province = {
-				#	mosopeleacipi tazewell bland  kallamuckee
-				#	cumberland_mountains_5
-				#}
-			}
-			west_virginia_area = {
-				wappacoma_province = {
-					wappacoma ashby conococheague
-					patna_us calicuas
-					cumberland_mountains_7
-				}
-				kanawha_province = {
-					moneton mohetan kanawha ouasioto pocatalico chinquetana weotowe tsalagi anigiduwagi
-				}
-				monongahela_province = {
-					wihlink monongahela onimgohow calicua 
-				}
-			}
-			north_carolina_area = {
-				#roanoke_province = {
-				#	roanoke croatan hatteras chowanoke pocosin wiccacon
-
-				#	mattamuskeet_lake phelps_lake
-				#}
-				#pamlico_province = {
-				#	pamlico coree corani neuse
-				#}
-				#chicora_province = {
-				#	chicora dawhee woccon cohari sapponah necoes
-				#}
-				#gowtano_province = {
-				#	gowtano nooherooka kehaukee cherohenaka_nc pamticough
-				#}
-				#waxhaw_province = {
-				#	adshusheer eno sissipahaw uwharrie waxhaw
-				#}
-				#yadkin_province = {
-				#	saura alamance yadkin keyauwee
-				#}
-				#joara_province = {
-				#	joara iswa guaquili eswawpuddenah
-				#}
-				#kituwa_province = {
-				#	kituwa nikwasi guaxule
-				#	tahkeeosteh italwa wattogee watauga 
-				#	shady_valley_wasteland cumberland_mountains_3 tanasee_ridge kuwohi
-				#	blue_ridge_mountains cumberland_mountains_2 nantahala_forest
-				#}
-			}
-			south_carolina_area = {
-				waccamaw_province = {
-					waccamaw winyah winnee peedee pocotaligo
-				}
-				santee_province = {
-					etiwan wando kiawah coosaw combahee wimbee santee
-				}
-				cofitachequi_province = {
-					cofitachequi hymahi talimeco ilasi
-				}
-				catawba_province = {
-					catawba enoree pacolate amoyescheck
-				}
-				keowee_province = {
-					keowee oolenoy generostee
-				}
-				congaree_province = {
-					selkehatchie saluda congaree kosalu
-				}
-			}
-			georgia_us_area = {
-				capachequi_province = {
-					capachequi toa kasihta hitchauta pallachacola eufaula
-				}
-				ocute_province = {
-					ocute	ichisi altamaha cofaqui
-				}
-				coosa_province = {
-					coosa ulibahali apica talimachusi itaba utsutigway 
-					quanasee chattahoochee_forest
-				}
-				tugaloo_province = {
-					tugaloo nacoochee estatoe etoho
-				}
-				kiokee_province = {
-					kiokee wahachee ogeechee ohoopee
-				}
-				hitchiti_province = {
-					sawokli alapaha mikasuki alapahoochee ocmulgee oconee hitchiti
-				}
-				mocama_province = {
-					mocama tacatacaru tamathli icafui
-				}
-				ossabaw_province = {
-					tybee ossabaw sapelo canoochee
-				}
-				coweta_province = {
-					coweta kealedji pakanahuili tussahaw
-				}
-				tuckabutche_province = {
-					tuckabutche tescuntee chatahoochee
-				}
-			}
-			florida_area = {
-				timucua_province = {
-					timucua malapaz uriutina napituca
-				}
-				mayaca_province = {
-					mayaca utina itaraholata
-					crescent_lake george_lake_fl
-				}
-				jororo_province = {
-					jororo acuera surruque ho_bay
-					harris_lake apopka_lake
-				}
-				mayaimi_province = {
-					mayaimi ais guacata tequesta guarungube
-				}
-				okeechobee_province = {
-					tequemapo okeechobee caloosahatchee uriparacoxi
-					lake_okeechobee istokpoga_lake
-				}
-				potano_province = {
-					potano vicela uqueten
-				}
-				tampa_province = {
-					tocaste guazoco mocozo ozita
-				}
-				apalachee_province = {
-					apalachee anhayca azile uzachile
-				}
-				pensacola_province = {
-					pensacola watappo choctawhatchee chatot
-				}
-			}
 			tennessee_area = {
-				pelisipi_province = {
-					pelisipi shawnee xualae maniatique
-					cumberland_mountains
-					cumberland_mountains_4
-				}
+				#pelisipi_province = {
+				#	pelisipi shawnee xualae maniatique
+				#	cumberland_mountains
+				#	cumberland_mountains_4
+				#}
 				#hogohega_province = {
 				#	amoyeli_gunahita canasoga chiaha coste  hogohega great_smokies
 				#}
-				tanasi_province = {
-					chalahume satapo tellico hiwasee chatanugi chestowee
-					walden_ridge
-					cohutta_mountains
-				}
+				#tanasi_province = {
+				#	chalahume satapo tellico hiwasee chatanugi chestowee
+				#	walden_ridge
+				#	cohutta_mountains
+				#}
 				aniyutsi_province = {
 					daguwanalahi aniyutsi shawanoe spithota
 				}

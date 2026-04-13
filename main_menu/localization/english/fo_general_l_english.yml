@@ -8,6 +8,8 @@
 
  # Modifiers
  STATIC_MODIFIER_NAME_noble_flight: "Noble Flight"
+ STATIC_MODIFIER_NAME_fo_edge_fear: "Afraid of the Edge of the World"
+ STATIC_MODIFIER_NAME_fo_edge_fear.desc: "The Greek exodus resulted in the death of all involved by falling off the world. There is no need to risk our peoples lives for a useless venture."
 
  # Countries
  FO0: "Nea Rhómania"

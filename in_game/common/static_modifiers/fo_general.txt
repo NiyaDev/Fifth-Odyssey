@@ -1,0 +1,5 @@
+
+fo_edge_fear = {
+  allow_open_sea_exploration = no
+}
+
