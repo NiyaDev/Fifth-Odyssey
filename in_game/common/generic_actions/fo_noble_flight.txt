@@ -8,7 +8,7 @@ fo_noble_flight_funding = {
     scope:actor = {
       "estate(estate_type:nobles_estate)" = {
       	estate_gold > {
-      		value = 20
+      		value = 40
       		multiply = 1
       	}
       }
@@ -38,7 +38,7 @@ fo_noble_flight_funding = {
 				name = fo_noble_flight_wealth
 				value = {
 					add = var:fo_noble_flight_wealth
-					add = 20
+					add = 40
 				}
 			}
 		}
@@ -46,7 +46,7 @@ fo_noble_flight_funding = {
       "estate(estate_type:nobles_estate)" = {
 		  	estate_add_gold = {
 		  		value = {
-		  			add = -20
+		  			add = -40
 		  			multiply = 1
 		  		}
 		  	}
@@ -185,13 +185,6 @@ fo_noble_flight_sell_clergy = {
 fo_noble_flight_buying_ships = {
 	type = situation
 	show_message = no
-
-	allow = {}
-
-	cooldown = {
-		type = buy_ships_key
-		months = 2
-	}
 
 	select_trigger = {
 		looking_for_a = situation
