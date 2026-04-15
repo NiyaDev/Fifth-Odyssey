@@ -34,7 +34,10 @@ new_world = {
 						has_discovered_area = area:south_macaronesia_area
 						has_discovered_area = area:bermuda_area
 					}
-					NOT = { has_country_modifier = fo_edge_fear }
+				}
+				OR = {
+					owner = { has_country_modifier = fo_lied_por }
+					NOT = { exists = c:FO0 }
 				}
 			}
 		}

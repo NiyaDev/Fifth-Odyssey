@@ -1,0 +1,21 @@
+
+fo_exiled_nobles = {
+  major = yes
+  locked = {
+		always = yes
+	}
+  country_modifier = {
+		government_reform_slots = -1
+    global_nobles_estate_power = 0.50
+    stability_investment = -0.05
+    research_speed_modifier = -0.5
+    global_institution_growth_modifier = -0.5
+    embrace_institution_cost_modifier = 1.0
+    global_pop_assimilation_speed_modifier = -0.5
+    global_pop_conversion_speed_modifier = -0.5
+    local_tribal_promotion = -10.0
+  }
+
+  years = 0
+}
+

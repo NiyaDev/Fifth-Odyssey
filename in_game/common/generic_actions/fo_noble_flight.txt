@@ -223,7 +223,6 @@ fo_noble_flight_leave = {
 
   effect = {
     end_situation = situation:fo_noble_flight
-		scope:actor = { trigger_event_non_silently = { id = fo_noble_flight.100 } }
   }
 }
 

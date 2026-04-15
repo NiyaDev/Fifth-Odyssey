@@ -41,6 +41,11 @@
   - Works of Knowledge
     - +0.5? Tech growth
   - 
+- Landing effects:
+  - Custom farm building to get food
+  - If 1+ dev ships, +1 RGO level
+  - If 2+ dev ships, Mason built
+  - If 4+ dev ships, 
 
 ##### Actions
 - ~~Selling titles to Burghers~~
@@ -61,6 +66,7 @@
 - Trade money for either GreekFire or ByzSilk. other event is 4x expensive.
 - Trade money for Greek fire recipe
 - Trade money for ByzSilk
+- Specialty ship for horses?
 - CHOICE: Get cache of old documents
   - Renaissance after landing
   - get Aquaducts early
@@ -87,16 +93,28 @@
     - Pray to Poseidon (Change to Helennic)
   - LORE: Landing
   - FINISH
-
+- Explore immediate surroundings
+- After colonizing location with stone:
+  - If ByzSilk: Change RGO in capital to silk
+  - Else: 
 
 ##### Long term goals
 - 
+
 ##### Post "Fate of the Pheonix"
-- Bureaucracies
+###### Bureaucracies
   - Development: - -Tax Eff, ~ +Development, + 
   - Pop growth:  - -Tax Eff, ~ +Pop Growth,  + +Colonial Growth
-- Aquaducts
-  - Maybe lessen bonus and allow it to be built normally? Don't know if you cant build it.
+###### Buildings
+  - Aquaducts
+    - Maybe lessen bonus and allow it to be built normally? Don't know if you cant build it.
+###### Movements
+- Elysian culture groups in certain regions
+  - Core
+  - Coastal?
+  - Southern
+  - Hyperborean
+- An actual transition to Hellenist religion
 
 
 - Choose which estate exiles

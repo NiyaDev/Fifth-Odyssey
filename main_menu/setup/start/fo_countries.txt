@@ -1,4 +1,4 @@
-
+﻿
 countries = {
   FO0 = { # Rhomania
     starting_technology_level = 3
@@ -31,7 +31,7 @@ countries = {
 			  # Tribesmen
 			}
 			reforms = {
-			  
+			  fo_exiled_nobles
 			}
     }
     currency_data = {

@@ -22,7 +22,10 @@ fo_startup.1 = {
   option = {
     name = fo_startup.1.a
     high_risk_option = yes
-    trigger_event_non_silently = { id = fo_startup.2 }
+    trigger_event_non_silently = {
+      id = fo_startup.2
+      days = 7
+    }
   }
 
   # No content
@@ -41,7 +44,10 @@ fo_startup.2 = {
 
   option = {
     name = fo_startup.2.a
-    trigger_event_non_silently = { id = fo_startup.3 }
+    trigger_event_non_silently = {
+      id = fo_startup.3
+      days = 7
+    }
   }
 }
 
@@ -56,14 +62,17 @@ fo_startup.3 = {
     name = fo_startup.3.a
     
     activate_situation = situation:fo_noble_flight
-    trigger_event_non_silently = { id = fo_noble_flight.1 }
+    trigger_event_non_silently = {
+      id = fo_noble_flight.1
+      days = 7
+    }
     custom_tooltip = { text = fo_startup.3.aa }
   }
 
   # Clergy
   option = {
     name = fo_startup.3.b
-    limit = never
+    limit = { always = no }
     
     #activate_situation = situation:fo_clergy_flight
     custom_tooltip = { text = fo_startup.3.bb }
@@ -75,7 +84,7 @@ fo_startup.3 = {
     name = fo_startup.3.c
     limit = never
     
-    #activate_situation = situation:fo_clergy_flight
+    #activate_situation = situation:fo_burgher_flight
     custom_tooltip = { text = fo_startup.3.cc }
     custom_tooltip = { text = fo_startup.empty }
   }
@@ -83,7 +92,7 @@ fo_startup.3 = {
   # Commoners
   option = {
     name = fo_startup.3.d
-    limit = never
+    limit = { always = no }
     
     #activate_situation = situation:fo_commoner_flight
     custom_tooltip = { text = fo_startup.3.dd }
@@ -93,7 +102,7 @@ fo_startup.3 = {
   # Tribesmen / Cossacks
   option = {
     name = fo_startup.3.e
-    limit = never
+    limit = { always = no }
     
     #activate_situation = situation:fo_tribes_flight
     custom_tooltip = { text = fo_startup.3.ee }

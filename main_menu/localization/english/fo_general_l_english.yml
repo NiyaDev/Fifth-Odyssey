@@ -7,9 +7,11 @@
  fifth_odyssey_events.11.e: "To Elysium we go!"
 
  # Modifiers
- STATIC_MODIFIER_NAME_noble_flight: "Noble Flight"
- STATIC_MODIFIER_NAME_fo_edge_fear: "Afraid of the Edge of the World"
- STATIC_MODIFIER_NAME_fo_edge_fear.desc: "The Greek exodus resulted in the death of all involved by falling off the world. There is no need to risk our peoples lives for a useless venture."
+ #STATIC_MODIFIER_NAME_noble_flight: "Noble Flight"
+ #STATIC_MODIFIER_NAME_fo_edge_fear: "Afraid of the Edge of the World"
+ #STATIC_MODIFIER_NAME_fo_edge_fear.desc: "The Greek exodus resulted in the death of all involved by falling off the world. There is no need to risk our peoples lives for a useless venture."
+ STATIC_MODIFIER_NAME_fo_lied_por: "Lied to the Europeans"
+ STATIC_MODIFIER_NAME_fo_lied_por.desc: "We decieved the Europeans into thinking we fell off the edge of the world. We hope this disuades them from following us."
 
  # Countries
  FO0: "Nea Rhómania"
@@ -23,10 +25,13 @@
  FO4: "Várvaros"
  FO4_ADJ: "Varvariótis"
 
-
  # Locations
  new_rome_gr: "Néa Rómi"
  new_constantinople_gr: "Néa Konstantinoúpoli"
  new_pella_gr: "Néa Pélla"
  elyseia: "Elyseia"
+
+ # Reforms
+ fo_exiled_nobles: "Exiled Noble Government"
+ fo_exiled_nobles_desc: "A government formed by exiled nobles from the Old World.\nDue to constant infighting and a lack of laws or enforcement, it is a very ineffective at ruling."
 
