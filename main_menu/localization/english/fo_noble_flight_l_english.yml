@@ -4,10 +4,9 @@ l_english:
  fo_noble_flight: "The flight of the Nobles"
  fo_noble_flight_desc: "The Nobles of the empire have decided to flee in order to escape the encrouching threats."
  
- FO_NOBLE_FLIGHT_MONEY: "Current treasury: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_wealth').GetValue|2]"
+ FO_NOBLE_FLIGHT_MONEY: "Current treasury: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('wealth').GetValue|2]"
  FO_NOBLE_FLIGHT_SPECIAL: "Exodus fleet:"
- #FO_NOBLE_FLIGHT_SPECIAL_GOODS: "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_combat').GetValue|2] - Combat ships\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_resource').GetValue|2] - Resource transports\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_pop').GetValue|2] - Population transport"
- FO_NOBLE_FLIGHT_SPECIAL_GOODS: "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('fo_noble_flight_combat').GetValue|2] - Combat ships\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('dev_output').GetValue|2] - Development on landing\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('dev_money').GetValue|2] - Money on landing\n\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('population_nob').GetValue|2] - Nobles\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('population_comm').GetValue|2] - Commoners"
+ FO_NOBLE_FLIGHT_SPECIAL_GOODS: "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('combat').GetValue|2] - Combat ships\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('dev_output').GetValue|2] - Development on landing\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('dev_money').GetValue|2] - Money on landing\n\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('population_nob').GetValue|2] - Nobles\n[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('population_comm').GetValue|2] - Commoners"
 
  # Actions
  fo_noble_flight_test: "TEST_BUTTON"

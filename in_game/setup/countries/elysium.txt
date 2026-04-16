@@ -1,4 +1,11 @@
 
+FO0 = {
+  color = rgb {255, 17, 21}
+
+  culture_definition = greek_culture
+  religion_definition = orthodox
+}
+
 
 FO0 = { # Rhomania (Nobles)
   color = rgb {255, 17, 21}

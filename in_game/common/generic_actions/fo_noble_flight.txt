@@ -35,9 +35,9 @@ fo_noble_flight_funding = {
   effect = {
   	situation:fo_noble_flight = {
   		set_variable = {
-				name = fo_noble_flight_wealth
+				name = wealth
 				value = {
-					add = var:fo_noble_flight_wealth
+					add = var:wealth
 					add = 40
 				}
 			}
@@ -94,9 +94,9 @@ fo_noble_flight_sell_burghers = {
 	effect = {
 		situation:fo_noble_flight = {
   		set_variable = {
-				name = fo_noble_flight_wealth
+				name = wealth
 				value = {
-					add = var:fo_noble_flight_wealth
+					add = var:wealth
 					add = 20
 				}
 			}
@@ -156,9 +156,9 @@ fo_noble_flight_sell_clergy = {
 	effect = {
 		situation:fo_noble_flight = {
   		set_variable = {
-				name = fo_noble_flight_wealth
+				name = wealth
 				value = {
-					add = var:fo_noble_flight_wealth
+					add = var:wealth
 					add = 20
 				}
 			}
@@ -221,8 +221,6 @@ fo_noble_flight_leave = {
 		}
 	}
 
-  effect = {
-    end_situation = situation:fo_noble_flight
-  }
+  effect = { end_situation = situation:fo_noble_flight }
 }
 

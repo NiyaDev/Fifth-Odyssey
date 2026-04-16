@@ -6,15 +6,6 @@ fo_noble_flight.1 = {
   desc = fo_noble_flight.1.desc
   fire_only_once = yes
 
-  immediate = {
-    situation:fo_noble_flight = {
-      set_variable = {
-        name = spawned_characters
-        value = yes
-      }
-    }
-  }
-
   # Roman
   option = {
     name = fo_noble_flight.1.a
@@ -58,23 +49,20 @@ fo_noble_flight.10 = {
   # Combat ships
   option = {
     name = fo_noble_flight.10.a
-
-    trigger = {
-      situation:fo_noble_flight.var:fo_noble_flight_wealth > 40
-    }
+    trigger = { situation:fo_noble_flight.var:wealth >= 40 }
 
     situation:fo_noble_flight = {
   		set_variable = {
-				name = fo_noble_flight_wealth
+				name = wealth
 				value = {
-					add = var:fo_noble_flight_wealth
+					add = var:wealth
 					add = -40
 				}
 			}
 			set_variable = {
-			  name = fo_noble_flight_combat
+			  name = combat
 			  value = {
-			    add = var:fo_noble_flight_combat
+			    add = var:combat
 			    add = 1
 			  }
 			}
@@ -85,23 +73,20 @@ fo_noble_flight.10 = {
   # Resource ships
   option = {
     name = fo_noble_flight.10.b
-
-    trigger = {
-      situation:fo_noble_flight.var:fo_noble_flight_wealth > 50
-    }
+    trigger = { situation:fo_noble_flight.var:wealth >= 50 }
 
     situation:fo_noble_flight = {
   		set_variable = {
-				name = fo_noble_flight_wealth
+				name = wealth
 				value = {
-					add = var:fo_noble_flight_wealth
+					add = var:wealth
 					add = -50
 				}
 			}
 			set_variable = {
-			  name = fo_noble_flight_resource
+			  name = resource
 			  value = {
-			    add = var:fo_noble_flight_resource
+			    add = var:resource
 			    add = 1
 			  }
 			}
@@ -112,23 +97,20 @@ fo_noble_flight.10 = {
   # Pop ship
   option = {
     name = fo_noble_flight.10.c
-
-    trigger = {
-      situation:fo_noble_flight.var:fo_noble_flight_wealth > 30
-    }
+    trigger = { situation:fo_noble_flight.var:wealth >= 30 }
 
     situation:fo_noble_flight = {
   		set_variable = {
-				name = fo_noble_flight_wealth
+				name = wealth
 				value = {
-					add = var:fo_noble_flight_wealth
+					add = var:wealth
 					add = -30
 				}
 			}
 			set_variable = {
-			  name = fo_noble_flight_pop
+			  name = pop
 			  value = {
-			    add = var:fo_noble_flight_pop
+			    add = var:pop
 			    add = 1
 			  }
 			}
@@ -139,7 +121,6 @@ fo_noble_flight.10 = {
   # Cancel
   option = {
     name = fo_noble_flight.10.d
-
     custom_tooltip = { text = fo_noble_flight.10.dd }
   }
 }
@@ -152,137 +133,9 @@ fo_noble_flight.100 = {
   option = {
     name = fo_noble_flight.100.a
 
-    # Create Rhómania
-    location:patawomeck = {
-      change_location_owner = c:FO0
-      add_core = c:FO0
-      change_location_rank = location_rank:town
-
-      # Development
-      change_development = {
-      	add = situation:fo_noble_flight.var:dev_output
-      }
-
-      # Pops
-      add_pop = {
-        culture = root.culture
-        religion = root.religion
-        type = pop_type:peasants
-        size = {
-        	value = situation:fo_noble_flight.var:fo_noble_flight_pop
-        	multiply = 0.49
-        }
-      }
-      add_pop = {
-        culture = root.culture
-        religion = root.religion
-        type = pop_type:nobles
-        size = {
-         	value = situation:fo_noble_flight.var:fo_noble_flight_pop
-        	multiply = 0.01
-        }
-      }
-
-      IF = {
-        limit = { situation:fo_noble_flight.var:current_leader = character:fo_romaboo }
-        rename_location = new_rome_gr
-      }
-      IF = {
-        limit = { situation:fo_noble_flight.var:current_leader = character:fo_byzaboo }
-        rename_location = new_constantinople_gr
-      }
-      IF = {
-        limit = { situation:fo_noble_flight.var:current_leader = character:fo_alexaboo }
-        rename_location = new_pella_gr
-      }
-    }
-    situation:fo_noble_flight.var:current_leader = {
-      move_country = c:FO0
-    }
-    c:FO0 = {
-      change_government_type = government_type:monarchy
-      set_new_ruler = situation:fo_noble_flight.var:current_leader
-      add_reform = government_reform:fo_exiled_nobles
-    	add_gold = {	value = situation:fo_noble_flight.var:dev_money	}
-      add_country_modifier = {
-        mode = add_and_replace
-        modifier = fo_lied_por
-        desc = STATIC_MODIFIER_NAME_fo_lied_por.desc
-        years = -1
-      }
-      research_advance = advance_type:written_alphabet
-      research_advance = advance_type:cultural_traditions_law_advance
-      research_advance = advance_type:mapmaking
-      research_advance = advance_type:codified_laws
-      research_advance = advance_type:cultural_acceptance_advance
-      research_advance = advance_type:colonies
-      research_advance = advance_type:distribution_of_power_advance
-      research_advance = advance_type:subjects_advance
-      research_advance = advance_type:taxation_advance
-      research_advance = advance_type:legalism_advance
-      research_advance = advance_type:chancery_advance
-      research_advance = advance_type:monarchy_reform_traditions_advance
-      research_advance = advance_type:monarchy_royal_court_advance
-      research_advance = advance_type:state_administration_advance
-      research_advance = advance_type:medieval_administration
-      research_advance = advance_type:pest_house_advance
-      research_advance = advance_type:feudal_de_jure_law_advance
-      research_advance = advance_type:hospital_advance
-      research_advance = advance_type:salic_law_advance
-      research_advance = advance_type:partition_inheritance_advance
-      research_advance = advance_type:semi_salic_law_advance
-      research_advance = advance_type:scriptorium_advance
-      research_advance = advance_type:paper_guild_advance
-      research_advance = advance_type:library_advance
-      research_advance = advance_type:paper_guild_fiber_pulp_maintenance_advance
-      research_advance = advance_type:agriculture_advance
-      research_advance = advance_type:windmills_advance
-      research_advance = advance_type:city_building_advance
-      research_advance = advance_type:alchemy_advance
-      research_advance = advance_type:ranching
-      research_advance = advance_type:road_building
-      research_advance = advance_type:apothecary_advance
-      research_advance = advance_type:horse_riding_advance
-      research_advance = advance_type:feudalism_advance
-      research_advance = advance_type:unlock_horsemen_advance
-      research_advance = advance_type:castle_advance
-      research_advance = advance_type:unlock_feudal_levy_advance
-      research_advance = advance_type:noble_knights
-      research_advance = advance_type:unlock_armored_horsemen_advance
-      research_advance = advance_type:royal_court_advance
-      research_advance = advance_type:republican_assembly_advance
-      research_advance = advance_type:fort_limit_1_advance
-      research_advance = advance_type:byz_cataphracts_advance
-      research_advance = advance_type:byz_akritai_advance
-      research_advance = advance_type:serfdom
-      research_advance = advance_type:mining_advance
-      research_advance = advance_type:ship_building_advance
-      research_advance = advance_type:metallurgy
-      research_advance = advance_type:mining_law_advance
-      research_advance = advance_type:trade_advance_age_of_trad
-      research_advance = advance_type:unlock_traditional_galley_advance
-      research_advance = advance_type:bronze_working
-      research_advance = advance_type:iron_working
-      research_advance = advance_type:weapon_guild_advance
-      research_advance = advance_type:more_merchants_age_of_trad
-      research_advance = advance_type:unlock_cog_advance
-      research_advance = advance_type:fine_metals_mining
-      research_advance = advance_type:local_smelters_advance
-      research_advance = advance_type:advanced_mining
-      research_advance = advance_type:faster_levy_recruitment
-      research_advance = advance_type:unlock_footmen_advance
-      research_advance = advance_type:unlock_archers_advance
-      # Orthodox
-      #IF = {
-      #  LIMIT = {}
-        research_advance = advance_type:the_pentarchy
-        research_advance = advance_type:imperial_creed
-        research_advance = advance_type:filioque_issue
-        research_advance = advance_type:septuagint
-        research_advance = advance_type:anagignoskomena
-        research_advance = advance_type:cathedral_advance
-      #}
-    }
+    fo_noble_flight_update_province = yes
+    fo_noble_flight_update_situation = yes
+    fo_noble_flight_update_country = yes
     change_player = c:FO0
   }
 }

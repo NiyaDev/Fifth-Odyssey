@@ -44,17 +44,5 @@ countries = {
     }
     liturgical_language = greek_language
   }
-  FO1 = { # Ekklisia
-
-  }
-  FO2 = { # Karchidona
-
-  }
-  FO3 = { # Ilysion
-
-  }
-  FO4 = { # Varvaros
-
-  }
 }
 

@@ -10,7 +10,12 @@
     tag = BYZ
   }
 
-  on_start = {}
+  on_starting = {
+    set_variable = {
+      name = religion
+      value = religion:orthodox
+    }
+  }
   on_ending = {
     c:BYZ = { trigger_event_non_silently = fo_noble_flight.100 }
   }
@@ -21,14 +26,14 @@
       set_variable = {
         name = dev_output
         value = {
-          add = var:fo_noble_flight_resource
+          add = var:resource
           multiply = 0.1
         }
       }
       set_variable = {
         name = dev_money
         value = {
-          add = var:fo_noble_flight_resource
+          add = var:resource
           multiply = 25
         }
       }
@@ -37,22 +42,18 @@
       set_variable = {
         name = population_comm
         value = {
-          add = var:fo_noble_flight_pop
+          add = var:pop
           multiply = 490
         }
       }
       set_variable = {
         name = population_nob
         value = {
-          add = var:fo_noble_flight_pop
+          add = var:pop
           multiply = 10
         }
       }
     }
-  }
-
-  tooltip = {
-    custom_tooltip = "FUCK"
   }
 }
 

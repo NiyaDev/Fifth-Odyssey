@@ -6,6 +6,7 @@ fo_exiled_nobles = {
 	}
   country_modifier = {
 		government_reform_slots = -1
+		government_size = -1
     global_nobles_estate_power = 0.50
     stability_investment = -0.05
     research_speed_modifier = -0.5

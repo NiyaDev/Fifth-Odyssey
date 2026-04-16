@@ -26,17 +26,17 @@
 ##### General
 - ~~Forces leave after 5 years~~
 - ~~Show current leader choice for exodus~~
-- Figure out why situation on_end doesnt trigger event
+- ~~Figure out why situation on_end doesnt trigger event~~
 - Create new autocephalous patriarchate
 - Government Policies:
-  - Noble Exile colony
-    - -0.1? stability
-    - -0.5? tech growth
-    - -50% Institution Spread
-    - +100% Institution cost
-    - -50% Assimilation
-    - -50% Conversion
-    - -100% Tribesman settling
+  - ~~Noble Exile colony~~
+    - ~~-0.1? stability~~
+    - ~~-0.5? tech growth~~
+    - ~~-50% Institution Spread~~
+    - ~~+100% Institution cost~~
+    - ~~-50% Assimilation~~
+    - ~~-50% Conversion~~
+    - ~~-100% Tribesman settling~~
 - Modifiers:
   - Works of Knowledge
     - +0.5? Tech growth
