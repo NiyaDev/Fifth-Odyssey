@@ -65,12 +65,24 @@ fo_noble_flight_update_country = {
         multiply = 25
       }
     }
-    # Remove
-    add_country_modifier = {
-      mode = add_and_replace
-      modifier = fo_lied_por
-      desc = STATIC_MODIFIER_NAME_fo_lied_por
-      years = -1
+    
+    if = { # Lied to Portugal
+      limit = { situation:fo_noble_flight.var:lied = yes }
+      add_country_modifier = {
+        mode = add_and_replace
+        modifier = fo_lied_por
+        desc = STATIC_MODIFIER_NAME_fo_lied_por
+        years = -1
+      }
+    }
+    if = { # Obtained ancient knowledge
+      limit = { situation:fo_noble_flight.var:knowledge = yes }
+      add_country_modifier = {
+        mode = add_and_replace
+        modifier = fo_knowledge
+        desc = STATIC_MODIFIER_NAME_fo_knowledge
+        years = -1
+      }
     }
 
     # Advances

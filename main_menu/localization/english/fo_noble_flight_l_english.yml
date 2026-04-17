@@ -40,6 +40,7 @@ l_english:
  fo_noble_flight.1.a: "[GetCharacter('fo_romaboo').GetName], The Daughter of Rome"
  fo_noble_flight.1.b: "[GetCharacter('fo_byzaboo').GetName], The Heir to the Empire"
  fo_noble_flight.1.c: "[GetCharacter('fo_alexaboo').GetName], Alexander reborn"
+
  fo_noble_flight.10.title: "Financing shipwrights"
  fo_noble_flight.10.desc: "The burgher shipwrights are more than willing to build ships with no questions asked. For the right price.\nNow the only question is what type of ship to construct."
  fo_noble_flight.10.a: "Light ship"
@@ -49,7 +50,20 @@ l_english:
  fo_noble_flight.10.c: "Population transport"
  fo_noble_flight.10.cc: "Construct a transport ship designed to carry as many people as possible. Cost: 30"
  fo_noble_flight.10.d: "Stop building"
- 
+
+ fo_noble_flight.11.title: "Knowledge of our forebearers"
+ fo_noble_flight.11.desc: "The largest collection of Greek literature, the Imperial Library of Constantinople, was destroyed in 1204 by the French and Venetians. The French were a more barbaric people then, so it is unlikely any of the texts they looted remain. The Venetians for all their flaws know value when they see it. Members of our group have put forward the idea of apporaching the Doge in an attempt to retrieve texts that may be of value.\nAll it requires is a little capital and some pulled strings."
+ fo_noble_flight.11.a: "Pay them handsomely"
+ fo_noble_flight.11.b: "Try to convince them"
+ fo_noble_flight.11.c: "We refuse to pay or beg for OUR texts"
+
+ fo_noble_flight.12.title: "The Venetians accepted!"
+ fo_noble_flight.12.desc: "The Venetians generously accepted our request for the tomes, claiming no real desire to go through countless books that will more than likely go nowhere."
+ fo_noble_flight.12.a: "Fetch the ships!"
+ fo_noble_flight.13.title: "The Venetians refused!"
+ fo_noble_flight.13.desc: "The contemptuious Venetians denied us, claiming while they had no desire to flip through dusty tomes without a guarantee of profit. Our interest in them has made them curious what exactly they have."
+ fo_noble_flight.13.a: "Those villains!"
+
  fo_noble_flight.100.title: "Finalizing the journey"
  fo_noble_flight.100.desc: "The time has come and the ships are stocked. The fleet, led by the Exodus and it's leader [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('current_leader').GetValue|2], finally leaves their stations across the empire meeting up off the coast of Achaea."
  fo_noble_flight.100.a: "The journey has begun..."

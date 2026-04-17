@@ -6,37 +6,17 @@ fo_noble_flight.1 = {
   desc = fo_noble_flight.1.desc
   fire_only_once = yes
 
-  # Roman
-  option = {
+  option = { # Roman
     name = fo_noble_flight.1.a
-    situation:fo_noble_flight = {
-      set_variable = {
-        name = current_leader
-        value = character:fo_romaboo
-      }
-    }
+    situation:fo_noble_flight = { set_variable = { name = current_leader value = character:fo_romaboo } }
   }
-
-  # Greek
-  option = {
+  option = { # Greek
     name = fo_noble_flight.1.b
-    situation:fo_noble_flight = {
-      set_variable = {
-        name = current_leader
-        value = character:fo_byzaboo
-      }
-    }
+    situation:fo_noble_flight = { set_variable = { name = current_leader value = character:fo_byzaboo } }
   }
-
-  # Macedonian
-  option = {
+  option = { # Macedonian
     name = fo_noble_flight.1.c
-    situation:fo_noble_flight = {
-      set_variable = {
-        name = current_leader
-        value = character:fo_alexaboo
-      }
-    }
+    situation:fo_noble_flight = { set_variable = { name = current_leader value = character:fo_alexaboo } }
   }
 }
 
@@ -46,83 +26,92 @@ fo_noble_flight.10 = {
   title = fo_noble_flight.10.title
   desc = fo_noble_flight.10.desc
 
-  # Combat ships
-  option = {
+  option = { # Combat ships
     name = fo_noble_flight.10.a
     trigger = { situation:fo_noble_flight.var:wealth >= 40 }
 
     situation:fo_noble_flight = {
-  		set_variable = {
-				name = wealth
-				value = {
-					add = var:wealth
-					add = -40
-				}
-			}
-			set_variable = {
-			  name = combat
-			  value = {
-			    add = var:combat
-			    add = 1
-			  }
-			}
+  		set_variable = { name = wealth value = { add = var:wealth add = -40 } }
+			set_variable = { name = combat value = { add = var:combat add =   1 } }
 		}
 		custom_tooltip = { text = fo_noble_flight.10.aa }
   }
-
-  # Resource ships
-  option = {
+  option = { # Resource ships
     name = fo_noble_flight.10.b
     trigger = { situation:fo_noble_flight.var:wealth >= 50 }
 
     situation:fo_noble_flight = {
-  		set_variable = {
-				name = wealth
-				value = {
-					add = var:wealth
-					add = -50
-				}
-			}
-			set_variable = {
-			  name = resource
-			  value = {
-			    add = var:resource
-			    add = 1
-			  }
-			}
+  		set_variable = { name = wealth   value = { add = var:wealth add = -50 } }
+			set_variable = { name = resource value = { add = var:resource add = 1 } }
 		}
 		custom_tooltip = { text = fo_noble_flight.10.bb }
   }
-
-  # Pop ship
-  option = {
+  option = { # Pop ship
     name = fo_noble_flight.10.c
     trigger = { situation:fo_noble_flight.var:wealth >= 30 }
 
     situation:fo_noble_flight = {
-  		set_variable = {
-				name = wealth
-				value = {
-					add = var:wealth
-					add = -30
-				}
-			}
-			set_variable = {
-			  name = pop
-			  value = {
-			    add = var:pop
-			    add = 1
-			  }
-			}
+      set_variable = { name = wealth value = { add = var:wealth add = -30 } }
+      set_variable = { name = pop value = { add = var:pop add = 1 }	}
 		}
 		custom_tooltip = { text = fo_noble_flight.10.cc }
   }
-
-  # Cancel
-  option = {
+  option = { # Cancel
     name = fo_noble_flight.10.d
     custom_tooltip = { text = fo_noble_flight.10.dd }
   }
+}
+
+fo_noble_flight.11 = {
+  type = country_event
+  category = situation
+  title = fo_noble_flight.11.title
+  desc = fo_noble_flight.11.desc
+  fire_only_once = yes
+
+  trigger = { situation:fo_noble_flight.var:wealth >= 80 }
+  dynamic_historical_event = {
+    tag = BYZ
+    to = 1339.12.31
+    monthly_chance = 20
+  }
+
+  option = { # Pay the Venetians
+    name = fo_noble_flight.11.a
+    random_list = {
+      90 = {
+        situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -80 } } }
+        trigger_event_non_silently = { id = fo_noble_flight.12 }
+      }
+      10 = { trigger_event_non_silently = { id = fo_noble_flight.13 } }
+    }
+  }
+  option = { # Convince the Venetians
+    name = fo_noble_flight.11.b
+    random_list = {
+      10 = { trigger_event_non_silently = { id = fo_noble_flight.12 } }
+      90 = { trigger_event_non_silently = { id = fo_noble_flight.13 } }
+    }
+  }
+  option = { name = fo_noble_flight.11.c } # Ignore the idea
+}
+
+fo_noble_flight.12 = { # Venetians accept
+  type = country_event
+  title = fo_noble_flight.12.title
+  desc = fo_noble_flight.12.desc
+
+  option = {
+    name = fo_noble_flight.12.a
+    situation:fo_noble_flight = { set_variable = { name = knowledge value = yes } }
+  }
+}
+fo_noble_flight.13 = { # Venetians refuse
+  type = country_event
+  title = fo_noble_flight.13.title
+  desc = fo_noble_flight.13.desc
+
+  option = { name = fo_noble_flight.13.a }
 }
 
 fo_noble_flight.100 = {

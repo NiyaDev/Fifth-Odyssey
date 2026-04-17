@@ -3,4 +3,4 @@ fo_edge_fear = {
   allow_open_sea_exploration = no
 }
 fo_lied_por = {}
-
+fo_knowledge = {}

@@ -1,4 +1,5 @@
-﻿fo_noble_flight = {
+﻿
+fo_noble_flight = {
   monthly_spawn_chance = 0
 
   can_end = {
@@ -10,12 +11,6 @@
     tag = BYZ
   }
 
-  on_starting = {
-    set_variable = {
-      name = religion
-      value = religion:orthodox
-    }
-  }
   on_ending = {
     c:BYZ = { trigger_event_non_silently = fo_noble_flight.100 }
   }

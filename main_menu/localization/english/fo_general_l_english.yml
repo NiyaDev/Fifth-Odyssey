@@ -12,6 +12,8 @@
  #STATIC_MODIFIER_NAME_fo_edge_fear.desc: "The Greek exodus resulted in the death of all involved by falling off the world. There is no need to risk our peoples lives for a useless venture."
  STATIC_MODIFIER_NAME_fo_lied_por: "Lied to the Europeans"
  STATIC_MODIFIER_NAME_fo_lied_por.desc: "We decieved the Europeans into thinking we fell off the edge of the world. We hope this disuades them from following us."
+ STATIC_MODIFIER_NAME_fo_knowledge: "Ancient Knowledge"
+ STATIC_MODIFIER_NAME_fo_knowledge.desc: "We possess ancient knowledge from before the destruction of The Imperial Library of Constantinople in 1204."
 
  # Countries
  FO0: "Nea Rhómania"

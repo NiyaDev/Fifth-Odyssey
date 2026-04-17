@@ -18,10 +18,6 @@
 #### Map
 - More area changes
 
-#### Advances
-- Greek fire infantry
-
-
 #### The flight of the nobles
 ##### General
 - ~~Forces leave after 5 years~~
@@ -63,6 +59,12 @@
   - ~~Romaboo - Boss bitch~~
   - ~~Byzaboo - LARPer~~
   - ~~Alexander reborn~~
+- Approach the Venetians for ancient knowledge
+  - later gives:
+    - Early Aquaducts advance
+    - Great library of Elysium building
+      - Provides +1 renaisance
+    - Greek Fire advance
 - Trade money for either GreekFire or ByzSilk. other event is 4x expensive.
 - Trade money for Greek fire recipe
 - Trade money for ByzSilk
@@ -115,6 +117,8 @@
   - Southern
   - Hyperborean
 - An actual transition to Hellenist religion
+###### Advances
+- Greek fire infantry
 
 
 - Choose which estate exiles
