@@ -37,3 +37,7 @@
  fo_exiled_nobles: "Exiled Noble Government"
  fo_exiled_nobles_desc: "A government formed by exiled nobles from the Old World.\nDue to constant infighting and a lack of laws or enforcement, it is a very ineffective at ruling."
 
+ # Buildings
+ overforage: "Over-foraging"
+ overforage_desc: "Our newly landed people are gathering any and all foodstuffs they can find in the immediate area while we set up farms."
+

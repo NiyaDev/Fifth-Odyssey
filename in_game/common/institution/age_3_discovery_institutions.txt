@@ -37,7 +37,7 @@ new_world = {
 				}
 				OR = {
 					owner = { has_country_modifier = fo_lied_por }
-					NOT = { exists = c:FO0 }
+					NOT = { country_exists = c:FO0 }
 				}
 			}
 		}

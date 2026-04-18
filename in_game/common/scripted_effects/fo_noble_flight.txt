@@ -1,8 +1,10 @@
 
 fo_noble_flight_update_province = {
+
   location:patawomeck = {
     change_location_owner = c:FO0
     hidden_effect = { add_core = c:FO0 }
+    change_location_rank = location_rank:town
 
     # Development
     change_development = {
@@ -31,6 +33,42 @@ fo_noble_flight_update_province = {
       size = {
         value = situation:fo_noble_flight.var:pop
         multiply = 0.005
+      }
+    }
+
+    construct_building = { # Overforaging
+      building_type = building_type:overforage
+      cost_multiplier = 0
+      instant = yes
+    }
+
+    # Landing effects
+    if = { # RGO level
+      limit = { situation:fo_noble_flight.var:resource > 0 }
+      change_max_raw_material_workers = 1
+    }
+    if = { # Mason
+      limit = { situation:fo_noble_flight.var:resource > 1 }
+      construct_building = {
+        building_type = building_type:mason
+        cost_multiplier = 0
+        instant = yes
+      }
+    }
+    if = { # Lumbermill
+      limit = { situation:fo_noble_flight.var:resource > 2 }
+      construct_building = {
+        building_type = building_type:lumber_mill
+        cost_multiplier = 0
+        instant = yes
+      }
+    }
+    if = { # Tools
+      limit = { situation:fo_noble_flight.var:resource > 3 }
+      construct_building = {
+        building_type = building_type:tools_guild
+        cost_multiplier = 0
+        instant = yes
       }
     }
 
@@ -83,6 +121,14 @@ fo_noble_flight_update_country = {
         desc = STATIC_MODIFIER_NAME_fo_knowledge
         years = -1
       }
+    }
+
+    # Estate satisfaction
+    hidden_effect = {
+      add_estate_satisfaction = { type = estate_type:nobles_estate value = 60 }
+      add_estate_satisfaction = { type = estate_type:clergy_estate value = 50 }
+      add_estate_satisfaction = { type = estate_type:burghers_estate value = 50 }
+      add_estate_satisfaction = { type = estate_type:peasants_estate value = 50 }
     }
 
     # Advances

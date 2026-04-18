@@ -8,6 +8,7 @@
 ##### New World
 - ~~Global variable that stops it from spawning~~
 - ~~Maybe able to spawn in exile empire?~~
+- Need to test if fix works. But need to get to age of discovery to do it.
 ##### Global Trade
 - ~~Change to add exile regions~~
 ##### Age 5: Absolutism
@@ -18,12 +19,27 @@
 #### Map
 - More area changes
 
+#### Buildings
+- The Great Library of Elysium
+  - +Literacy for all
+  - +1 renaissance
+  - ???
+- ~~Over Foraging~~
+  - ~~+6 food~~
+  - ~~+100% cOMMONER POWER~~
+  - ~~+100% Food Production~~
+  - ~~-0.5% Prosperity~~
+  - ~~Destroyed after food in province is > +6 monthly~~
+
+#### Post-Landing Events
+- Create new autocephalous patriarchate
+- When second stone province colonized, convert captial to silk (With ByzSilk)
+
 #### The flight of the nobles
 ##### General
 - ~~Forces leave after 5 years~~
 - ~~Show current leader choice for exodus~~
 - ~~Figure out why situation on_end doesnt trigger event~~
-- Create new autocephalous patriarchate
 - Government Policies:
   - ~~Noble Exile colony~~
     - ~~-0.1? stability~~
@@ -34,14 +50,15 @@
     - ~~-50% Conversion~~
     - ~~-100% Tribesman settling~~
 - Modifiers:
-  - Works of Knowledge
-    - +0.5? Tech growth
-  - 
+  - ~~Works of Knowledge~~
 - Landing effects:
   - Custom farm building to get food
   - If 1+ dev ships, +1 RGO level
-  - If 2+ dev ships, Mason built
+  - If 2+ dev ships, 
+  - If 3+ dev ships, 
   - If 4+ dev ships, 
+  - If 5+ dev ships, 
+  - If 6+ dev ships, 
 
 ##### Actions
 - ~~Selling titles to Burghers~~
@@ -59,14 +76,12 @@
   - ~~Romaboo - Boss bitch~~
   - ~~Byzaboo - LARPer~~
   - ~~Alexander reborn~~
-- Approach the Venetians for ancient knowledge
+- ~Approach the Venetians for ancient knowledge~
   - later gives:
     - Early Aquaducts advance
     - Great library of Elysium building
       - Provides +1 renaisance
     - Greek Fire advance
-- Trade money for either GreekFire or ByzSilk. other event is 4x expensive.
-- Trade money for Greek fire recipe
 - Trade money for ByzSilk
 - Specialty ship for horses?
 - CHOICE: Get cache of old documents
@@ -98,7 +113,8 @@
 - Explore immediate surroundings
 - After colonizing location with stone:
   - If ByzSilk: Change RGO in capital to silk
-  - Else: 
+  - Else: ??
+- Build Market
 
 ##### Long term goals
 - 
