@@ -52,13 +52,11 @@
 - Modifiers:
   - ~~Works of Knowledge~~
 - Landing effects:
-  - Custom farm building to get food
-  - If 1+ dev ships, +1 RGO level
-  - If 2+ dev ships, 
-  - If 3+ dev ships, 
-  - If 4+ dev ships, 
-  - If 5+ dev ships, 
-  - If 6+ dev ships, 
+  - ~~Custom farm building to get food~~
+  - ~~If 1+ dev ships, +1 RGO level~~
+  - ~~If 2+ dev ships, Mason~~
+  - ~~If 3+ dev ships, Lunmber Mill~~
+  - ~~If 4+ dev ships, Tools Guild~~
 
 ##### Actions
 - ~~Selling titles to Burghers~~
@@ -82,11 +80,11 @@
     - Great library of Elysium building
       - Provides +1 renaisance
     - Greek Fire advance
-- Trade money for ByzSilk
-- Specialty ship for horses?
-- CHOICE: Get cache of old documents
-  - Renaissance after landing
-  - get Aquaducts early
+- Getting Silk
+  - Rob 'em blind
+  - ~~Buy it~~
+- Getting horses
+  - Buy ship to carry them
 - CHAIN: Take Flight
   - ACTION: Take to the ships
     - If dock  workers not paid off, lose 25% pops & resources

@@ -2,5 +2,16 @@
 fo_edge_fear = {
   allow_open_sea_exploration = no
 }
-fo_lied_por = {}
-fo_knowledge = {}
+fo_lied_por = {
+  monthly_prestige = -0.1
+}
+fo_knowledge = {
+  research_speed_modifier = 0.1
+}
+fo_silk = {
+  global_production_efficiency = 0.05
+}
+fo_horses = {
+  global_production_efficiency = 0.05
+}
+

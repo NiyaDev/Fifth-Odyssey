@@ -95,11 +95,11 @@ fo_noble_flight.11 = {
   }
   option = { name = fo_noble_flight.11.c } # Ignore the idea
 }
-
 fo_noble_flight.12 = { # Venetians accept
   type = country_event
   title = fo_noble_flight.12.title
   desc = fo_noble_flight.12.desc
+  fire_only_once = yes
 
   option = {
     name = fo_noble_flight.12.a
@@ -108,10 +108,106 @@ fo_noble_flight.12 = { # Venetians accept
 }
 fo_noble_flight.13 = { # Venetians refuse
   type = country_event
+  category = situation
   title = fo_noble_flight.13.title
   desc = fo_noble_flight.13.desc
 
   option = { name = fo_noble_flight.13.a }
+}
+
+fo_noble_flight.14 = { # Byzantine Silk
+  type = country_event
+  title = fo_noble_flight.14.title
+  desc = fo_noble_flight.14.desc
+
+  trigger = { situation:fo_noble_flight.var:wealth >= 80 }
+  dynamic_historical_event = {
+    tag = BYZ
+    to = 1339.12.31
+    monthly_chance = 10
+  }
+
+  option = { # Attempt robbery
+    name = fo_noble_flight.14.a
+    limit = { current_date < 1339.6.1 }
+    trigger_event_silently = { id = fo_noble_flight.15  days = 7 }
+    custom_tooltip = { text = fo_noble_flight.14.aa }
+  }
+  option = { # Attempt purchase
+    name = fo_noble_flight.14.b
+    if = {
+      limit = { dysaster_type:byzantine_succession_crisis = { disaster_is_active = yes } c:BYZ = { num_loans >= 6 } }
+      random_list = {
+        75 = {
+          situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -90 } } }
+          trigger_event_non_silently = { id = fo_noble_flight.15 }
+        }
+        25 = { trigger_event_non_silently = { id = fo_noble_flight.16 } }
+      }
+    }
+    else_if = {
+      limit = { dysaster_type:byzantine_succession_crisis = { disaster_is_active = yes } c:BYZ = { num_loans >= 4 } }
+      random_list = {
+        50 = {
+          situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -60 } } }
+          trigger_event_non_silently = { id = fo_noble_flight.15 }
+        }
+        50 = { trigger_event_non_silently = { id = fo_noble_flight.16 } }
+      }
+    }
+    else_if = {
+      limit = { dysaster_type:byzantine_succession_crisis = { disaster_is_active = yes } c:BYZ = { num_loans >= 2 } }
+      random_list = {
+        25 = {
+          situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -30 } } }
+          trigger_event_non_silently = { id = fo_noble_flight.15 }
+        }
+        75 = { trigger_event_non_silently = { id = fo_noble_flight.16 } }
+      }
+    }
+    else = {
+      random_list = {
+        5  = {
+          situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -30 } } }
+          trigger_event_non_silently = { id = fo_noble_flight.15 }
+        }
+        95 = { trigger_event_non_silently = { id = fo_noble_flight.16 } }
+      }
+    }
+    custom_tooltip = { text = fo_noble_flight.14.bb }
+  }
+  option = { # Not worth it
+    name = fo_noble_flight.14.c
+    custom_tooltip = { text = fo_noble_flight.14.cc }
+  }
+}
+fo_noble_flight.15 = { # Byazantium accepts offer for Silk
+  type = country_event
+  title = fo_noble_flight.15.title
+  desc = fo_noble_flight.15.desc
+  
+  option = {
+    name = fo_noble_flight.15.a
+    situation:fo_noble_flight = { set_variable = { name = silk value = yes } }
+  }
+}
+fo_noble_flight.16 = { # Byazantium rejects offer for Silk
+  type = country_event
+  title = fo_noble_flight.16.title
+  desc = fo_noble_flight.16.desc
+  
+  option = { name = fo_noble_flight.16.a }
+}
+fo_noble_flight.17 = { # Stealing Byzantine Silk 1
+  type = country_event
+  title = fo_noble_flight.17.title
+  desc = fo_noble_flight.17.desc
+
+  immediate = {
+    random_list = {
+      
+    }
+  }
 }
 
 fo_noble_flight.100 = {

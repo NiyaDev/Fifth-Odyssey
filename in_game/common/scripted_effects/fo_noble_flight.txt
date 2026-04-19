@@ -43,32 +43,34 @@ fo_noble_flight_update_province = {
     }
 
     # Landing effects
-    if = { # RGO level
-      limit = { situation:fo_noble_flight.var:resource > 0 }
-      change_max_raw_material_workers = 1
-    }
-    if = { # Mason
-      limit = { situation:fo_noble_flight.var:resource > 1 }
-      construct_building = {
-        building_type = building_type:mason
-        cost_multiplier = 0
-        instant = yes
+    hidden_effect = {
+      if = { # RGO level
+        limit = { situation:fo_noble_flight.var:resource > 0 }
+        change_max_raw_material_workers = 1
       }
-    }
-    if = { # Lumbermill
-      limit = { situation:fo_noble_flight.var:resource > 2 }
-      construct_building = {
-        building_type = building_type:lumber_mill
-        cost_multiplier = 0
-        instant = yes
+      if = { # Mason
+        limit = { situation:fo_noble_flight.var:resource > 1 }
+        construct_building = {
+          building_type = building_type:mason
+          cost_multiplier = 0
+          instant = yes
+        }
       }
-    }
-    if = { # Tools
-      limit = { situation:fo_noble_flight.var:resource > 3 }
-      construct_building = {
-        building_type = building_type:tools_guild
-        cost_multiplier = 0
-        instant = yes
+      if = { # Lumbermill
+        limit = { situation:fo_noble_flight.var:resource > 2 }
+        construct_building = {
+          building_type = building_type:lumber_mill
+          cost_multiplier = 0
+          instant = yes
+        }
+      }
+      if = { # Tools
+        limit = { situation:fo_noble_flight.var:resource > 3 }
+        construct_building = {
+          building_type = building_type:tools_guild
+          cost_multiplier = 0
+          instant = yes
+        }
       }
     }
 
@@ -106,33 +108,77 @@ fo_noble_flight_update_country = {
     
     if = { # Lied to Portugal
       limit = { situation:fo_noble_flight.var:lied = yes }
-      add_country_modifier = {
-        mode = add_and_replace
-        modifier = fo_lied_por
-        desc = STATIC_MODIFIER_NAME_fo_lied_por
-        years = -1
+      custom_tooltip = { text = STATIC_MODIFIER_NAME_fo_lied_por.desc }
+      hidden_effect = {
+        add_country_modifier = {
+          mode = add_and_replace
+          modifier = fo_lied_por
+          years = -1
+        }
       }
     }
     if = { # Obtained ancient knowledge
       limit = { situation:fo_noble_flight.var:knowledge = yes }
-      add_country_modifier = {
-        mode = add_and_replace
-        modifier = fo_knowledge
-        desc = STATIC_MODIFIER_NAME_fo_knowledge
-        years = -1
+      custom_tooltip = { text = STATIC_MODIFIER_NAME_fo_knowledge.desc }
+      hidden_effect = {
+        add_country_modifier = {
+          mode = add_and_replace
+          modifier = fo_knowledge
+          years = -1
+        }
+      }
+    }
+    if = { # Obtained Silk worms
+      limit = { situation:fo_noble_flight.var:silk = yes }
+      custom_tooltip = { text = STATIC_MODIFIER_NAME_fo_silk.desc }
+      hidden_effect = {
+        add_country_modifier = {
+          mode = add_and_replace
+          modifier = fo_silk
+          years = -1
+        }
+      }
+    }
+    if = { # Obtained Horses
+      limit = { situation:fo_noble_flight.var:horses = yes }
+      custom_tooltip = { text = STATIC_MODIFIER_NAME_fo_horses.desc }
+      hidden_effect = {
+        add_country_modifier = {
+          mode = add_and_replace
+          modifier = fo_horses
+          years = -1
+        }
       }
     }
 
-    # Estate satisfaction
-    hidden_effect = {
-      add_estate_satisfaction = { type = estate_type:nobles_estate value = 60 }
-      add_estate_satisfaction = { type = estate_type:clergy_estate value = 50 }
-      add_estate_satisfaction = { type = estate_type:burghers_estate value = 50 }
-      add_estate_satisfaction = { type = estate_type:peasants_estate value = 50 }
+    hidden_effect = { # Laws
+      add_policy = policy:central_councils
+      add_policy = policy:closed_borders_law
+      add_policy = policy:no_censorship
+      add_policy = policy:barter_exchange
+      add_policy = policy:civil_society
+      add_policy = policy:dop_traditional_distribution_of_power
+      add_policy = policy:uneducated_masses_education
+      add_policy = policy:by_blood
+      add_policy = policy:heir_same_religion
+      add_policy = policy:byzantine_law
+      add_policy = policy:all_cultures
+      add_policy = policy:forestry_ordinance
+      add_policy = policy:monogamous_marriage
+      add_policy = policy:peasants_mining_law
+      add_policy = policy:anti_piracy_policy
+      add_policy = policy:combined_patriarchate_policy
+      add_policy = policy:balanced_court_policy
     }
 
-    # Advances
-    hidden_effect = {
+    hidden_effect = { # Estate satisfaction
+      #add_estate_satisfaction = { type = estate_type:nobles_estate value = 60 }
+      add_estate_satisfaction = { type = estate_type:clergy_estate value = 50 }
+      add_estate_satisfaction = { type = estate_type:burghers_estate value = 50 }
+      #add_estate_satisfaction = { type = estate_type:peasants_estate value = 50 }
+    }
+
+    hidden_effect = { # Advances
       research_advance = advance_type:written_alphabet
       research_advance = advance_type:cultural_traditions_law_advance
       research_advance = advance_type:mapmaking
@@ -192,15 +238,16 @@ fo_noble_flight_update_country = {
       research_advance = advance_type:unlock_footmen_advance
       research_advance = advance_type:unlock_archers_advance
 
-      # Horses
-      research_advance = advance_type:horse_riding_advance
-      research_advance = advance_type:unlock_horsemen_advance
-      research_advance = advance_type:unlock_armored_horsemen_advance
-      research_advance = advance_type:byz_cataphracts_advance
+      if = { # Horses
+        limit = { situation:fo_noble_flight.var:horses = yes }
+        research_advance = advance_type:horse_riding_advance
+        research_advance = advance_type:unlock_horsemen_advance
+        research_advance = advance_type:unlock_armored_horsemen_advance
+        research_advance = advance_type:byz_cataphracts_advance
+      }
 
-      # Orthodox
-      if = {
-        LIMIT = { c:FO0.religion = religion:orthodox }
+      if = { # Orthodox
+        limit = { c:FO0.religion = religion:orthodox }
         research_advance = advance_type:the_pentarchy
         research_advance = advance_type:imperial_creed
         research_advance = advance_type:filioque_issue
