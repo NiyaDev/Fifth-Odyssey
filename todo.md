@@ -103,9 +103,6 @@
   - CHOICE: Portuguese sailors
     - Tell them where your going (Colonization like normal)
     - Lie and say you fell (Stop New World until re-contact)
-  - CHOICE: Storm
-    - Pray to God (Stay orthodox)
-    - Pray to Poseidon (Change to Helennic)
   - LORE: Landing
   - FINISH
 - Explore immediate surroundings

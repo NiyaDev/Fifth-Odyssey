@@ -129,8 +129,8 @@ fo_noble_flight.14 = { # Byzantine Silk
 
   option = { # Attempt robbery
     name = fo_noble_flight.14.a
-    limit = { current_date < 1339.6.1 }
-    trigger_event_silently = { id = fo_noble_flight.15  days = 7 }
+    trigger = { current_date < 1339.6.1 }
+    hidden_effect = { trigger_event_non_silently = { id = fo_noble_flight.17  days = 7 } }
     custom_tooltip = { text = fo_noble_flight.14.aa }
   }
   option = { # Attempt purchase
@@ -204,9 +204,221 @@ fo_noble_flight.17 = { # Stealing Byzantine Silk 1
   desc = fo_noble_flight.17.desc
 
   immediate = {
-    random_list = {
-      
+    situation:fo_noble_flight = { set_variable = { name = heist  value = 0 } }
+    situation:fo_noble_flight = { set_variable = { name = heist_bribe value = no } }
+    situation:fo_noble_flight = { set_variable = { name = heist_tools value = no } }
+    situation:fo_noble_flight = { set_variable = { name = heist_stake value = no } }
+  }
+
+  option = { # Hire the best
+    name = fo_noble_flight.17.a
+    trigger = {
+      situation:fo_noble_flight.var:heist_stake = no
+      situation:fo_noble_flight.var:wealth > 60
     }
+    situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -60 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist  value = { add = var:heist  add =   4 } } }
+    trigger_event_non_silently = {
+      id = fo_noble_flight.18
+      days = 14
+    }
+    custom_tooltip = { text = fo_noble_flight.17.aa }
+  }
+  option = { # Hire the mediumist
+    name = fo_noble_flight.17.b
+    trigger = {
+      situation:fo_noble_flight.var:heist_stake = no
+      situation:fo_noble_flight.var:wealth > 30
+    }
+    situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -30 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist  value = { add = var:heist  add =   2 } } }
+    trigger_event_non_silently = {
+      id = fo_noble_flight.18
+      days = 14
+    }
+    custom_tooltip = { text = fo_noble_flight.17.bb }
+  }
+  option = { # Hire the worst
+    name = fo_noble_flight.17.c
+    trigger = {
+      situation:fo_noble_flight.var:heist_stake = no
+      situation:fo_noble_flight.var:wealth > 5
+    }
+    situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -5 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist  value = { add = var:heist  add =  1 } } }
+    trigger_event_non_silently = {
+      id = fo_noble_flight.18
+      days = 14
+    }
+    custom_tooltip = { text = fo_noble_flight.17.cc }
+  }
+  option = { # Do it yourself
+    name = fo_noble_flight.17.d
+    situation:fo_noble_flight = { set_variable = { name = heist  value = { add = var:heist  add = var:current_leader.dip divide = 10 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist_leader  value = yes } }
+    trigger_event_non_silently = {
+      id = fo_noble_flight.18
+      days = 14
+    }
+    custom_tooltip = { text = fo_noble_flight.17.dd }
+  }
+  option = { # Nevermind
+    name = fo_noble_flight.17.e
+    trigger_event_non_silently = { id = fo_noble_flight.14 }
+    custom_tooltip = { text = fo_noble_flight.17.ee }
+  }
+}
+fo_noble_flight.18 = { # Stealing Byzantine Silk 2
+  type = country_event
+  title = fo_noble_flight.18.title
+  desc = fo_noble_flight.18.desc
+
+  option = { # Bribe
+    name = fo_noble_flight.18.a
+    trigger = {
+      situation:fo_noble_flight.var:heist_stake = no
+      situation:fo_noble_flight.var:wealth > 20
+    }
+    situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -20 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist  value = { add = var:heist  add =  2 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist_bribe  value = yes } }
+    trigger_event_non_silently = { id = fo_noble_flight.18 }
+    custom_tooltip = { text = fo_noble_flight.18.aa }
+  }
+  option = { # Equipment
+    name = fo_noble_flight.18.b
+    trigger = {
+      situation:fo_noble_flight.var:heist_stake = no
+      situation:fo_noble_flight.var:wealth > 10
+    }
+    situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -10 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist  value = { add = var:heist  add =  2 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist_tools  value = yes } }
+    trigger_event_non_silently = { id = fo_noble_flight.18 }
+    custom_tooltip = { text = fo_noble_flight.18.bb }
+  }
+  option = { # Stakeout
+    name = fo_noble_flight.18.c
+    trigger = {
+      situation:fo_noble_flight.var:heist_stake = no
+      situation:fo_noble_flight.var:wealth > 10
+    }
+    situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -10 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist  value = { add = var:heist  add =  2 } } }
+    situation:fo_noble_flight = { set_variable = { name = heist_stake  value = yes } }
+    trigger_event_non_silently = { id = fo_noble_flight.18 }
+    custom_tooltip = { text = fo_noble_flight.18.cc }
+  }
+  option = { # End prep
+    name = fo_noble_flight.18.d
+    trigger_event_non_silently = {
+      id = fo_noble_flight.19
+      days = 14
+    }
+  }
+}
+fo_noble_flight.19 = { # Stealing Byzantine Silk 3
+  type = country_event
+  title = fo_noble_flight.19.title
+  desc = fo_noble_flight.19.desc
+  
+  option = {
+    name = fo_noble_flight.19.a
+
+    if = { # You didin't even try
+      limit = { situation:fo_noble_flight.var:heist = 0 }
+      custom_tooltip = { text = fo_noble_flight.19.aa }
+      situation:fo_noble_flight = { set_variable = { name = heist_success  value = no } }
+      hidden_effect = { trigger_event_non_silently = { id = fo_noble_flight.20 } }
+    }
+    else_if = { # Ver low
+      limit = { situation:fo_noble_flight.var:heist < 2 }
+      custom_tooltip = { text = fo_noble_flight.19.ab }
+      hidden_effect = {
+        random_list = {
+          10 = { situation:fo_noble_flight = { set_variable = { name = heist_success  value = yes } } }
+          90 = { situation:fo_noble_flight = { set_variable = { name = heist_success  value = no } } }
+        }
+        hidden_effect = { trigger_event_non_silently = { id = fo_noble_flight.20 days = 30 } }
+      }
+    }
+    else_if = { # low
+      limit = { situation:fo_noble_flight.var:heist < 4 }
+      custom_tooltip = { text = fo_noble_flight.19.ac }
+      hidden_effect = {
+        random_list = {
+          30 = { situation:fo_noble_flight = { set_variable = { name = heist_success  value = yes } } }
+          70 = { situation:fo_noble_flight = { set_variable = { name = heist_success  value = no } } }
+        }
+        hidden_effect = { trigger_event_non_silently = { id = fo_noble_flight.20 days = 30 } }
+      }
+    }
+    else_if = { # mediocre
+      limit = { situation:fo_noble_flight.var:heist < 6 }
+      custom_tooltip = { text = fo_noble_flight.19.ad }
+      hidden_effect = {
+        random_list = {
+          50 = { situation:fo_noble_flight = { set_variable = { name = heist_success  value = yes } } }
+          50 = { situation:fo_noble_flight = { set_variable = { name = heist_success  value = no } } }
+        }
+        hidden_effect = { trigger_event_non_silently = { id = fo_noble_flight.20 days = 30 } }
+      }
+    }
+    else_if = { # good
+      limit = { situation:fo_noble_flight.var:heist < 8 }
+      custom_tooltip = { text = fo_noble_flight.19.ae }
+      hidden_effect = {
+        random_list = {
+          70 = { situation:fo_noble_flight = { set_variable = { name = heist_success  value = yes } } }
+          30 = { situation:fo_noble_flight = { set_variable = { name = heist_success  value = no } } }
+        }
+        hidden_effect = { trigger_event_non_silently = { id = fo_noble_flight.20 days = 30 } }
+      }
+    }
+    else = { # Perfect
+      custom_tooltip = { text = fo_noble_flight.19.af }
+      hidden_effect = {
+        situation:fo_noble_flight = { set_variable = { name = heist_success  value = yes } }
+        hidden_effect = { trigger_event_non_silently = { id = fo_noble_flight.20 days = 30 } }
+      }
+    }
+  }
+}
+fo_noble_flight.20 = { # Heist end
+  type = country_event
+  title = {
+    first_valid = {
+      triggered_desc = { # Success
+        desc = fo_noble_flight.20.title_s
+        trigger = { situation:fo_noble_flight.var:heist_success = yes }
+      }
+      triggered_desc = { # Fail
+        desc = fo_noble_flight.20.title_f
+        trigger = { situation:fo_noble_flight.var:heist_success = no }
+      }
+    }
+  }
+  desc = {
+    first_valid = {
+      triggered_desc = { # Success
+        desc = fo_noble_flight.20.desc_s
+        trigger = { situation:fo_noble_flight.var:heist_success = yes }
+      }
+      triggered_desc = { # Fail
+        desc = fo_noble_flight.20.desc_f
+        trigger = { situation:fo_noble_flight.var:heist_success = no }
+      }
+    }
+  }
+
+  option = { # Success
+    trigger = { situation:fo_noble_flight.var:heist_success = yes }
+    name = fo_noble_flight.20.a
+    situation:fo_noble_flight = { set_variable = { name = silk  value = yes } }
+  }
+  option = { # Fail
+    trigger = { situation:fo_noble_flight.var:heist_success = no }
+    name = fo_noble_flight.20.b
   }
 }
 
