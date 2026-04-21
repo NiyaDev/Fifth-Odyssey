@@ -1,6 +1,6 @@
 namespace = fo_noble_flight
 
-fo_noble_flight.1 = {
+fo_noble_flight.1 = { # Choose Leader
   type = country_event
   title = fo_noble_flight.1.title
   desc = fo_noble_flight.1.desc
@@ -20,7 +20,7 @@ fo_noble_flight.1 = {
   }
 }
 
-fo_noble_flight.10 = {
+fo_noble_flight.10 = { # Buy Ships
   type = country_event
   category = situation_event
   title = fo_noble_flight.10.title
@@ -62,7 +62,7 @@ fo_noble_flight.10 = {
   }
 }
 
-fo_noble_flight.11 = {
+fo_noble_flight.11 = { # Buy Knowledge
   type = country_event
   category = situation
   title = fo_noble_flight.11.title
@@ -81,38 +81,81 @@ fo_noble_flight.11 = {
     random_list = {
       90 = {
         situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -80 } } }
-        trigger_event_non_silently = { id = fo_noble_flight.12 }
+        situation:fo_noble_flight = { set_variable = { name = knowledge value = yes } }
       }
-      10 = { trigger_event_non_silently = { id = fo_noble_flight.13 } }
+      10 = { situation:fo_noble_flight = { set_variable = { name = knowledge value = no } } }
     }
+    trigger_event_non_silently = { id = fo_noble_flight.20 }
   }
   option = { # Convince the Venetians
     name = fo_noble_flight.11.b
     random_list = {
-      10 = { trigger_event_non_silently = { id = fo_noble_flight.12 } }
-      90 = { trigger_event_non_silently = { id = fo_noble_flight.13 } }
+      10 = { situation:fo_noble_flight = { set_variable = { name = knowledge value = yes } } }
+      90 = { situation:fo_noble_flight = { set_variable = { name = knowledge value =  no } } }
     }
+    trigger_event_non_silently = { id = fo_noble_flight.20 }
   }
   option = { name = fo_noble_flight.11.c } # Ignore the idea
 }
-fo_noble_flight.12 = { # Venetians accept
+fo_noble_flight.12 = { # Ventian Response
   type = country_event
-  title = fo_noble_flight.12.title
-  desc = fo_noble_flight.12.desc
-  fire_only_once = yes
+  title = {
+    first_valid = {
+      triggered_desc = { # Success
+        desc = fo_noble_flight.12.title_s
+        trigger = { situation:fo_noble_flight.var:knowledge = yes }
+      }
+      triggered_desc = { # Failure
+        desc = fo_noble_flight.12.title_f
+        trigger = { situation:fo_noble_flight.var:knowledge = no }
+      }
+    }
+  }
+  desc = {
+    first_valid = {
+      triggered_desc = { # Success
+        desc = fo_noble_flight.12.desc_s
+        trigger = { situation:fo_noble_flight.var:knowledge = yes }
+      }
+      triggered_desc = { # Failure
+        desc = fo_noble_flight.12.desc_f
+        trigger = { situation:fo_noble_flight.var:knowledge = no }
+      }
+    }
+  }
 
-  option = {
+  option = { # Success
+    trigger = { situation:fo_noble_flight.var:knowledge = yes }
     name = fo_noble_flight.12.a
-    situation:fo_noble_flight = { set_variable = { name = knowledge value = yes } }
+  }
+  option = { # Failure
+    trigger = { situation:fo_noble_flight.var:knowledge = no }
+    name = fo_noble_flight.12.b
   }
 }
-fo_noble_flight.13 = { # Venetians refuse
+
+fo_noble_flight.13 = { # Horses
   type = country_event
-  category = situation
   title = fo_noble_flight.13.title
   desc = fo_noble_flight.13.desc
 
-  option = { name = fo_noble_flight.13.a }
+  trigger = { situation:fo_noble_flight.var:wealth >= 40 }
+  dynamic_historical_event = {
+    tag = BYZ
+    to = 1339.12.31
+    monthly_chance = 10
+  }
+
+  option = {
+    name = fo_noble_flight.13.a
+    situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -40 } } }
+    situation:fo_noble_flight = { set_variable = { name = horses value = yes } }
+    custom_tooltip = { text = fo_noble_flight.13.aa }
+  }
+  option = {
+    name = fo_noble_flight.13.b
+    situation:fo_noble_flight = { set_variable = { name = horses value = no } }
+  }
 }
 
 fo_noble_flight.14 = { # Byzantine Silk
@@ -140,9 +183,13 @@ fo_noble_flight.14 = { # Byzantine Silk
       random_list = {
         75 = {
           situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -90 } } }
+          situation:fo_noble_flight = { set_variable = { name = silk value = yes } }
           trigger_event_non_silently = { id = fo_noble_flight.15 }
         }
-        25 = { trigger_event_non_silently = { id = fo_noble_flight.16 } }
+        25 = {
+          situation:fo_noble_flight = { set_variable = { name = silk value = no } }
+          trigger_event_non_silently = { id = fo_noble_flight.15 }
+        }
       }
     }
     else_if = {
@@ -150,9 +197,13 @@ fo_noble_flight.14 = { # Byzantine Silk
       random_list = {
         50 = {
           situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -60 } } }
+          situation:fo_noble_flight = { set_variable = { name = silk value = yes } }
           trigger_event_non_silently = { id = fo_noble_flight.15 }
         }
-        50 = { trigger_event_non_silently = { id = fo_noble_flight.16 } }
+        50 = {
+          situation:fo_noble_flight = { set_variable = { name = silk value = no } }
+          trigger_event_non_silently = { id = fo_noble_flight.15 }
+        }
       }
     }
     else_if = {
@@ -160,18 +211,26 @@ fo_noble_flight.14 = { # Byzantine Silk
       random_list = {
         25 = {
           situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -30 } } }
+          situation:fo_noble_flight = { set_variable = { name = silk value = yes } }
           trigger_event_non_silently = { id = fo_noble_flight.15 }
         }
-        75 = { trigger_event_non_silently = { id = fo_noble_flight.16 } }
+        75 = {
+          situation:fo_noble_flight = { set_variable = { name = silk value = no } }
+          trigger_event_non_silently = { id = fo_noble_flight.15 }
+        }
       }
     }
     else = {
       random_list = {
         5  = {
           situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:wealth add = -30 } } }
+          situation:fo_noble_flight = { set_variable = { name = silk value = yes } }
           trigger_event_non_silently = { id = fo_noble_flight.15 }
         }
-        95 = { trigger_event_non_silently = { id = fo_noble_flight.16 } }
+        95 = {
+          situation:fo_noble_flight = { set_variable = { name = silk value = no } }
+          trigger_event_non_silently = { id = fo_noble_flight.16 }
+        }
       }
     }
     custom_tooltip = { text = fo_noble_flight.14.bb }
@@ -181,22 +240,41 @@ fo_noble_flight.14 = { # Byzantine Silk
     custom_tooltip = { text = fo_noble_flight.14.cc }
   }
 }
-fo_noble_flight.15 = { # Byazantium accepts offer for Silk
+fo_noble_flight.15 = { Byzantine response
   type = country_event
-  title = fo_noble_flight.15.title
-  desc = fo_noble_flight.15.desc
-  
-  option = {
-    name = fo_noble_flight.15.a
-    situation:fo_noble_flight = { set_variable = { name = silk value = yes } }
+  title = {
+    first_valid = {
+      triggered_desc = { # Success
+        desc = fo_noble_flight.12.title_s
+        trigger = { situation:fo_noble_flight.var:silk = yes }
+      }
+      triggered_desc = { # Failure
+        desc = fo_noble_flight.12.title_f
+        trigger = { situation:fo_noble_flight.var:silk = no }
+      }
+    }
   }
-}
-fo_noble_flight.16 = { # Byazantium rejects offer for Silk
-  type = country_event
-  title = fo_noble_flight.16.title
-  desc = fo_noble_flight.16.desc
-  
-  option = { name = fo_noble_flight.16.a }
+  desc = {
+    first_valid = {
+      triggered_desc = { # Success
+        desc = fo_noble_flight.12.desc_s
+        trigger = { situation:fo_noble_flight.var:silk = yes }
+      }
+      triggered_desc = { # Failure
+        desc = fo_noble_flight.12.desc_f
+        trigger = { situation:fo_noble_flight.var:silk = no }
+      }
+    }
+  }
+
+  option = { # Success
+    trigger = { situation:fo_noble_flight.var:silk = yes }
+    name = fo_noble_flight.15.a
+  }
+  option = { # Failure
+    trigger = { situation:fo_noble_flight.var:silk = no }
+    name = fo_noble_flight.15.b
+  }
 }
 fo_noble_flight.17 = { # Stealing Byzantine Silk 1
   type = country_event

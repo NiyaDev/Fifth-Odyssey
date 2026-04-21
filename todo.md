@@ -26,7 +26,7 @@
   - ???
 - ~~Over Foraging~~
   - ~~+6 food~~
-  - ~~+100% cOMMONER POWER~~
+  - ~~+100% Commoner Power~~
   - ~~+100% Food Production~~
   - ~~-0.5% Prosperity~~
   - ~~Destroyed after food in province is > +6 monthly~~
@@ -34,6 +34,10 @@
 #### Post-Landing Events
 - Create new autocephalous patriarchate
 - When second stone province colonized, convert captial to silk (With ByzSilk)
+
+#### Achievements:
+- Perfect start: Nobles
+  - Only spend money on ships but still leave with everything possible
 
 #### The flight of the nobles
 ##### General
@@ -80,11 +84,11 @@
     - Great library of Elysium building
       - Provides +1 renaisance
     - Greek Fire advance
-- Getting Silk
-  - Rob 'em blind
+- ~~Getting Silk~~
+  - ~~Rob 'em blind~~
   - ~~Buy it~~
-- Getting horses
-  - Buy ship to carry them
+- ~~Getting horses~~
+  - ~~Buy ship to carry them~~
 - CHAIN: Take Flight
   - ACTION: Take to the ships
     - If dock  workers not paid off, lose 25% pops & resources
