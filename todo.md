@@ -90,14 +90,8 @@
 - ~~Getting horses~~
   - ~~Buy ship to carry them~~
 - CHAIN: Take Flight
-  - ACTION: Take to the ships
-    - If dock  workers not paid off, lose 25% pops & resources
-    - If not organized, lose 25% pops & resources
-  - CHOICE: Sailing across med
-    - Pay off Venetians, -ducats
-    - Fight, start war w/venice
-      - GreekFire: Auto win
-      - Else: chances to win based on cambat ship count
+  - ~~LORE: Take to the ships~~
+  - ~~LEADER: Sailing across med~~
   - LORE: Pillars of Hercules
   - CHOICE: Moorish raiders
     - Give them resources
@@ -107,6 +101,8 @@
   - CHOICE: Portuguese sailors
     - Tell them where your going (Colonization like normal)
     - Lie and say you fell (Stop New World until re-contact)
+  - LORE: Sailing
+  - LORE: Storm
   - LORE: Landing
   - FINISH
 - Explore immediate surroundings

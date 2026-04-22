@@ -5,6 +5,9 @@ fo_edge_fear = {
 fo_lied_por = {
   monthly_prestige = -0.1
 }
+fo_truth_por = {
+  monthly_prestige = 0.1
+}
 fo_knowledge = {
   research_speed_modifier = 0.1
 }

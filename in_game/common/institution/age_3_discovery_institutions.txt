@@ -36,8 +36,17 @@ new_world = {
 					}
 				}
 				OR = {
-					owner = { has_country_modifier = fo_lied_por }
-					NOT = { country_exists = c:FO0 }
+					OR = {
+						owner = { has_country_modifier = fo_lied_por }
+						NOT = { country_exists = c:FO0 }
+					}
+					AND = {
+						c:FO0 = { has_country_modifier = fo_truth_por }
+						OR = {
+							owner = c:FO0
+							owner = c:POR
+						}
+					}
 				}
 			}
 		}

@@ -12,6 +12,8 @@
  #STATIC_MODIFIER_NAME_fo_edge_fear.desc: "The Greek exodus resulted in the death of all involved by falling off the world. There is no need to risk our peoples lives for a useless venture."
  STATIC_MODIFIER_NAME_fo_lied_por: "Lied to the Europeans"
  STATIC_MODIFIER_NAME_fo_lied_por.desc: "We lied to the Iberians, claiming our exodus failed with our deaths at the edge of the world. They are less likely to follow us."
+ STATIC_MODIFIER_NAME_fo_truth_por: "Told the truth to the Europeans"
+ STATIC_MODIFIER_NAME_fo_truth_por.desc: "We told the truth to the Iberians, that we continued past the supposed \"End of the World\" and lived."
  STATIC_MODIFIER_NAME_fo_knowledge: "Ancient Knowledge"
  STATIC_MODIFIER_NAME_fo_knowledge.desc: "We brought with us countless books from the now destroyed Imperial Library. They may contain knowledge that will help us in the coming years."
  STATIC_MODIFIER_NAME_fo_silk: "Byzantine Silk"

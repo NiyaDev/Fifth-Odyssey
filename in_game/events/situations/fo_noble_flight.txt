@@ -347,7 +347,7 @@ fo_noble_flight.17 = { # Stealing Byzantine Silk 1
   }
 }
 fo_noble_flight.18 = { # Stealing Byzantine Silk 2
-  type = country_event
+type = country_event
   title = fo_noble_flight.18.title
   desc = fo_noble_flight.18.desc
 
@@ -512,6 +512,351 @@ fo_noble_flight.100 = {
     fo_noble_flight_update_situation = yes
     fo_noble_flight_update_country = yes
     change_player = c:FO0
+  }
+}
+
+fo_noble_flight.101 = { # Flight 1: Leaving
+  type = country_event
+  title = fo_noble_flight.101.title
+  desc = fo_noble_flight.101.desc
+
+  option = {
+    name = fo_noble_flight.101.a
+    trigger_event_non_silently = {
+      id = fo_noble_flight.102
+      days = 14
+    }
+  }
+}
+fo_noble_flight.102 = { # Flight 2: Meeting Genoese
+  type = country_event
+  title = fo_noble_flight.102.title
+  desc = fo_noble_flight.102.desc
+
+  immediate = { situation:fo_noble_flight = { set_variable = { name = pop_genoese value = 0 } } }
+
+  option = { # Rome
+    name = fo_noble_flight.102.a
+    limit = { situation:fo_noble_flight.var:current_leader = character:fo_romaboo }
+    situation:fo_noble_flight = { set_variable = { name = resource value = { add = var:resource add = 2 } } }
+    situation:fo_noble_flight = { set_variable = { name = combat value = { add = var:combat add = 2 } } }
+    trigger_event_non_silently = {
+      id = fo_noble_flight.103
+      days = 14
+    }
+  }
+  option = { # Byz
+    name = fo_noble_flight.102.b
+    limit = { situation:fo_noble_flight.var:current_leader = character:fo_byzaboo }
+    situation:fo_noble_flight = { set_variable = { name = resource value = { add = var:resource add = 1 } } }
+    situation:fo_noble_flight = { set_variable = { name = combat value = { add = var:combat add = 1 } } }
+    situation:fo_noble_flight = { set_variable = { name = pop_genoese value = { add = var:pop_genoese add = 2 } } }
+    # Genoese Captain
+    trigger_event_non_silently = {
+      id = fo_noble_flight.103
+      days = 14
+    }
+  }
+  option = { # Mace
+    name = fo_noble_flight.102.c
+    limit = { situation:fo_noble_flight.var:current_leader = character:fo_alexaboo }
+    situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:resource add = 4 } } }
+    trigger_event_non_silently = {
+
+      id = fo_noble_flight.103
+      days = 21
+    }
+  }
+}
+fo_noble_flight.103 = { # Flight 3: Pillars of Hercules
+  type = country_event
+  title = fo_noble_flight.103.title
+  desc = fo_noble_flight.103.desc
+  
+  option = {
+    name = fo_noble_flight.103.a
+    trigger_event_non_silently = {
+      id = fo_noble_flight.104
+      days = 4
+    }
+  }
+}
+fo_noble_flight.104 = { # Flight 4: Morrocans
+  type = country_event
+  title = fo_noble_flight.104.title
+  desc = fo_noble_flight.104.desc
+  
+  option = { # Offense
+    name = fo_noble_flight.104.a
+    hidden_effect = {
+      if = {
+        limit = { situation:fo_noble_flight.var:combat < 2 }
+        random_list = {
+          5  = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 1 } } }
+          95 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 } } }
+        }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+      else_if = {
+        limit = { situation:fo_noble_flight.var:combat < 4 }
+        random_list = {
+          25 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 1 } } }
+          75 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 } } }
+        }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+      else_if = {
+        limit = { situation:fo_noble_flight.var:combat < 6 }
+        random_list = {
+          75 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 1 } } }
+          25 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 } } }
+        }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+      else_if = {
+        limit = { situation:fo_noble_flight.var:combat >= 6 }
+        situation:fo_noble_flight = { set_variable = { name = pirate_win value = 2 } }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+    }
+  }
+  option = { # Defense
+    name = fo_noble_flight.104.b
+    hidden_effect = {
+      if = {
+        limit = { situation:fo_noble_flight.var:combat < 2 }
+        random_list = {
+          25 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 1 } } }
+          75 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 } } }
+        }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+      else_if = {
+        limit = { situation:fo_noble_flight.var:combat < 4 }
+        random_list = {
+          50 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 1 } } }
+          50 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 } } }
+        }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+      else_if = {
+        limit = { situation:fo_noble_flight.var:combat < 6 }
+        random_list = {
+          75 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 1 } } }
+          25 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 } } }
+        }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+      else_if = {
+        limit = { situation:fo_noble_flight.var:combat >= 6 }
+        situation:fo_noble_flight = { set_variable = { name = pirate_win value = 1 } }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+    }
+  }
+  option = { # Flee
+    name = fo_noble_flight.104.c
+    hidden_effect = {
+      situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 }
+      trigger_event_non_silently = { id = fo_noble_flight.105 }
+    }
+  }
+  option = { # Mace
+    name = fo_noble_flight.104.d
+    hidden_effect = {
+      if = {
+        limit = { situation:fo_noble_flight.var:combat < 4 }
+        random_list = {
+          95 = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 1 } } }
+          5  = { situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 } } }
+        }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+      else_if = {
+        limit = { situation:fo_noble_flight.var:combat >= 4 }
+        situation:fo_noble_flight = { set_variable = { name = pirate_win value = 2 } }
+        trigger_event_non_silently = { id = fo_noble_flight.105 }
+      }
+    }
+  }
+}
+fo_noble_flight.105 = { # Flight 4: Morrocans result
+  type = country_event
+  title = {
+    first_valid = {
+      triggered_desc = { # Perfect Success
+        desc = fo_noble_flight.105.title_p
+        trigger = { situation:fo_noble_flight.var:pirate_win = 2 }
+      }
+      triggered_desc = { # Success
+        desc = fo_noble_flight.105.title_s
+        trigger = { situation:fo_noble_flight.var:pirate_win = 1 }
+      }
+      triggered_desc = { # Fail
+        desc = fo_noble_flight.105.title_f
+        trigger = { situation:fo_noble_flight.var:pirate_win = 0 }
+      }
+    }
+  }
+  desc = {
+    first_valid = {
+      triggered_desc = { # Perfect Success
+        desc = fo_noble_flight.105.desc_p
+        trigger = { situation:fo_noble_flight.var:pirate_win = 2 }
+      }
+      triggered_desc = { # Success
+        desc = fo_noble_flight.105.desc_s
+        trigger = { situation:fo_noble_flight.var:pirate_win = 1 }
+      }
+      triggered_desc = { # Fail
+        desc = fo_noble_flight.105.desc_f
+        trigger = { situation:fo_noble_flight.var:pirate_win = 0 }
+      }
+    }
+  }
+
+  immediate = { situation:fo_noble_flight = { set_variable = { name = pop_moor value = 0 } } }
+
+  option = { # Perfect Success
+    name = fo_noble_flight.105.a
+    trigger = { situation:fo_noble_flight.var:pirate_win = 2 }
+
+    situation:fo_noble_flight = { set_variable = { name = resource value = { add = var:resource add = 1 } } }
+    situation:fo_noble_flight = { set_variable = { name = pop_moor value = { add = var:pop_moor add = 2 } } }
+
+    trigger_event_non_silently = {
+      id = fo_noble_flight.106
+      days = 4
+    }
+  }
+  option = { # Success
+    name = fo_noble_flight.105.b
+    trigger = { situation:fo_noble_flight.var:pirate_win = 1 }
+
+    trigger_event_non_silently = {
+      id = fo_noble_flight.106
+      days = 4
+    }
+  }
+  option = { # Failure
+    name = fo_noble_flight.105.c
+    trigger = { situation:fo_noble_flight.var:pirate_win = 0 }
+
+    situation:fo_noble_flight = { set_variable = { name = resource value = { add = var:resource subtract = 1 } } }
+
+    trigger_event_non_silently = {
+      id = fo_noble_flight.106
+      days = 4
+    }
+  }
+}
+fo_noble_flight.106 = { # Flight 5: Portuguese
+  type = country_event
+  title = fo_noble_flight.106.title
+  desc = fo_noble_flight.106.desc
+  
+  option = { # Tell the truth
+    name = fo_noble_flight.106.a
+    situation:fo_noble_flight = { set_variable = { name = truth value = yes } }
+    trigger_event_non_silently = {
+      id = fo_noble_flight.107
+      days = 30
+    }
+  }
+  option = { # Lie
+    name = fo_noble_flight.106.b
+    situation:fo_noble_flight = { set_variable = { name = lied value = yes } }
+    trigger_event_non_silently = {
+      id = fo_noble_flight.107
+      days = 30
+    }
+  }
+  option = { # No deal
+    name = fo_noble_flight.106.c
+    trigger_event_non_silently = {
+      id = fo_noble_flight.107
+      days = 30
+    }
+  }
+}
+fo_noble_flight.107 = { # Flight 6: Sailing
+  type = country_event
+  title = fo_noble_flight.107.title
+  desc = fo_noble_flight.107.desc
+
+  option = {
+    name = fo_noble_flight.107.a
+    trigger_event_non_silently = {
+      id = fo_noble_flight.108
+      days = 30
+    }
+  }
+}
+fo_noble_flight.108 = { # Flight 7: The Storm
+  type = country_event
+  title = fo_noble_flight.108.title
+  desc = fo_noble_flight.108.desc
+
+  option = {
+    name = fo_noble_flight.108.a
+    trigger_event_non_silently = {
+      id = fo_noble_flight.109
+      days = 30
+    }
+  }
+}
+fo_noble_flight.109 = { # Flight 8: Land Sighted
+  type = country_event
+  title = fo_noble_flight.109.title
+  desc = fo_noble_flight.109.desc
+
+  option = {
+    name = fo_noble_flight.109.a
+    trigger_event_non_silently = {
+      id = fo_noble_flight.110
+      days = 30
+    }
+  }
+}
+fo_noble_flight.110 = { # Flight 9: People?
+  type = country_event
+  title = fo_noble_flight.110.title
+  desc = fo_noble_flight.110.desc
+
+  option = {
+    name = fo_noble_flight.110.a
+    trigger_event_non_silently = {
+      id = fo_noble_flight.111
+      days = 30
+    }
+  }
+}
+fo_noble_flight.111 = { # Flight 10: Unexpected help and friendship
+  type = country_event
+  title = fo_noble_flight.111.title
+  desc = fo_noble_flight.111.desc
+
+  option = {
+    name = fo_noble_flight.111.a
+    trigger_event_non_silently = {
+      id = fo_noble_flight.112
+      days = 30
+    }
+  }
+}
+fo_noble_flight.112 = { # Flight 11: The start of a new Empire
+  type = country_event
+  title = fo_noble_flight.112.title
+  desc = fo_noble_flight.112.desc
+
+  option = {
+    name = fo_noble_flight.112.a
+
+    fo_noble_flight_update_province = yes
+    fo_noble_flight_update_situation = yes
+    fo_noble_flight_update_country = yes
+    change_player = c:FO0
+    end_situation = situation:fo_noble_flight
   }
 }
 

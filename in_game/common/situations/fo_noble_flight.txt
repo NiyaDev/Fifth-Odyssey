@@ -3,16 +3,12 @@ fo_noble_flight = {
   monthly_spawn_chance = 0
 
   can_end = {
-    current_year > 1339
+    current_year > 1340
   }
 
   visible = {
     exists = c:BYZ
     tag = BYZ
-  }
-
-  on_ending = {
-    c:BYZ = { trigger_event_non_silently = fo_noble_flight.100 }
   }
 
   on_monthly = {
