@@ -347,7 +347,7 @@ fo_noble_flight.17 = { # Stealing Byzantine Silk 1
   }
 }
 fo_noble_flight.18 = { # Stealing Byzantine Silk 2
-type = country_event
+  type = country_event
   title = fo_noble_flight.18.title
   desc = fo_noble_flight.18.desc
 
@@ -522,9 +522,11 @@ fo_noble_flight.101 = { # Flight 1: Leaving
 
   option = {
     name = fo_noble_flight.101.a
-    trigger_event_non_silently = {
-      id = fo_noble_flight.102
-      days = 14
+    hidden_effect = {
+      trigger_event_non_silently = {
+        id = fo_noble_flight.102
+        days = 14
+      }
     }
   }
 }
@@ -536,36 +538,44 @@ fo_noble_flight.102 = { # Flight 2: Meeting Genoese
   immediate = { situation:fo_noble_flight = { set_variable = { name = pop_genoese value = 0 } } }
 
   option = { # Rome
-    name = fo_noble_flight.102.a
-    limit = { situation:fo_noble_flight.var:current_leader = character:fo_romaboo }
+    name = fo_noble_flight.102.aa
+    trigger = { situation:fo_noble_flight.var:current_leader = character:fo_romaboo }
     situation:fo_noble_flight = { set_variable = { name = resource value = { add = var:resource add = 2 } } }
     situation:fo_noble_flight = { set_variable = { name = combat value = { add = var:combat add = 2 } } }
-    trigger_event_non_silently = {
-      id = fo_noble_flight.103
-      days = 14
+    hidden_effect = {
+      trigger_event_non_silently = {
+        id = fo_noble_flight.103
+        days = 14
+      }
     }
+    custom_tooltip = { text = fo_noble_flight.102.a }
   }
   option = { # Byz
-    name = fo_noble_flight.102.b
-    limit = { situation:fo_noble_flight.var:current_leader = character:fo_byzaboo }
+    name = fo_noble_flight.102.aa
+    trigger = { situation:fo_noble_flight.var:current_leader = character:fo_byzaboo }
     situation:fo_noble_flight = { set_variable = { name = resource value = { add = var:resource add = 1 } } }
     situation:fo_noble_flight = { set_variable = { name = combat value = { add = var:combat add = 1 } } }
     situation:fo_noble_flight = { set_variable = { name = pop_genoese value = { add = var:pop_genoese add = 2 } } }
     # Genoese Captain
-    trigger_event_non_silently = {
-      id = fo_noble_flight.103
-      days = 14
+    hidden_effect = {
+      trigger_event_non_silently = {
+        id = fo_noble_flight.103
+        days = 14
+      }
     }
+    custom_tooltip = { text = fo_noble_flight.102.b }
   }
   option = { # Mace
-    name = fo_noble_flight.102.c
-    limit = { situation:fo_noble_flight.var:current_leader = character:fo_alexaboo }
+    name = fo_noble_flight.102.aa
+    trigger = { situation:fo_noble_flight.var:current_leader = character:fo_alexaboo }
     situation:fo_noble_flight = { set_variable = { name = wealth value = { add = var:resource add = 4 } } }
-    trigger_event_non_silently = {
-
-      id = fo_noble_flight.103
-      days = 21
+    hidden_effect = {
+      trigger_event_non_silently = {
+        id = fo_noble_flight.103
+        days = 21
+      }
     }
+    custom_tooltip = { text = fo_noble_flight.102.c }
   }
 }
 fo_noble_flight.103 = { # Flight 3: Pillars of Hercules
@@ -575,9 +585,11 @@ fo_noble_flight.103 = { # Flight 3: Pillars of Hercules
   
   option = {
     name = fo_noble_flight.103.a
-    trigger_event_non_silently = {
-      id = fo_noble_flight.104
-      days = 4
+    hidden_effect = {
+      trigger_event_non_silently = {
+        id = fo_noble_flight.104
+        days = 4
+      }
     }
   }
 }
@@ -657,7 +669,7 @@ fo_noble_flight.104 = { # Flight 4: Morrocans
   option = { # Flee
     name = fo_noble_flight.104.c
     hidden_effect = {
-      situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 }
+      situation:fo_noble_flight = { set_variable = { name = pirate_win value = 0 } }
       trigger_event_non_silently = { id = fo_noble_flight.105 }
     }
   }
