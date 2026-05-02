@@ -71,4 +71,5 @@
   - +1g per month per click
 
 - Bring in Commoners
+  - +50% Commoners strength per click
   - +additional peasants/laborers/soldiers in fleet
