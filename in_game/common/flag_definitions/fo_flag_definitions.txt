@@ -1,7 +1,0 @@
-
-FO0 = { # Rhomania
-	flag_definition = {
-		coa = BYZ_eagle
-		priority = 1
-	}
-}
