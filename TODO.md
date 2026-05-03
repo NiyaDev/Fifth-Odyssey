@@ -18,36 +18,59 @@
 - The Collisseum (Event allowed)
   - ???
 
+#### Starting
+##### Priviliges
+###### Tribes
+- Allow Gatherings
+- Native Communities
+- Protected Tribal Faith
+- Respected Tribal Traditions
+- Tribal Land rights
+
 #### Events
 
 #### Mission-like Events
 - Get maps of Illysio
+  - NOTES: Even though they are weird, I want to integrate Societies of Pops into the mod
   - OPTION: Ask for maps from neighbors
     - Trigger: Doeg opinion > +100
     - Free maps
   - OPTION: Lead a campaign
     - Doeg, Piscataway, Nentego, Accawmacke, Rappahannock, Tsenacommacah, Nansemond, and Nottoway -100 opinion
     - Tribes -20 satisfaction
+- Revocation of Native rights:
+  - Trigger: All society of pops within territory -100 or less opinion
+  - Remove Native Communities
+- Subjegation of the Natives:
+  - Trigger
+    - Revocation of Native Rights
+    - Less than 3 privilidges
+- Integration of Natives:
+  - Trigger: All society of pops within territory +100 or more opinion
+  - Swap Native Communities with Native Integration
 
 #### Priviliges
-- No Noble presence:
-  - Can i just disable nobles for a little?
+- No X presence:
+  - Can i just disable nobles, clergy, and burghers for a little?
   - -100% Power? Maybe more?
   - 0% satisfaction
-  - -1000? expected nobles in provinces?
+  - -1000? expected in provinces?
+- Native Communities:
+  - 10% satisfaction
+  - 100% power
+  - Block Tribesmen Promotion
+  - Assimilation of Tribesmen blocked
+- Native Integration:
+  - 10% satisfaction
+  - 100% power
 
 #### Situations
 ##### The Fifth Oddyssey
 ###### Variables
 - Money
-  - Gained over time through convincing Nobles, Clergy, and Burghers to join and invest in the cause.
 - Knowledge
-  - Can buy knowledge off of Venetian nobles who stole from great library of Constantinople
 - Greek Silk
-  - Can steal from Empire
 - Horses
-  - Just costs money OR
-  - Maybe Cossacks want in? Explore idea.
 
 ###### Actions
 - Allow Nobles
@@ -73,3 +96,13 @@
 - Bring in Commoners
   - +50% Commoners strength per click
   - +additional peasants/laborers/soldiers in fleet
+
+###### Events / Chains
+- Buy old books and scrolls from venetians who destroyed The Great Library
+  - Potentially gives Greek Fire, Renaissance, Aquaducts, etc
+- Steal Silk from the empire
+  - Once a basic economy is born, RGO in capital changes to Illysian Silk
+- Buy horses from Cossack breeders
+  - A province will have Horses in the new world eventually
+  - Start with horses advances
+
