@@ -64,10 +64,26 @@
   - 10% satisfaction
   - 100% power
 
+#### Estates
+- Romanyoti-led estate? Maybe thats a thing for another version?
+
 #### Situations
 ##### The Fifth Oddyssey
 ###### Variables
 - Money
+- Money per month (mpm)
+- Pops
+  - 80% Peasants
+  -  8% Laborers
+  -  5% Burghers
+  -  5% Clergy
+  -  2% Nobles
+- Slaves
+- Different cultures
+  - 85% Peasants
+  - 10% Laborers
+  -  5% Burghers
+- Ships
 - Knowledge
 - Greek Silk
 - Horses
@@ -97,12 +113,44 @@
   - +50% Commoners strength per click
   - +additional peasants/laborers/soldiers in fleet
 
+- Commission Shipwright
+  - Gain ships
+
+- Rent ships out to traders
+  - Gain mpm per ship rented
+
+- Leave:
+  - Start the leaving event chain
+  - Doesn't activate automatically, but more bad events happen the longer you wait
+
 ###### Events / Chains
-- Buy old books and scrolls from venetians who destroyed The Great Library
-  - Potentially gives Greek Fire, Renaissance, Aquaducts, etc
-- Steal Silk from the empire
-  - Once a basic economy is born, RGO in capital changes to Illysian Silk
-- Buy horses from Cossack breeders
-  - A province will have Horses in the new world eventually
-  - Start with horses advances
+- **Important**
+  - Buy old books and scrolls from venetians who destroyed The Great Library
+    - Potentially gives Greek Fire, Renaissance, Aquaducts, etc
+  - Steal Silk from the empire
+    - Once a basic economy is born, RGO in capital changes to Illysian Silk
+  - Buy horses from Cossack breeders
+    - A province will have Horses in the new world eventually
+    - Start with horses advances
+- **Good**
+  - Commoners abandon lands to join journey (+pops)
+  - Lesser nobles offer money and serfs to join (+money/+pops)
+  - Burghers offer wealth and ships to join (+money/+ships)
+  - Greeks from Frankokratia want freedom (+pops)
+  - Romanyoti offer money for joining and religious freedom (+money/+diffpops)
+    - Can only happen if Clergy not invited
+  - Romanyoti worried about influence of clergy and back out (-diffpops)
+  - Bank of Bardy/Peruzzi approached for loan (+money/-mpm)
+  - Rented ships get attacked, but manage to survive and capture enemy ships (+ships)
+    - Only at war
+  - Rented ships get attacked by North African Pirates
+    - CHOICE: Keep pirates as slaves, keep ships, release and direct them to harrass enemies
+- **Bad**
+  - Rented ships get attacked, lose some (-ships)
+    - Only at war
+  - Rented ships get attacked by North African Pirates (-ships)
+  - Ships need repairs after disuse (-money) 3+ years
+  - Nobles/Burghers/Clergy want their money back (-mpm) 3+ years
+  - Unrest among participants (-people) 3+ years
+  - Crackdown on exodus (-everything) 5+ years
 

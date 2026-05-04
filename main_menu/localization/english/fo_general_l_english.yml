@@ -1,0 +1,25 @@
+﻿l_english:
+  # Countries
+  EXO: "Exodus Party"
+  EXO_ADJ: "Member"
+
+  # Cultures
+  old_world_greek: "Greek"
+
+  # Reforms
+  exodus_party: "Exodus Party"
+  exodus_party_desc: "We are an organization set up to organize an escape from the empire and it's many enemies."
+
+  # Buildings
+  exodus_party_headquarters: "Party Headquarters"
+  exodus_party_headquarters_desc: "The manorial home of the party leaders from which everything is organized."
+  exodus_party_commoners: "Commoner membership"
+  exodus_party_commoners_desc: "The members of the peasantry that are coming along on our exodus."
+  exodus_party_laborers: "Laborer membership"
+  exodus_party_laborers_desc: "The members of the laborers that are coming along on our exodus."
+  exodus_party_burghers: "Burgher membership"
+  exodus_party_burghers_desc: "The members of the burghers that are coming along on our exodus."
+  exodus_party_clergy: "Clergy membership"
+  exodus_party_clergy_desc: "The members of the clergy that are coming along on our exodus."
+  exodus_party_nobles: "Nobles membership"
+  exodus_party_nobles_desc: "The members of the nobles that are coming along on our exodus."

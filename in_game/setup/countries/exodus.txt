@@ -1,0 +1,8 @@
+
+EXO = { # Exodus party
+  color = rgb { 92 174 219 }
+
+  culture_definition = old_world_greek
+  religion_definition = orthodox
+}
+

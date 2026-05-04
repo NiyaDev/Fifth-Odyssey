@@ -1,0 +1,6 @@
+
+building_manager = {
+  #banking_office = { tag = EXO level = 1 location = mystras }
+  exodus_party_headquarters = { tag = EXO level = 1 location = thessaloniki }
+}
+

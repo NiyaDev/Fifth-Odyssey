@@ -1,0 +1,168 @@
+
+exodus_party_headquarters = {
+  is_special = yes
+  is_foreign = yes
+  need_good_relations = yes
+  pop_type = peasants
+	forbidden_for_estates = yes
+
+  category = trade_category
+
+  max_levels = 1
+  employment_size = 0.100
+
+  rural_settlement = no
+  town = yes
+  city = yes
+
+  location_potential = { always = no }
+  country_potential = { has_reform = government_reform:exodus_party }
+  build_time = 100
+
+  modifier = {
+    gold_to_building_owner = 1.00
+  }
+
+  construction_demand = town_building_construction
+}
+
+exodus_party_commoners = {
+  is_foreign = yes
+  need_good_relations = yes
+  pop_type = peasants
+	forbidden_for_estates = yes
+
+  category = trade_category
+
+  max_levels = 10
+  employment_size = 0.250
+
+  rural_settlement = yes
+  town = yes
+  city = yes
+
+  location_potential = {
+    owner ?= { culture = culture:greek_culture }
+    owner ?= { religion = scope:actor.religion }
+  }
+  country_potential = { has_reform = government_reform:exodus_party }
+  build_time = 100
+
+  modifier = {
+    scaled_gold_to_building_owner = 0.01
+  }
+
+  construction_demand = town_building_construction
+}
+exodus_party_laborers = {
+  is_foreign = yes
+  need_good_relations = yes
+  pop_type = laborers
+
+  category = trade_category
+
+  max_levels = 10
+  employment_size = 0.250
+
+  rural_settlement = yes
+  town = yes
+  city = yes
+
+  location_potential = {
+    owner ?= { culture = culture:greek_culture }
+    owner ?= { religion = scope:actor.religion }
+  }
+  country_potential = { has_reform = government_reform:exodus_party }
+  build_time = 100
+
+  modifier = {
+    scaled_gold_to_building_owner = 0.01
+  }
+
+  construction_demand = town_building_construction
+}
+exodus_party_nobles = {
+  is_foreign = yes
+  need_good_relations = yes
+  pop_type = nobles
+	forbidden_for_estates = yes
+
+  category = trade_category
+
+  max_levels = 10
+  employment_size = 0.050
+
+  rural_settlement = yes
+  town = yes
+  city = yes
+
+  location_potential = {
+    owner ?= { culture = culture:greek_culture }
+    owner ?= { religion = scope:actor.religion }
+  }
+  country_potential = { has_reform = government_reform:exodus_party }
+  build_time = 100
+
+  modifier = {
+    scaled_gold_to_building_owner = 0.05
+  }
+
+  construction_demand = town_building_construction
+}
+exodus_party_burghers = {
+  is_foreign = yes
+  need_good_relations = yes
+  pop_type = burghers
+	forbidden_for_estates = yes
+
+  category = trade_category
+
+  max_levels = 10
+  employment_size = 0.100
+
+  rural_settlement = no
+  town = yes
+  city = yes
+
+  location_potential = {
+    owner ?= { culture = culture:greek_culture }
+    owner ?= { religion = scope:actor.religion }
+  }
+  country_potential = { has_reform = government_reform:exodus_party }
+  build_time = 100
+
+  modifier = {
+    scaled_gold_to_building_owner = 0.03
+  }
+
+  construction_demand = town_building_construction
+}
+exodus_party_clergy = {
+  is_foreign = yes
+  need_good_relations = yes
+  pop_type = clergy
+	forbidden_for_estates = yes
+
+  category = trade_category
+
+  max_levels = 10
+  employment_size = 0.100
+
+  rural_settlement = yes
+  town = yes
+  city = yes
+
+  location_potential = {
+    owner ?= { culture = culture:greek_culture }
+    owner ?= { religion = scope:actor.religion }
+  }
+  country_potential = { has_reform = government_reform:exodus_party }
+  build_time = 100
+
+  modifier = {
+    scaled_gold_to_building_owner = 0.02
+  }
+
+  construction_demand = town_building_construction
+}
+

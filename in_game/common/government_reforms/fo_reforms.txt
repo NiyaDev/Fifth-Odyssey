@@ -1,0 +1,18 @@
+
+exodus_party = {
+  major = yes
+
+  potential = {
+		country_type = building
+		NOT = { has_reform = government_reform:japanese_clan }
+		NOT = { is_subject_type = trade_company }
+		NOT = { has_reform = government_reform:banking_country }
+	}
+	locked = { always = yes }
+	country_modifier = {
+		government_reform_slots = -1
+		government_size = -1
+		global_crown_estate_power = 0.5
+	}
+}
+

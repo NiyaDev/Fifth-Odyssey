@@ -1,0 +1,22 @@
+namespace = fo_fifth_odyssey
+
+
+# Initial Events
+
+fo_fifth_odyssey.1 = { # Test
+  type = country_event
+  title = fo_fifth_odyssey.1.title
+  desc = fo_fifth_odyssey.1.desc
+
+  option = {
+    name = fo_fifth_odyssey.1.a
+  }
+}
+
+# Random Events
+fo_fifth_odyssey.20 = { # 
+  
+}
+
+# Important Events
+
