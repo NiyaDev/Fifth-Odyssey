@@ -15,12 +15,14 @@ exodus_party_headquarters = {
   town = yes
   city = yes
 
-  location_potential = { always = no }
+  location_potential = { is_capital = yes }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
 
   modifier = {
     gold_to_building_owner = 1.00
+		can_build_ships_in_this_location = yes
+		sailors_to_building_owner = 0.002
   }
 
   construction_demand = town_building_construction
@@ -34,7 +36,7 @@ exodus_party_commoners = {
 
   category = trade_category
 
-  max_levels = 10
+  max_levels = 5
   employment_size = 0.250
 
   rural_settlement = yes
@@ -43,7 +45,6 @@ exodus_party_commoners = {
 
   location_potential = {
     owner ?= { culture = culture:greek_culture }
-    owner ?= { religion = scope:actor.religion }
   }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
@@ -61,7 +62,7 @@ exodus_party_laborers = {
 
   category = trade_category
 
-  max_levels = 10
+  max_levels = 5
   employment_size = 0.250
 
   rural_settlement = yes
@@ -89,7 +90,7 @@ exodus_party_nobles = {
 
   category = trade_category
 
-  max_levels = 10
+  max_levels = 2
   employment_size = 0.050
 
   rural_settlement = yes
@@ -117,7 +118,7 @@ exodus_party_burghers = {
 
   category = trade_category
 
-  max_levels = 10
+  max_levels = 4
   employment_size = 0.100
 
   rural_settlement = no
@@ -145,7 +146,7 @@ exodus_party_clergy = {
 
   category = trade_category
 
-  max_levels = 10
+  max_levels = 4
   employment_size = 0.100
 
   rural_settlement = yes
