@@ -22,10 +22,45 @@ situation_panel = {
 			  texture = "gfx/interface/icons/resources/bribe.dds"
 			}
       blockoverride "card_header_button_raw_text" {
-        text = "FO_NOBLE_FLIGHT_MONEY"
+        text = "FO_FIFTH_ODYSSEY_NOBLES"
       }
-      blockoverride "bottom_content" {
+      blockoverride "bottom_content" {}
+    }
+    situation_card_header_button = {
+      blockoverride "card_header_button_icon_texture" {
+			  texture = "gfx/interface/icons/resources/bribe.dds"
+			}
+      blockoverride "card_header_button_raw_text" {
+        text = "FO_FIFTH_ODYSSEY_CLERGY"
       }
+      blockoverride "bottom_content" {}
+    }
+    situation_card_header_button = {
+      blockoverride "card_header_button_icon_texture" {
+			  texture = "gfx/interface/icons/resources/bribe.dds"
+			}
+      blockoverride "card_header_button_raw_text" {
+        text = "FO_FIFTH_ODYSSEY_BURGHERS"
+      }
+      blockoverride "bottom_content" {}
+    }
+    situation_card_header_button = {
+      blockoverride "card_header_button_icon_texture" {
+			  texture = "gfx/interface/icons/resources/bribe.dds"
+			}
+      blockoverride "card_header_button_raw_text" {
+        text = "FO_FIFTH_ODYSSEY_COMMONERS"
+      }
+      blockoverride "bottom_content" {}
+    }
+    situation_card_header_button = {
+      blockoverride "card_header_button_icon_texture" {
+			  texture = "gfx/interface/icons/resources/bribe.dds"
+			}
+      blockoverride "card_header_button_raw_text" {
+        text = "FO_FIFTH_ODYSSEY_SHIPS"
+      }
+      blockoverride "bottom_content" {}
     }
     situation_card_header_button = {
       blockoverride "card_header_button_icon_texture" {

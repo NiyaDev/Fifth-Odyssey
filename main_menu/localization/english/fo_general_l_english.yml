@@ -27,4 +27,9 @@
   # Situations
   fo_fifth_odyssey: "The Fifth Odyssey"
   fo_fifth_odyssey_desc: "Us members of the Exodus Party are preparing to leave the Empire and Europe behind for greener pastures."
+  FO_FIFTH_ODYSSEY_NOBLES: "Nobles: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('nobles_count').GetValue|0]"
+  FO_FIFTH_ODYSSEY_CLERGY: "Clergy: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('clergy_count').GetValue|0]"
+  FO_FIFTH_ODYSSEY_BURGHERS: "Burghers: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('burghers_count').GetValue|0]"
+  FO_FIFTH_ODYSSEY_COMMONERS: "Commoners: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('commoners_count').GetValue|0]"
+  FO_FIFTH_ODYSSEY_SHIPS: "Ships: [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('ships_count').GetValue|0]"
 

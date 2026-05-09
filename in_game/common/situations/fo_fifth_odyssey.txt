@@ -10,7 +10,15 @@ fo_fifth_odyssey = {
     tag = EXO
   }
 
+  on_start = {
+    update_situation_pops = yes
+  }
+
   on_monthly = {
+    # Calculate pops
+    update_situation_pops = yes
+
+    # Events
     if = { # More positive events than negative
       limit = { current_year < 1340 }
       random_list = {

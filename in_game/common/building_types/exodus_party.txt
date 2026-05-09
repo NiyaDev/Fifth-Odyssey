@@ -42,6 +42,7 @@ exodus_party_commoners = {
   rural_settlement = yes
   town = yes
   city = yes
+  megalopolis = yes
 
   location_potential = {
     owner ?= { culture = culture:greek_culture }
@@ -68,6 +69,7 @@ exodus_party_laborers = {
   rural_settlement = yes
   town = yes
   city = yes
+  megalopolis = yes
 
   location_potential = {
     owner ?= { culture = culture:greek_culture }
@@ -96,6 +98,7 @@ exodus_party_nobles = {
   rural_settlement = yes
   town = yes
   city = yes
+  megalopolis = yes
 
   location_potential = {
     owner ?= { culture = culture:greek_culture }
@@ -124,6 +127,7 @@ exodus_party_burghers = {
   rural_settlement = no
   town = yes
   city = yes
+  megalopolis = yes
 
   location_potential = {
     owner ?= { culture = culture:greek_culture }
@@ -152,6 +156,7 @@ exodus_party_clergy = {
   rural_settlement = yes
   town = yes
   city = yes
+  megalopolis = yes
 
   location_potential = {
     owner ?= { culture = culture:greek_culture }
