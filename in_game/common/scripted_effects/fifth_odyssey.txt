@@ -1,4 +1,4 @@
-
+﻿
 update_situation_pops = {
   c:EXO = {
     set_local_variable = {

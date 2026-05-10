@@ -1,4 +1,4 @@
-namespace = fo_fifth_odyssey
+﻿namespace = fo_fifth_odyssey
 
 
 # Initial Events

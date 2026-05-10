@@ -1,4 +1,4 @@
-new_world = {
+﻿new_world = {
 	age = age_3_discovery 
 
 	location = sevilla	#fallback for when no valid

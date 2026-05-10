@@ -1,8 +1,8 @@
-
+﻿
 exodus_party_headquarters = {
   is_special = yes
   is_foreign = yes
-  need_good_relations = yes
+  need_good_relation = yes
   pop_type = peasants
 	forbidden_for_estates = yes
 
@@ -30,7 +30,7 @@ exodus_party_headquarters = {
 
 exodus_party_commoners = {
   is_foreign = yes
-  need_good_relations = yes
+  need_good_relation = yes
   pop_type = peasants
 	forbidden_for_estates = yes
 
@@ -58,7 +58,7 @@ exodus_party_commoners = {
 }
 exodus_party_laborers = {
   is_foreign = yes
-  need_good_relations = yes
+  need_good_relation = yes
   pop_type = laborers
 
   category = trade_category
@@ -86,7 +86,7 @@ exodus_party_laborers = {
 }
 exodus_party_nobles = {
   is_foreign = yes
-  need_good_relations = yes
+  need_good_relation = yes
   pop_type = nobles
 	forbidden_for_estates = yes
 
@@ -115,7 +115,7 @@ exodus_party_nobles = {
 }
 exodus_party_burghers = {
   is_foreign = yes
-  need_good_relations = yes
+  need_good_relation = yes
   pop_type = burghers
 	forbidden_for_estates = yes
 
@@ -144,7 +144,7 @@ exodus_party_burghers = {
 }
 exodus_party_clergy = {
   is_foreign = yes
-  need_good_relations = yes
+  need_good_relation = yes
   pop_type = clergy
 	forbidden_for_estates = yes
 

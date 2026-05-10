@@ -154,3 +154,14 @@
   - Unrest among participants (-people) 3+ years
   - Crackdown on exodus (-everything) 5+ years
 
+
+## Future
+### Countries + Flavor
+- Haudenosaune
+- Cahokia
+- Pueblo
+- Jīnshān, Chinese colony founded after Zheng He's expedition in 1421
+- Manden Koura, Malian colony by Mansa Muhammad ibn Qu in 1312
+- Something Similar to Spartakon?
+- Mayan/Aztec/Tonal Empire?
+

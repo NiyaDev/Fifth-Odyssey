@@ -1,4 +1,4 @@
-confessionalism = {
+﻿confessionalism = {
 	age = age_4_reformation 
 	
 	location = augsburg	#fallback for when no valid

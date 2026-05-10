@@ -1,4 +1,4 @@
-manufactories = {
+﻿manufactories = {
 	age = age_5_absolutism 
 	
 	location = derby	#fallback for when no valid

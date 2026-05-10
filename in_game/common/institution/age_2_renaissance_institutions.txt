@@ -1,4 +1,4 @@
-renaissance = {
+﻿renaissance = {
 	age = age_2_renaissance 
 	
 	location = florence	#fallback for when no valid

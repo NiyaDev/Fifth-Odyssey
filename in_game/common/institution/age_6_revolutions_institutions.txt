@@ -1,4 +1,4 @@
-enlightenment = {
+﻿enlightenment = {
 	age = age_6_revolutions
 	
 	

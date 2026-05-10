@@ -2,6 +2,10 @@
   # Countries
   EXO: "Exodus Party"
   EXO_ADJ: "Member"
+  MANK: "Manden Koura"
+  MANK_ADJ: "Kouran"
+  ZHE: "Jīnshān"
+  ZHE_ADJ: "Jīnshān"
 
   # Cultures
   old_world_greek: "Greek"

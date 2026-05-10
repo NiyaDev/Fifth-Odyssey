@@ -1,4 +1,4 @@
-
+﻿
 fo_fifth_odyssey = {
   monthly_spawn_chance = 1
 

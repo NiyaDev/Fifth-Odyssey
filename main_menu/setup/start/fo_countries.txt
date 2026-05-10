@@ -38,6 +38,71 @@ countries = {
   
 	  	country_rank = rank_county
     }
+
+    MANK = {
+      own_control_core = {
+        potiguara kaaysara caico paraiba
+      }
+
+		  starting_technology_level = 3
+		  include = "expl_west_africa_muslim"
+		  government = {
+		    type = monarchy
+		    heir_selection = cognatic_primogenture
+		    ruler = mal_abubakr_ii
+
+        ruler_term = { character = mal_muhammad_qu start_date = 1312.1.1 end_date = 1332.1.1 regnal_number = 1 }
+        parliament = { parliament_type = council }
+        reforms = {}
+        laws = {
+				  administrative_system = feudal_administration
+				  immigration_law = open_borders_law
+				  censorship = no_censorship
+				  heir_religion_law = heir_same_religion
+				  cultural_traditions_law = martial_society
+				  education_masses_law = uneducated_masses_education
+				  feudal_de_jure_law = by_tradition
+				  legal_code_law = sharia_law_policy
+				  distribution_of_power_law = dop_law_gbara
+				  medieval_levy_law = ton_ta_jon_ta_ni_woro
+				  marriage_law = muslim_marriage
+				  sharia_law = maliki_policy
+				  iqta_law = efficient_tax_farming
+				  mining_law = nobles_mining_law
+				  precious_metal_distribution_law = regulated_gold_export
+				  royal_court_customs_law = harem_policy
+				  harem_law = public_harem_policy
+			  }
+			  centralization_vs_decentralization = 70
+			  traditionalist_vs_innovative = -10
+			  aristocracy_vs_plutocracy = -40
+			  serfdom_vs_free_subjects = -20
+			  quality_vs_quantity = -10
+			  outward_vs_inward = -30
+			  spiritualist_vs_humanist = -40
+			  mercantilism_vs_free_trade = -20
+			  belligerent_vs_conciliatory = -30
+			  offensive_vs_defensive = -20
+			  land_vs_naval = -60
+			  capital_economy_vs_traditional_economy = 90
+			  individualism_vs_communalism = 60
+
+			  privilege = {}
+
+			  accepted_cultures = {
+			    soninke
+		    }
+		    tolerated_cultures = {
+		      potiguara_culture
+		    }
+
+		    country_rank = rank_county
+		    capital = potiguara
+		    dynasty = keita_dyanasty
+		    religious_school = maliki_school
+		    government = { mysticism_vs_jurisprudence = -5 }
+		  }
+    }
   }
 }
 
