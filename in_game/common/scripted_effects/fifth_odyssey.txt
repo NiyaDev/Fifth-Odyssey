@@ -12,7 +12,7 @@ update_situation_pops = {
       name = clergy
       value = {
         add = num_pop_type_in_country:clergy
-        multiply = 1000
+    multiply = 1000
       }
     }
     set_local_variable = {
@@ -30,23 +30,49 @@ update_situation_pops = {
         multiply = 1000
       }
     }
+    set_local_variable = {
+      name = soldiers
+      value = {
+        add = num_pop_type_in_country:soldiers
+        multiply = 1000
+      }
+    }
   }
   situation:fo_fifth_odyssey = {
     set_variable = {
       name = nobles_count
-      value = local_var:nobles
+      value = {
+        add = local_var:nobles
+        add = var:nobles_additional
+      }
     }
     set_variable = {
       name = clergy_count
-      value = local_var:clergy
+      value = {
+        add = local_var:clergy
+        add = var:clergy_additional
+      }
     }
     set_variable = {
       name = burghers_count
-      value = local_var:burghers
+      value = {
+        add = local_var:burghers
+        add = var:burghers_additional
+      }
     }
     set_variable = {
       name = commoners_count
-      value = local_var:commoners
+      value = {
+        add = local_var:commoners
+        add = var:commoners_additional
+      }
+    }
+    set_variable = {
+      name = soldiers_count
+      value = {
+        add = local_var:soldiers
+        add = var:soldiers_additional
+      }
     }
   }
 }

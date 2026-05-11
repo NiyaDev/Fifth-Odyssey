@@ -133,9 +133,12 @@
     - A province will have Horses in the new world eventually
     - Start with horses advances
 - **Good**
-  - Commoners abandon lands to join journey (+pops)
-  - Lesser nobles offer money and serfs to join (+money/+pops)
-  - Burghers offer wealth and ships to join (+money/+ships)
+  - (20) ~~Nobles join journey (+pops)~~
+  - (21) ~~Clergy join journey (+pops)~~
+  - (22) ~~Burghers join journey (+pops)~~
+  - (23) ~~Commoners join journey (+pops)~~
+  - (24) ~~Lesser nobles offer money and serfs to join (+money/+pops)~~
+  - (25) ~~Burghers offer wealth and ships to join (+money/+ships)~~
   - Greeks from Frankokratia want freedom (+pops)
   - Romanyoti offer money for joining and religious freedom (+money/+diffpops)
     - Can only happen if Clergy not invited
@@ -153,6 +156,11 @@
   - Nobles/Burghers/Clergy want their money back (-mpm) 3+ years
   - Unrest among participants (-people) 3+ years
   - Crackdown on exodus (-everything) 5+ years
+
+###### Goals
+- Goal for each Pop type getting to a ceratin number
+  - ~~Framework~~
+  - Effects
 
 
 ## Future

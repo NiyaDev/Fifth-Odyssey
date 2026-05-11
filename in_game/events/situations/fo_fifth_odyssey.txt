@@ -2,7 +2,6 @@
 
 
 # Initial Events
-
 fo_fifth_odyssey.1 = { # Test
   type = country_event
   title = fo_fifth_odyssey.1.title
@@ -14,9 +13,263 @@ fo_fifth_odyssey.1 = { # Test
 }
 
 # Random Events
-fo_fifth_odyssey.20 = { # 
-  
+fo_fifth_odyssey.20 = { # Nobles join
+  type = country_event
+  title = fo_fifth_odyssey.20.title
+  desc = fo_fifth_odyssey.20.desc
+ 	category = situation_event
+
+  option = { # Accept them no conditions
+    name = fo_fifth_odyssey.20.a
+    custom_tooltip = { text = fo_fifth_odyssey.20.aa }
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = nobles_additional
+        value = {
+          add = var:nobles_additional
+          add = 20
+        }
+      }
+    }
+  }
+  option = { # Accept them for payment
+    name = fo_fifth_odyssey.20.b
+    custom_tooltip = { text = fo_fifth_odyssey.20.bb }
+
+    add_gold = 100
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = nobles_additional
+        value = {
+          add = var:nobles_additional
+          add = 10
+        }
+      }
+    }
+  }
+  option = { # Accept them for money but lie
+    name = fo_fifth_odyssey.20.c
+    custom_tooltip = { text = fo_fifth_odyssey.20.cc }
+
+    add_gold = 100
+  }
+  option = { # Deny them
+    name = fo_fifth_odyssey.20.d
+    custom_tooltip = { text = fo_fifth_odyssey.20.cc }
+  }
 }
+fo_fifth_odyssey.21 = { # Clergy join
+  type = country_event
+  title = fo_fifth_odyssey.21.title
+  desc = fo_fifth_odyssey.21.desc
+ 	category = situation_event
+
+  option = { # Accept them no conditions
+    name = fo_fifth_odyssey.21.a
+    custom_tooltip = { text = fo_fifth_odyssey.21.aa }
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = clergy_additional
+        value = {
+          add = var:clergy_additional
+          add = 50
+        }
+      }
+    }
+  }
+  option = { # Accept them for payment
+    name = fo_fifth_odyssey.21.b
+    custom_tooltip = { text = fo_fifth_odyssey.21.bb }
+
+    add_gold = 75
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = clergy_additional
+        value = {
+          add = var:clergy_additional
+          add = 25
+        }
+      }
+    }
+  }
+  option = { # Accept them for money but lie
+    name = fo_fifth_odyssey.21.c
+    custom_tooltip = { text = fo_fifth_odyssey.21.cc }
+
+    add_gold = 75
+  }
+  option = { # Deny them
+    name = fo_fifth_odyssey.21.d
+    custom_tooltip = { text = fo_fifth_odyssey.21.cc }
+  }
+}
+fo_fifth_odyssey.22 = { # Burghers join
+  type = country_event
+  title = fo_fifth_odyssey.22.title
+  desc = fo_fifth_odyssey.22.desc
+ 	category = situation_event
+
+  option = { # Accept them no conditions
+    name = fo_fifth_odyssey.22.a
+    custom_tooltip = { text = fo_fifth_odyssey.22.aa }
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = burghers_additional
+        value = {
+          add = var:burghers_additional
+          add = 50
+        }
+      }
+    }
+  }
+  option = { # Accept them for payment
+    name = fo_fifth_odyssey.22.b
+    custom_tooltip = { text = fo_fifth_odyssey.22.bb }
+
+    add_gold = 75
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = burghers_additional
+        value = {
+          add = var:burghers_additional
+          add = 25
+        }
+      }
+    }
+  }
+  option = { # Accept them for money but lie
+    name = fo_fifth_odyssey.22.c
+    custom_tooltip = { text = fo_fifth_odyssey.22.cc }
+
+    add_gold = 75
+  }
+  option = { # Deny them
+    name = fo_fifth_odyssey.22.d
+    custom_tooltip = { text = fo_fifth_odyssey.22.cc }
+  }
+}
+fo_fifth_odyssey.23 = { # Commoners join
+  type = country_event
+  title = fo_fifth_odyssey.23.title
+  desc = fo_fifth_odyssey.23.desc
+ 	category = situation_event
+
+  option = { # Accept them no conditions
+    name = fo_fifth_odyssey.23.a
+    custom_tooltip = { text = fo_fifth_odyssey.23.aa }
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = commoners_additional
+        value = {
+          add = var:commoners_additional
+          add = 100
+        }
+      }
+    }
+  }
+  option = { # Accept them for payment
+    name = fo_fifth_odyssey.23.b
+    custom_tooltip = { text = fo_fifth_odyssey.23.bb }
+
+    add_gold = 50
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = commoners_additional
+        value = {
+          add = var:commoners_additional
+          add = 50
+        }
+      }
+    }
+  }
+  option = { # Accept them for money but lie
+    name = fo_fifth_odyssey.23.c
+    custom_tooltip = { text = fo_fifth_odyssey.23.cc }
+
+    add_gold = 50
+  }
+  option = { # Deny them
+    name = fo_fifth_odyssey.23.d
+    custom_tooltip = { text = fo_fifth_odyssey.23.cc }
+  }
+}
+
+fo_fifth_odyssey.24 = { # Nobles join with money and pops
+  type = country_event
+  title = fo_fifth_odyssey.24.title
+  desc = fo_fifth_odyssey.24.desc
+ 	category = situation_event
+
+  option = { # Accept their offer
+    name = fo_fifth_odyssey.24.a
+    custom_tooltip = { text = fo_fifth_odyssey.24.aa }
+
+    add_gold = 50
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = nobles_additional
+        value = {
+          add = var:nobles_additional
+          add = 10
+        }
+      }
+      set_variable = {
+        name = laborers_additional
+        value = {
+          add = var:laborers_additional
+          add = 100
+        }
+      }
+    }
+  }
+  option = { # Refuse them
+    name = fo_fifth_odyssey.24.b
+    custom_tooltip = { text = fo_fifth_odyssey.24.bb }
+  }
+}
+fo_fifth_odyssey.25 = { # Burghers join with money and ships
+  type = country_event
+  title = fo_fifth_odyssey.25.title
+  desc = fo_fifth_odyssey.25.desc
+ 	category = situation_event
+
+  option = { # Accept their offer
+    name = fo_fifth_odyssey.25.a
+    custom_tooltip = { text = fo_fifth_odyssey.25.aa }
+
+    add_gold = 25
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = burghers_additional
+        value = {
+          add = var:Burghers_additional
+          add = 50
+        }
+      }
+    }
+    capital = {
+      create_sub_unit_with_owner = {
+				type = n_traditional_galley
+				owner = c:EXO
+			}
+    }
+  }
+  option = { # Refuse them
+    name = fo_fifth_odyssey.25.b
+    custom_tooltip = { text = fo_fifth_odyssey.25.bb }
+  }
+}
+
 
 # Important Events
 

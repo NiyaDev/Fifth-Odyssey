@@ -12,6 +12,10 @@ fo_fifth_odyssey = {
 
   on_start = {
     update_situation_pops = yes
+    set_variable = {
+      name = target
+      value = c:EXO
+    }
   }
 
   on_monthly = {
