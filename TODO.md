@@ -139,11 +139,12 @@
   - (23) ~~Commoners join journey (+pops)~~
   - (24) ~~Lesser nobles offer money and serfs to join (+money/+pops)~~
   - (25) ~~Burghers offer wealth and ships to join (+money/+ships)~~
-  - Greeks from Frankokratia want freedom (+pops)
-  - Romanyoti offer money for joining and religious freedom (+money/+diffpops)
+  - (26) ~~Greeks from Frankokratia want freedom (+pops)~~
+  - (27) ~~Greeks from Turkish realms want freedom (+pops)~~
+  - (28) ~~Bank of Bardy/Peruzzi approached for loan (+money/-mpm)~~
+  - (40) Romanyoti offer money for joining and religious freedom (+money/+diffpops)
     - Can only happen if Clergy not invited
-  - Romanyoti worried about influence of clergy and back out (-diffpops)
-  - Bank of Bardy/Peruzzi approached for loan (+money/-mpm)
+  - (41) Romanyoti worried about influence of clergy and back out (-diffpops)
   - Rented ships get attacked, but manage to survive and capture enemy ships (+ships)
     - Only at war
   - Rented ships get attacked by North African Pirates
@@ -154,8 +155,12 @@
   - Rented ships get attacked by North African Pirates (-ships)
   - Ships need repairs after disuse (-money) 3+ years
   - Nobles/Burghers/Clergy want their money back (-mpm) 3+ years
-  - Unrest among participants (-people) 3+ years
-  - Crackdown on exodus (-everything) 5+ years
+  - (29) ~~Unrest among participants (-people) 3+ years~~
+  - (30) Nobles want their money back (-money/-people) 3+ years
+  - (31) Clergy want their money back (-money/-people) 3+ years
+  - (32) Burghers want their money back (-money/-people) 3+ years
+  - (33) Peasants want their money back (-money/-people) 3+ years
+  - (30) Crackdown on exodus (-everything) 5+ years
 
 ###### Goals
 - Goal for each Pop type getting to a ceratin number

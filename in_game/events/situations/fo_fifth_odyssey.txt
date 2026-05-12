@@ -252,7 +252,7 @@ fo_fifth_odyssey.25 = { # Burghers join with money and ships
       set_variable = {
         name = burghers_additional
         value = {
-          add = var:Burghers_additional
+          add = var:burghers_additional
           add = 50
         }
       }
@@ -268,6 +268,221 @@ fo_fifth_odyssey.25 = { # Burghers join with money and ships
     name = fo_fifth_odyssey.25.b
     custom_tooltip = { text = fo_fifth_odyssey.25.bb }
   }
+}
+fo_fifth_odyssey.26 = { # Peasants flee Frankokratic country
+  type = country_event
+  title = fo_fifth_odyssey.26.title
+  desc = fo_fifth_odyssey.26.desc
+  category = situation_event
+
+  immediate = {
+    random_country = {
+      limit = {
+        culture != culture:greek_culture
+        culture != culture:turkish_culture
+        religion != religion:orthodox
+        dominant_culture = culture:greek_culture
+      }
+      save_scope_as = target_country
+    }
+  }
+
+  option = { # Invite them
+    name = fo_fifth_odyssey.26.a
+    custom_tooltip = { text = fo_fifth_odyssey.26.aa }
+
+    scope:target_country = {
+      add_opinion = {
+        modifier = opinion_invited_peasants_soft
+        target = c:EXO
+      }
+    }
+    
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = peasants_additional
+        value = {
+          add = var:peasants_additional
+          add = 100
+        }
+      }
+    }
+  }
+  option = { # Refuse them
+    name = fo_fifth_odyssey.26.b
+    custom_tooltip = { test = fo_fifth_odyssey.26.bb }
+
+    scope:target_country = {
+      add_opinion = {
+        modifier = opinion_refused_peasants
+        target = c:EXO
+      }
+    }
+  }
+}
+fo_fifth_odyssey.27 = { # Peasants flee Turkic country
+  type = country_event
+  title = fo_fifth_odyssey.27.title
+  desc = fo_fifth_odyssey.27.desc
+  category = situation_event
+
+  immediate = {
+    random_country = {
+      limit = {
+        culture != culture:greek_culture
+        culture = culture:turkish_culture
+        religion != religion:orthodox
+        dominant_culture = culture:greek_culture
+      }
+      save_scope_as = target_country
+    }
+  }
+
+  option = { # Welcome them
+    name = fo_fifth_odyssey.27.a
+    custom_tooltip = { text = fo_fifth_odyssey.27.aa }
+
+    scope:target_country = {
+      add_opinion = {
+        modifier = opinion_invited_peasants_hard
+        target = c:EXO
+      }
+    }
+    add_gold = -25
+    
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = peasants_additional
+        value = {
+          add = var:peasants_additional
+          add = 300
+        }
+      }
+    }
+  }
+  option = { # Refuse them
+    name = fo_fifth_odyssey.27.b
+    custom_tooltip = { test = fo_fifth_odyssey.27.bb }
+
+    scope:target_country = {
+      add_opinion = {
+        modifier = opinion_refused_peasants
+        target = c:EXO
+      }
+    }
+  }
+}
+fo_fifth_odyssey.28 = { # Bank loan
+  type = country_event
+  title = fo_fifth_odyssey.28.title
+  desc = fo_fifth_odyssey.28.desc
+  category = situation_event
+
+  immediate = {
+    random_country = {
+      limit = {
+        has_reform = government_reform:banking_country
+      }
+      save_scope_as = target_country
+    }
+  }
+
+  option = { # Accept loan
+    name = fo_fifth_odyssey.28.a
+    scope:target_country = {
+      give_loan = {
+        target = c:EXO
+        amount = 100
+        interest = 0.1
+        months = 12
+      }
+    }
+  }
+  option = { # Refuse loan
+    name = fo_fifth_odyssey.28.b
+    custom_tooltip = { text = fo_fifth_odyssey.28.bb }
+  }
+}
+fo_fifth_odyssey.29 = { # Unrest
+  type = country_event
+  title = fo_fifth_odyssey.28.title
+  desc = fo_fifth_odyssey.28.desc
+  category = situation_event
+
+  option = {
+    name = fo_fifth_odyssey.29.a
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = nobles_additional
+        value = {
+          add = var:nobles_additional
+          subtract = {
+            add = var:nobles_additional
+            multiply = 0.1
+          }
+        }
+      }
+      set_variable = {
+        name = clergy_additional
+        value = {
+          add = var:clergy_additional
+          subtract = {
+            add = var:clergy_additional
+            multiply = 0.1
+          }
+        }
+      }
+      set_variable = {
+        name = burghers_additional
+        value = {
+          add = var:burghers_additional
+          subtract = {
+            add = var:burghers_additional
+            multiply = 0.1
+          }
+        }
+      }
+      set_variable = {
+        name = peasants_additional
+        value = {
+          add = var:peasants_additional
+          subtract = {
+            add = var:peasants_additional
+            multiply = 0.1
+          }
+        }
+      }
+      set_variable = {
+        name = laborers_additional
+        value = {
+          add = var:laborers_additional
+          subtract = {
+            add = var:laborers_additional
+            multiply = 0.1
+          }
+        }
+      }
+    }
+  }
+}
+fo_fifth_odyssey.30 = { # Noble refund
+
+}
+fo_fifth_odyssey.30 = { # Clergy refund
+
+}
+fo_fifth_odyssey.30 = { # Burgher refund
+
+}
+fo_fifth_odyssey.30 = { # Peasant refund
+
+}
+
+fo_fifth_odyssey.40 = { # Romanyoti approach
+
+}
+fo_fifth_odyssey.41 = { # Romanyoti leave
+
 }
 
 

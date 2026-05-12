@@ -45,8 +45,7 @@ exodus_party_nobles = {
   megalopolis = yes
 
   location_potential = {
-    owner ?= { culture = culture:greek_culture }
-    owner ?= { religion = scope:actor.religion }
+    dominant_culture = culture:greek_culture
   }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
@@ -74,8 +73,7 @@ exodus_party_clergy = {
   megalopolis = yes
 
   location_potential = {
-    owner ?= { culture = culture:greek_culture }
-    owner ?= { religion = scope:actor.religion }
+    dominant_culture = culture:greek_culture
   }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
@@ -103,8 +101,7 @@ exodus_party_burghers = {
   megalopolis = yes
 
   location_potential = {
-    owner ?= { culture = culture:greek_culture }
-    owner ?= { religion = scope:actor.religion }
+    dominant_culture = culture:greek_culture
   }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
@@ -132,7 +129,7 @@ exodus_party_commoners = {
   megalopolis = yes
 
   location_potential = {
-    owner ?= { culture = culture:greek_culture }
+    dominant_culture = culture:greek_culture
   }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
@@ -159,8 +156,7 @@ exodus_party_laborers = {
   megalopolis = yes
 
   location_potential = {
-    owner ?= { culture = culture:greek_culture }
-    owner ?= { religion = scope:actor.religion }
+    dominant_culture = culture:greek_culture
   }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
@@ -187,8 +183,7 @@ exodus_party_soldiers = {
   megalopolis = yes
 
   location_potential = {
-    owner ?= { culture = culture:greek_culture }
-    owner ?= { religion = scope:actor.religion }
+    dominant_culture = culture:greek_culture
   }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100

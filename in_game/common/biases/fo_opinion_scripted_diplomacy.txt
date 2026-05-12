@@ -1,0 +1,16 @@
+﻿
+opinion_invited_peasants_soft = {
+  value = -50
+  yearly_decay = 2
+}
+
+opinion_invited_peasants_hard = {
+  value = -100
+  yearly_decay = 1
+}
+
+opinion_refused_peasants = {
+  value = 50
+  yearly_decay = 2
+}
+
