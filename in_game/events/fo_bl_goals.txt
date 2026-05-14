@@ -21,6 +21,11 @@ fo_bl_goals.1 = { # Noble bonuses
   option = {
     name = fo_bl_goals.1.a
     custom_tooltip = { text = fo_bl_goals.1.a }
+    add_country_modifier = {
+      mode = add_and_replace
+      modifier = fo_goals_noblebonuses
+      years = -1
+    }
   }
 }
 fo_bl_goals.2 = { # Clergy bonuses
@@ -43,6 +48,11 @@ fo_bl_goals.2 = { # Clergy bonuses
   option = {
     name = fo_bl_goals.2.a
     custom_tooltip = { text = fo_bl_goals.2.a }
+    add_country_modifier = {
+      mode = add_and_replace
+      modifier = fo_goals_clergybonuses
+      years = -1
+    }
   }
 }
 fo_bl_goals.3 = { # Burghers bonuses
@@ -51,7 +61,7 @@ fo_bl_goals.3 = { # Burghers bonuses
   desc = fo_bl_goals.3.desc
 
   trigger = {
-    situation:fo_fifth_odyssey.var:clergy_count >= 500
+    situation:fo_fifth_odyssey.var:burghers_count >= 500
   }
 
   dynamic_historical_event = {
@@ -65,6 +75,11 @@ fo_bl_goals.3 = { # Burghers bonuses
   option = {
     name = fo_bl_goals.3.a
     custom_tooltip = { text = fo_bl_goals.3.a }
+    add_country_modifier = {
+      mode = add_and_replace
+      modifier = fo_goals_burgherbonuses
+      years = -1
+    }
   }
 }
 fo_bl_goals.4 = { # Peasants bonuses
@@ -87,6 +102,11 @@ fo_bl_goals.4 = { # Peasants bonuses
   option = {
     name = fo_bl_goals.4.a
     custom_tooltip = { text = fo_bl_goals.4.a }
+    add_country_modifier = {
+      mode = add_and_replace
+      modifier = fo_goals_commonerbonuses
+      years = -1
+    }
   }
 }
 fo_bl_goals.5 = { # Soldier bonuses
@@ -109,6 +129,11 @@ fo_bl_goals.5 = { # Soldier bonuses
   option = {
     name = fo_bl_goals.5.a
     custom_tooltip = { text = fo_bl_goals.5.a }
+    add_country_modifier = {
+      mode = add_and_replace
+      modifier = fo_goals_soldierbonuses
+      years = -1
+    }
   }
 }
 

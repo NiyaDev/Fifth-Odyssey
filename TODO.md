@@ -132,6 +132,9 @@
   - Buy horses from Cossack breeders
     - A province will have Horses in the new world eventually
     - Start with horses advances
+  - (40) Romanyoti offer money for joining and religious freedom (+money/+diffpops)
+    - Can only happen if Clergy not invited
+  - (41) Romanyoti worried about influence of clergy and back out (-diffpops)
 - **Good**
   - (20) ~~Nobles join journey (+pops)~~
   - (21) ~~Clergy join journey (+pops)~~
@@ -142,9 +145,6 @@
   - (26) ~~Greeks from Frankokratia want freedom (+pops)~~
   - (27) ~~Greeks from Turkish realms want freedom (+pops)~~
   - (28) ~~Bank of Bardy/Peruzzi approached for loan (+money/-mpm)~~
-  - (40) Romanyoti offer money for joining and religious freedom (+money/+diffpops)
-    - Can only happen if Clergy not invited
-  - (41) Romanyoti worried about influence of clergy and back out (-diffpops)
   - Rented ships get attacked, but manage to survive and capture enemy ships (+ships)
     - Only at war
   - Rented ships get attacked by North African Pirates
@@ -154,18 +154,61 @@
     - Only at war
   - Rented ships get attacked by North African Pirates (-ships)
   - Ships need repairs after disuse (-money) 3+ years
-  - Nobles/Burghers/Clergy want their money back (-mpm) 3+ years
   - (29) ~~Unrest among participants (-people) 3+ years~~
-  - (30) Nobles want their money back (-money/-people) 3+ years
-  - (31) Clergy want their money back (-money/-people) 3+ years
-  - (32) Burghers want their money back (-money/-people) 3+ years
-  - (33) Peasants want their money back (-money/-people) 3+ years
-  - (30) Crackdown on exodus (-everything) 5+ years
+  - (30) ~~Nobles want their money back (-money/-people) 3+ years~~
+  - (31) ~~Clergy want their money back (-money/-people) 3+ years~~
+  - (32) ~~Burghers want their money back (-money/-people) 3+ years~~
+  - (33) ~~Peasants want their money back (-money/-people) 3+ years~~
+  - (34) Crackdown on exodus (-everything) 5+ years
 
 ###### Goals
-- Goal for each Pop type getting to a ceratin number
-  - ~~Framework~~
-  - Effects
+- ~~A Noble Goal~~
+  - More Nobles than XXX
+  - Bonus free Nobles
+  - Modifier:
+    - +Noble satisfaction
+    - +Aristocracy
+    - +Levy combat Eff
+    - +Legitimacy
+- ~~A Clerical Error~~
+  - More Clergy than XXX
+  - Bonus free Clergy
+  - Modifier:
+    - +Clergy satisfaction
+    - +Spiritualist
+    - +Base literacy
+    - +Monthly Research
+- ~~Burghers go well with fries~~
+  - More Burghers than XXX
+  - Bonus free Burghers
+  - Modifier:
+    - +Burgher satisfaction
+    - +Plutocracy
+    - +Production Efficiency
+    - +RGO Size
+- ~~Kneel Peasants!~~
+  - More Commoners than XXX
+  - Bonus free Peasants
+  - Modifier:
+    - +Commoner satisfaction
+    - +Free Subjects
+    - +Food production
+    - +Peasant enfranchisement
+- ~~An army fit for a colony!~~
+  - More Soldiers than XXX
+  - Bonus free Soldiers
+  - Modifier:
+    - +Centralization
+    - +Crown power
+    - +army_light_infantry_maintenance_cost_modifier
+- Assuming Direct Control
+  - Settle Illysium with no estate having more than 0 additional power
+  - Modifier:
+    - ???
+- Who needs them?
+  - Settle Illysium with all estates having -150% additional power
+  - Modifier:
+    - ??
 
 
 ## Future
@@ -173,6 +216,7 @@
 - Haudenosaune
 - Cahokia
 - Pueblo
+- Vinland
 - Jīnshān, Chinese colony founded after Zheng He's expedition in 1421
 - Manden Koura, Malian colony by Mansa Muhammad ibn Qu in 1312
 - Something Similar to Spartakon?

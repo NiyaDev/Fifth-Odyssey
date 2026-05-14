@@ -2,10 +2,12 @@
 
 
 # Initial Events
-fo_fifth_odyssey.1 = { # Test
+fo_fifth_odyssey.1 = { # Introduction
   type = country_event
   title = fo_fifth_odyssey.1.title
   desc = fo_fifth_odyssey.1.desc
+ 	category = situation_event
+ 	fire_only_once = yes
 
   option = {
     name = fo_fifth_odyssey.1.a
@@ -53,7 +55,7 @@ fo_fifth_odyssey.20 = { # Nobles join
     name = fo_fifth_odyssey.20.c
     custom_tooltip = { text = fo_fifth_odyssey.20.cc }
 
-    add_gold = 100
+    add_gold = 33
   }
   option = { # Deny them
     name = fo_fifth_odyssey.20.d
@@ -100,7 +102,7 @@ fo_fifth_odyssey.21 = { # Clergy join
     name = fo_fifth_odyssey.21.c
     custom_tooltip = { text = fo_fifth_odyssey.21.cc }
 
-    add_gold = 75
+    add_gold = 25
   }
   option = { # Deny them
     name = fo_fifth_odyssey.21.d
@@ -147,7 +149,7 @@ fo_fifth_odyssey.22 = { # Burghers join
     name = fo_fifth_odyssey.22.c
     custom_tooltip = { text = fo_fifth_odyssey.22.cc }
 
-    add_gold = 75
+    add_gold = 25
   }
   option = { # Deny them
     name = fo_fifth_odyssey.22.d
@@ -178,7 +180,7 @@ fo_fifth_odyssey.23 = { # Commoners join
     name = fo_fifth_odyssey.23.b
     custom_tooltip = { text = fo_fifth_odyssey.23.bb }
 
-    add_gold = 50
+    add_gold = 20
 
     situation:fo_fifth_odyssey = {
       set_variable = {
@@ -194,7 +196,7 @@ fo_fifth_odyssey.23 = { # Commoners join
     name = fo_fifth_odyssey.23.c
     custom_tooltip = { text = fo_fifth_odyssey.23.cc }
 
-    add_gold = 50
+    add_gold = 10
   }
   option = { # Deny them
     name = fo_fifth_odyssey.23.d
@@ -256,12 +258,13 @@ fo_fifth_odyssey.25 = { # Burghers join with money and ships
           add = 50
         }
       }
-    }
-    capital = {
-      create_sub_unit_with_owner = {
-				type = n_traditional_galley
-				owner = c:EXO
-			}
+      set_variable = {
+        name = ships
+        value = {
+          add = var:ships
+          add = 1
+        }
+      }
     }
   }
   option = { # Refuse them
@@ -466,16 +469,120 @@ fo_fifth_odyssey.29 = { # Unrest
   }
 }
 fo_fifth_odyssey.30 = { # Noble refund
+  type = country_event
+  title = fo_fifth_odyssey.30.title
+  desc = fo_fifth_odyssey.30.desc
+  category = situation_event
 
+  option = { # Pay them to stay
+    name = fo_fifth_odyssey.30.a
+    
+    add_gold = -50
+  }
+  option = { # They leave
+    name = fo_fifth_odyssey.30.b
+    custom_tooltip = { text = fo_fifth_odyssey.30.bb }
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = nobles_additional
+        value = {
+          add = var:nobles_additional
+          subtract = {
+            add = var:nobles_additional
+            divide = 10
+          }
+        }
+      }
+    }
+  }
 }
-fo_fifth_odyssey.30 = { # Clergy refund
+fo_fifth_odyssey.31 = { # Clergy refund
+  type = country_event
+  title = fo_fifth_odyssey.31.title
+  desc = fo_fifth_odyssey.31.desc
+  category = situation_event
 
+  option = { # Pay them to stay
+    name = fo_fifth_odyssey.31.a
+    
+    add_gold = -25
+  }
+  option = { # They leave
+    name = fo_fifth_odyssey.31.b
+    custom_tooltip = { text = fo_fifth_odyssey.31.bb }
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = clergy_additional
+        value = {
+          add = var:clergy_additional
+          subtract = {
+            add = var:clergy_additional
+            divide = 10
+          }
+        }
+      }
+    }
+  }
 }
-fo_fifth_odyssey.30 = { # Burgher refund
+fo_fifth_odyssey.32 = { # Burgher refund
+  type = country_event
+  title = fo_fifth_odyssey.32.title
+  desc = fo_fifth_odyssey.32.desc
+  category = situation_event
 
+  option = { # Pay them to stay
+    name = fo_fifth_odyssey.32.a
+    
+    add_gold = -25
+  }
+  option = { # They leave
+    name = fo_fifth_odyssey.32.b
+    custom_tooltip = { text = fo_fifth_odyssey.32.bb }
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = burghers_additional
+        value = {
+          add = var:burghers_additional
+          subtract = {
+            add = var:burghers_additional
+            divide = 10
+          }
+        }
+      }
+    }
+  }
 }
-fo_fifth_odyssey.30 = { # Peasant refund
+fo_fifth_odyssey.33 = { # Peasant refund
+  type = country_event
+  title = fo_fifth_odyssey.33.title
+  desc = fo_fifth_odyssey.33.desc
+  category = situation_event
 
+  option = { # Pay them to stay
+    name = fo_fifth_odyssey.33.a
+    
+    add_gold = -10
+  }
+  option = { # They leave
+    name = fo_fifth_odyssey.33.b
+    custom_tooltip = { text = fo_fifth_odyssey.33.bb }
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = peasants_additional
+        value = {
+          add = var:peasants_additional
+          subtract = {
+            add = var:peasants_additional
+            divide = 10
+          }
+        }
+      }
+    }
+  }
 }
 
 fo_fifth_odyssey.40 = { # Romanyoti approach

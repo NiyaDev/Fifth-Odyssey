@@ -1,0 +1,11 @@
+fifth_odyssey = {
+    id = "d008_fate_of_the_phoenix/d008_fate_of_the_phoenix.dlc.json"
+    name = "fifth_odyssey_key"
+    desc = "fifth_odyssey_dlc_desc"
+    category = "dlc_immersion_pack"
+    show_tags_in_ui = { "EXO" "MANK" }
+    type = content
+    color = hsv360 { 287 62 55 }
+    desc_id = "fifth_odyssey"
+    order = 100
+}

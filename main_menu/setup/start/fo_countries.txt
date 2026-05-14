@@ -4,7 +4,6 @@ countries = {
     EXO = {
       type = building
       starting_technology_level = 3
-      include = "eastern_european_monarchy"
 	  	include = "expl_mediterranean"
 
       capital = thessaloniki 

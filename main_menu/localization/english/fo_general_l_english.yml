@@ -7,12 +7,26 @@
   ZHE: "Jīnshān"
   ZHE_ADJ: "Jīnshān"
 
+  # DLC Info
+  fifth_odyssey_key: "The Fifth Odyssey"
+  fifth_odyssey_dlc_desc: "Take flight to the new world in this reimagining of the old classic EU4 Mod."
+
   # Cultures
   old_world_greek: "Greek"
 
   # Reforms
-  exodus_party: "Exodus Party"
-  exodus_party_desc: "We are an organization set up to organize an escape from the empire and it's many enemies."
+  exodus_party: "Noble Family"
+  exodus_party_desc: "This \"Government\" is run by a lower noble family is is working to gather people to flee the Empire."
+
+  # Modifiers
+  opinion_refused_peasants: "Refused to take in refugees"
+  opinion_invited_peasants_soft: "Took in refugees"
+  opinion_invited_peasants_hard: "Stole our citizens"
+  STATIC_MODIFIER_NAME_fo_goals_noblebonuses: "A Noble Goal"
+  STATIC_MODIFIER_NAME_fo_goals_clergybonuses: "A Clerical Error"
+  STATIC_MODIFIER_NAME_fo_goals_burgherbonuses: "Burghers go well with Fries"
+  STATIC_MODIFIER_NAME_fo_goals_commonerbonuses: "Kneel Peasants!"
+  STATIC_MODIFIER_NAME_fo_goals_soldierbonuses: "An army fit for a colony!"
 
   # Buildings
   exodus_party_headquarters: "Party Headquarters"
@@ -48,6 +62,10 @@
   soldiers_count: "Soldier membership"
 
   # Situation Events
+  fo_fifth_odyssey.1.title: "The Fifth Odyssey"
+  fo_fifth_odyssey.1.desc: "The current situation in the Roman empire is dire to say the least. Turks in Anatolia, Crusader states in Greece, The Serbians to the northwest, and the Bulgarians to the northeast just to speak on foreign threats. Internally we have succession issues along with horribly corrupt estates and constant revolts.\n\nDire is an understatement.\n\nFortunately, the minor nobleman XXX descovered ancient texts describing a land to the west of the pillars of Hercules. A land that might be a place to escape from all the turmoil here.\nUnfortunately, he passed away late last night leaving his three children, his daughter XX and two sons XX and XX. After deliberation between the three, (daughter) will continue to lead the Exodus and they all will work together to achieve their father's goal to help his kin to find safety and prosperity."
+  fo_fifth_odyssey.1.a: "We must look forward"
+
   fo_fifth_odyssey.20.title: "Nobles want to join us"
   fo_fifth_odyssey.20.desc: "A number of nobles from various parts of the empire have come together to try to persuade us to let them join our escape.\nWhile there are not that many, any people we can get can help, especially if they are willing to pitch in..."
   fo_fifth_odyssey.20.a: "All are welcome"
@@ -113,27 +131,49 @@
   fo_fifth_odyssey.28.a: "Accept the loan"
   fo_fifth_odyssey.28.b: "We are not that desperate"
   fo_fifth_odyssey.28.bb: "Nothing happens"
-  fo_fifth_odyssey.29.title: ""
+  fo_fifth_odyssey.29.title: "Unrest among the ranks"
+  fo_fifth_odyssey.29.desc: "Everyday that goes by is another day closer to the fall of the empire and the end of our way of life. Members from all walks of life are growing more and more uneasy and as a result many have left our ranks."
+  fo_fifth_odyssey.29.a: "Their loss"
+  fo_fifth_odyssey.30.title: "Nobles at our door"
+  fo_fifth_odyssey.30.desc: "The nobles who have donated to our cause have come knocking demanding a refund of what they paid as well as keeping their spot on our expedition."
+  fo_fifth_odyssey.30.a: "Fine, here"
+  fo_fifth_odyssey.30.b: "No refunds"
+  fo_fifth_odyssey.30.bb: "10% of the additional Nobles leave the expedition"
+  fo_fifth_odyssey.31.title: "Donations"
+  fo_fifth_odyssey.31.desc: "Members of the clergy who have donated to our cause have decided we are taking to long and they want a refund as well as their place on the expedition"
+  fo_fifth_odyssey.31.a: "Forgive me father"
+  fo_fifth_odyssey.31.b: "No refunds"
+  fo_fifth_odyssey.31.bb: "10% of the additional Clergy leave the expedition"
+  fo_fifth_odyssey.32.title: "Just business"
+  fo_fifth_odyssey.32.desc: "Multiple traders and business owners have come forward demanding that we either pay back what they are owed or they will leave the expedition. They seem to be under the impression that the money they gave us was a loan and not a donation the cause, but our explantions are falling on deaf ears."
+  fo_fifth_odyssey.32.a: "We need their business"
+  fo_fifth_odyssey.32.b: "It was never a loan, we don't have to pay a single gold"
+  fo_fifth_odyssey.32.bb: "10% of the additional Burghers leave the expedition"
+  fo_fifth_odyssey.33.title: "The commons"
+  fo_fifth_odyssey.33.desc: "Representatives of the common folk have come forward to petition us to give them their money back or they walk. While this isn't a whol lot of money, it still is money better spent elsewhere..."
+  fo_fifth_odyssey.33.a: "Keep the change"
+  fo_fifth_odyssey.33.b: "Don't let the door hit you on the way out"
+  fo_fifth_odyssey.33.bb: "10% of the additional Commoners leave the expedition"
 
   # Goals
   # Before leaving
-  fo_bl_goals.1.entry: "A Noble Goal"
+  fo_bl_goals.1.entry: "GOAL: A Noble Goal"
   fo_bl_goals.1.title: "A Noble Goal"
   fo_bl_goals.1.desc: "We have gathered a large number of Nobles in our mission to leave this collapsing empire.\n\nPerhaps we may even be the reson for the collapse ourselves."
   fo_bl_goals.1.a: "We are the inheritors of the Empire"
-  fo_bl_goals.2.entry: "A Clerical Error"
+  fo_bl_goals.2.entry: "GOAL: A Clerical Error"
   fo_bl_goals.2.title: "A Clerical Error"
   fo_bl_goals.2.desc: "While abandoning our kin is not exactly what Jesus would do, we have gathered a large number of Clergymen and philosophers in our efforts to leave our crumbling empire."
   fo_bl_goals.2.a: "God wills it!"
-  fo_bl_goals.3.entry: "Burghers go well with Fries"
+  fo_bl_goals.3.entry: "GOAL: Burghers go well with Fries"
   fo_bl_goals.3.title: "Burghers go well with Fries"
   fo_bl_goals.3.desc: "While it is difficult to convice members of the Clergy to join us, and the Nobles have a lot to lose. Burghers have everything to gain by joining us; New land, new riches, and most importantly, less entrenched competition."
   fo_bl_goals.3.a: "The almighty Ducat prevails"
-  fo_bl_goals.4.entry: "Kneel Peasants!"
+  fo_bl_goals.4.entry: "GOAL: Kneel Peasants!"
   fo_bl_goals.4.title: "Kneel Peasants!"
   fo_bl_goals.4.desc: "The easiest group to convince is the average member of the empire. Crushed by tyranny of the crown and nobles alike, forced to work their lives away for wealth they themselves will never see. All we had to do is promise them emancipation from serfdom and they were more than happy to join.\n\nNow, whether we keep that promise is entirely up to us."
   fo_bl_goals.4.a: "Let's see where this goes..."
-  fo_bl_goals.5.entry: "An army fit for a colony!"
+  fo_bl_goals.5.entry: "GOAL: An army fit for a colony!"
   fo_bl_goals.5.title: "An army fit for a colony!"
   fo_bl_goals.5.desc: "Bringing any group of people brings with it potential dangers, biggest of all is their belief that because they had power in the empire, that means they should have power in our new home as well. The wealthier of our members might even bring their own private guards and soldiers to ensure their power is kept.\n\nWhich is why we must also follow suit to ensure we keep control of our investment."
   fo_bl_goals.5.a: "Hold the line!"

@@ -10,7 +10,7 @@ fo_fifth_odyssey.100 = { # Test
   	tag = EXO
  		from = 1337.1.1
  		to = 1350.1.1
- 		monthly_chance = 10
+ 		monthly_chance = 0
  	}
 
   option = {

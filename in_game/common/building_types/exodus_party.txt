@@ -20,7 +20,7 @@ exodus_party_headquarters = {
   build_time = 100
 
   modifier = {
-    gold_to_building_owner = 1.00
+    gold_to_building_owner = 2.00
 		can_build_ships_in_this_location = yes
 		sailors_to_building_owner = 0.002
   }
@@ -51,10 +51,10 @@ exodus_party_nobles = {
   build_time = 100
 
   modifier = {
-    gold_to_building_owner = 0.20
+    gold_to_building_owner = 0.40
   }
 
-  construction_demand = town_building_construction
+  construction_demand = guild_construction
 }
 exodus_party_clergy = {
   is_foreign = yes
@@ -79,10 +79,10 @@ exodus_party_clergy = {
   build_time = 100
 
   modifier = {
-    gold_to_building_owner = 0.05
+    gold_to_building_owner = 0.10
   }
 
-  construction_demand = town_building_construction
+  construction_demand = guild_construction
 }
 exodus_party_burghers = {
   is_foreign = yes
@@ -107,10 +107,10 @@ exodus_party_burghers = {
   build_time = 100
 
   modifier = {
-    gold_to_building_owner = 0.10
+    gold_to_building_owner = 0.20
   }
 
-  construction_demand = town_building_construction
+  construction_demand = guild_construction
 }
 exodus_party_commoners = {
   is_foreign = yes
@@ -135,10 +135,10 @@ exodus_party_commoners = {
   build_time = 100
 
   modifier = {
-    gold_to_building_owner = 0.05
+    gold_to_building_owner = 0.10
   }
 
-  construction_demand = town_building_construction
+  construction_demand = guild_construction
 }
 exodus_party_laborers = {
   is_foreign = yes
@@ -162,10 +162,10 @@ exodus_party_laborers = {
   build_time = 100
 
   modifier = {
-    gold_to_building_owner = 0.05
+    gold_to_building_owner = 0.25
   }
 
-  construction_demand = town_building_construction
+  construction_demand = guild_construction
 }
 exodus_party_soldiers = {
   is_foreign = yes
@@ -189,9 +189,9 @@ exodus_party_soldiers = {
   build_time = 100
 
   modifier = {
-    gold_to_building_owner = 0.05
+    gold_to_building_owner = 0.10
   }
 
-  construction_demand = town_building_construction
+  construction_demand = guild_construction
 }
 

@@ -11,8 +11,8 @@ exodus_party = {
 	locked = { always = yes }
 	country_modifier = {
 		government_reform_slots = -1
-		government_size = -1
 		global_crown_estate_power = 0.5
+		improve_relation_impact = 3.00
 	}
 }
 
