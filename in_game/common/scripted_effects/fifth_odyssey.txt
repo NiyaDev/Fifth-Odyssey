@@ -40,37 +40,61 @@ update_situation_pops = {
   }
   situation:fo_fifth_odyssey = {
     set_variable = {
+      name = nobles_pop
+      value = local_var:nobles
+    }
+    set_variable = {
       name = nobles_count
       value = {
-        add = local_var:nobles
+        add = nobles_pop
         add = var:nobles_additional
       }
+    }
+    
+    set_variable = {
+      name = clergy_pop
+      value = local_var:clergy
     }
     set_variable = {
       name = clergy_count
       value = {
-        add = local_var:clergy
+        add = clergy_pop
         add = var:clergy_additional
       }
+    }
+    
+    set_variable = {
+      name = burghers_pop
+      value = local_var:burghers
     }
     set_variable = {
       name = burghers_count
       value = {
-        add = local_var:burghers
+        add =burghers_pop
         add = var:burghers_additional
       }
+    }
+    
+    set_variable = {
+      name = commoners_pop
+      value = local_var:commoners
     }
     set_variable = {
       name = commoners_count
       value = {
-        add = local_var:commoners
+        add = commoners_pop
         add = var:commoners_additional
       }
+    }
+    
+    set_variable = {
+      name = soldiers_pop
+      value = local_var:soldiers
     }
     set_variable = {
       name = soldiers_count
       value = {
-        add = local_var:soldiers
+        add = soldiers_pop
         add = var:soldiers_additional
       }
     }

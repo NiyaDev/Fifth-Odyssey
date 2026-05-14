@@ -11,6 +11,9 @@ fo_fifth_odyssey.1 = { # Introduction
 
   option = {
     name = fo_fifth_odyssey.1.a
+    hidden_effects = {
+      allow_bureaucracy = yes
+    }
   }
 }
 
@@ -586,10 +589,99 @@ fo_fifth_odyssey.33 = { # Peasant refund
 }
 
 fo_fifth_odyssey.40 = { # Romanyoti approach
+  type = country_event
+  title = fo_fifth_odyssey.40.title
+  desc = fo_fifth_odyssey.40.desc
+  fire_only_once = yes
+  
+  trigger = {
+    has_or_had_tag = EXO
+    situation:fo_fifth_odyssey = { situation_is_active = yes }
+    situation:fo_fifth_odyssey.var:romanyoti_joined = no
+    situation:fo_fifth_odyssey.var:clergy_count <= 0
+  }
 
+  option = { # Allow
+    name = fo_fifth_odyssey.40.a
+    custom_tooltip = { text = fo_fifth_odyssey.40.aa }
+
+    add_gold = 50
+    add_tolerated_culture = culture:romanyoti
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = romanyoti_joined
+        value = yes
+      }
+      set_variable = {
+        name = romanyoti_count
+        value = 200
+      }
+    }
+  }
+  option = { # Refuse
+    name = fo_fifth_odyssey.40.b
+    custom_tooltip = { text = fo_fifth_odyssey.40.bb }
+  }
 }
 fo_fifth_odyssey.41 = { # Romanyoti leave
+  type = country_event
+  title = fo_fifth_odyssey.41.title
+  desc = fo_fifth_odyssey.41.desc
+  fire_only_once = yes
 
+  trigger = {
+    has_or_had_tag = EXO
+    situation:fo_fifth_odyssey = { situation_is_active = yes }
+    situation:fo_fifth_odyssey.var:romanyoti_joined = yes
+    situation:fo_fifth_odyssey.var:clergy_count > 0
+  }
+
+  option = {
+    name = fo_fifth_odyssey.41.a
+    custom_tooltip = { text = fo_fifth_odyssey.41.aa }
+    remove_tolerated_culture = culture:romanyoti
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = romanyoti_joined
+        value = no
+      }
+      set_variable = {
+        name = romanyoti_count
+        value = 0
+      }
+    }
+  }
+}
+fo_fifth_odyssey.42 = { # More Romanyoti join
+  type = country_event
+  title = fo_fifth_odyssey.42.title
+  desc = fo_fifth_odyssey.42.desc
+
+  trigger = {
+    has_or_had_tag = EXO
+    situation:fo_fifth_odyssey = { situation_is_active = yes }
+    situation:fo_fifth_odyssey.var:romanyoti_joined = yes
+    situation:fo_fifth_odyssey.var:clergy_count <= 0
+  }
+
+  option = {
+    name = fo_fifth_odyssey.42.a
+    custom_tooltip = { text = fo_fifth_odyssey.42.aa }
+
+    add_gold = 30
+
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = romanyoti_count
+        value = {
+          add = var:romanyoti_count
+          add = 200
+        }
+      }
+    }
+  }
 }
 
 

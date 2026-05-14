@@ -1,4 +1,4 @@
-fifth_odyssey = {
+﻿fifth_odyssey = {
     id = "d008_fate_of_the_phoenix/d008_fate_of_the_phoenix.dlc.json"
     name = "fifth_odyssey_key"
     desc = "fifth_odyssey_dlc_desc"

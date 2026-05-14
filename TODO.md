@@ -29,7 +29,7 @@
 
 #### Events
 
-#### Mission-like Events
+#### Goals
 - Get maps of Illysio
   - NOTES: Even though they are weird, I want to integrate Societies of Pops into the mod
   - OPTION: Ask for maps from neighbors
@@ -70,52 +70,17 @@
 #### Situations
 ##### The Fifth Oddyssey
 ###### Variables
-- Money
-- Money per month (mpm)
 - Pops
-  - 80% Peasants
-  -  8% Laborers
-  -  5% Burghers
-  -  5% Clergy
-  -  2% Nobles
 - Slaves
 - Different cultures
-  - 85% Peasants
-  - 10% Laborers
-  -  5% Burghers
 - Ships
 - Knowledge
 - Greek Silk
 - Horses
 
 ###### Actions
-- Allow Nobles
-  - Nobles start in colony
-- Bring in Nobles
-  - +50% Noble strength per click
-  - +1g per month per click
-
-- Allow Clergy
-  - Clergy start in colony
-  - Resistance to Hellenistic conversion
-- Bring in Clergy
-  - Clergy start in colony
-  - +50%  Clergy power per click
-  - 0.5g per month per click
-
-- Allow Burghers
-  - Burghers start in colony
-- Bring in Burghers
-  - +50% Burghers strength per click
-  - +1g per month per click
-
-- Bring in Commoners
-  - +50% Commoners strength per click
-  - +additional peasants/laborers/soldiers in fleet
-
 - Commission Shipwright
   - Gain ships
-
 - Rent ships out to traders
   - Gain mpm per ship rented
 
@@ -126,7 +91,7 @@
 ###### Events / Chains
 - **Important**
   - Buy old books and scrolls from venetians who destroyed The Great Library
-    - Potentially gives Greek Fire, Renaissance, Aquaducts, etc
+    - Potentially gives Greek Fire, Aquaducts, etc
   - Steal Silk from the empire
     - Once a basic economy is born, RGO in capital changes to Illysian Silk
   - Buy horses from Cossack breeders
@@ -135,6 +100,8 @@
   - (40) Romanyoti offer money for joining and religious freedom (+money/+diffpops)
     - Can only happen if Clergy not invited
   - (41) Romanyoti worried about influence of clergy and back out (-diffpops)
+  - The Black Death
+    - For the duration, money gained goes up and new good events. But if BD exists in any location you have buildings it comes with you
 - **Good**
   - (20) ~~Nobles join journey (+pops)~~
   - (21) ~~Clergy join journey (+pops)~~
@@ -209,6 +176,9 @@
   - Settle Illysium with all estates having -150% additional power
   - Modifier:
     - ??
+- Bigpox Blankets
+  - Bring the Black death to the New world
+  - No modifier, you're a bad person
 
 
 ## Future

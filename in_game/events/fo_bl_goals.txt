@@ -7,7 +7,7 @@ fo_bl_goals.1 = { # Noble bonuses
   desc = fo_bl_goals.1.desc
 
   trigger = {
-    situation:fo_fifth_odyssey.var:nobles_count >= 250
+    situation:fo_fifth_odyssey.var:nobles_count >= 200
   }
 
   dynamic_historical_event = {
@@ -34,7 +34,7 @@ fo_bl_goals.2 = { # Clergy bonuses
   desc = fo_bl_goals.2.desc
 
   trigger = {
-    situation:fo_fifth_odyssey.var:clergy_count >= 500
+    situation:fo_fifth_odyssey.var:clergy_count >= 400
   }
 
   dynamic_historical_event = {
@@ -61,7 +61,7 @@ fo_bl_goals.3 = { # Burghers bonuses
   desc = fo_bl_goals.3.desc
 
   trigger = {
-    situation:fo_fifth_odyssey.var:burghers_count >= 500
+    situation:fo_fifth_odyssey.var:burghers_count >= 400
   }
 
   dynamic_historical_event = {

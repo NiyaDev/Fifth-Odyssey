@@ -6,13 +6,6 @@ fo_fifth_odyssey.100 = { # Test
   title = fo_fifth_odyssey.100.title
   desc = fo_fifth_odyssey.100.desc
 
-  dynamic_historical_event = {
-  	tag = EXO
- 		from = 1337.1.1
- 		to = 1350.1.1
- 		monthly_chance = 0
- 	}
-
   option = {
     name = fo_fifth_odyssey.100.a
 

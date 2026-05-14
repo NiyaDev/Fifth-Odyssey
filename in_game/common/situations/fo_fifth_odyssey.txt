@@ -19,6 +19,23 @@ fo_fifth_odyssey = {
     c:EXO = {
       trigger_event_non_silently = fo_fifth_odyssey.1
     }
+
+    set_variable = {
+      name = romanyoti_joined
+      value = no
+    }
+    set_variable = {
+      name = knowledge
+      value = no
+    }
+    set_variable = {
+      name = silk
+      value = no
+    }
+    set_variable = {
+      name = horses
+      value = no
+    }
   }
 
   on_monthly = {
@@ -30,7 +47,7 @@ fo_fifth_odyssey = {
       80 = {}
       20 = {
         if = { # More positive events than negative
-          limit = { current_year <= 1341 }
+          limit = { current_year <= 1342 }
           random_list = {
             40 = { # Estates join
               random_list = {
@@ -59,8 +76,8 @@ fo_fifth_odyssey = {
         }
         else_if = { # Equal chance of good and bad
           limit = {
-            current_year > 1341
-            current_year <= 1343
+            current_year > 1342
+            current_year <= 1346
           }
           random_list = {
             50 = { # Good
@@ -107,8 +124,8 @@ fo_fifth_odyssey = {
         }
         else_if = { # More negative than good
           limit = {
-            current_year > 1343
-            current_year <= 1346
+            current_year > 1346
+            current_year <= 1350
           }
           random_list = {
             10 = { # Good
@@ -154,7 +171,7 @@ fo_fifth_odyssey = {
           }
         }
         else_if = { # Only bad
-          limit = { current_year > 1346 }
+          limit = { current_year > 1350 }
           random_list = {
             50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.29 } } # Unrest
             50 = { # Estates want refend
