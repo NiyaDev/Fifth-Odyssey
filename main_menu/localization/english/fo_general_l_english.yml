@@ -1,11 +1,17 @@
 ﻿l_english:
   # Countries
-  EXO: "Exodus Party"
+  EXO: "Hodēgetes Family"
   EXO_ADJ: "Member"
   MANK: "Manden Koura"
   MANK_ADJ: "Kouran"
   ZHE: "Jīnshān"
   ZHE_ADJ: "Jīnshān"
+
+  rank_county_exodus: ""
+  rank_county_exodus_prefix: ""
+  rank_county_exodus_ADJ: "family"
+  rank_county_exodus_ruler_male: "Family Head"
+  rank_county_exodus_ruler_female: "Family Head"
 
   # DLC Info
   fifth_odyssey_key: "The Fifth Odyssey"
@@ -16,7 +22,7 @@
 
   # Reforms
   exodus_party: "Noble Family"
-  exodus_party_desc: "This \"Government\" is run by a lower noble family is is working to gather people to flee the Empire."
+  exodus_party_desc: "Not truly a country, but simply a Noble house attempting to flee the empire."
 
   # Modifiers
   opinion_refused_peasants: "Refused to take in refugees"
@@ -29,7 +35,7 @@
   STATIC_MODIFIER_NAME_fo_goals_soldierbonuses: "An army fit for a colony!"
 
   # Buildings
-  exodus_party_headquarters: "Party Headquarters"
+  exodus_party_headquarters: "Family Estate"
   exodus_party_headquarters_desc: "The manorial home of the party leaders from which everything is organized."
 
   exodus_party_nobles: "Nobles membership"
@@ -68,26 +74,4 @@
   soldiers_count: "Total Soldier membership"
   romanyoti_joined: "Romanyoti joined"
  
-  # Goals
-  # Before leaving
-  fo_bl_goals.1.entry: "GOAL: A Noble Goal"
-  fo_bl_goals.1.title: "A Noble Goal"
-  fo_bl_goals.1.desc: "We have gathered a large number of Nobles in our mission to leave this collapsing empire.\n\nPerhaps we may even be the reson for the collapse ourselves."
-  fo_bl_goals.1.a: "We are the inheritors of the Empire"
-  fo_bl_goals.2.entry: "GOAL: A Clerical Error"
-  fo_bl_goals.2.title: "A Clerical Error"
-  fo_bl_goals.2.desc: "While abandoning our kin is not exactly what Jesus would do, we have gathered a large number of Clergymen and philosophers in our efforts to leave our crumbling empire."
-  fo_bl_goals.2.a: "God wills it!"
-  fo_bl_goals.3.entry: "GOAL: Burghers go well with Fries"
-  fo_bl_goals.3.title: "Burghers go well with Fries"
-  fo_bl_goals.3.desc: "While it is difficult to convice members of the Clergy to join us, and the Nobles have a lot to lose. Burghers have everything to gain by joining us; New land, new riches, and most importantly, less entrenched competition."
-  fo_bl_goals.3.a: "The almighty Ducat prevails"
-  fo_bl_goals.4.entry: "GOAL: Kneel Peasants!"
-  fo_bl_goals.4.title: "Kneel Peasants!"
-  fo_bl_goals.4.desc: "The easiest group to convince is the average member of the empire. Crushed by tyranny of the crown and nobles alike, forced to work their lives away for wealth they themselves will never see. All we had to do is promise them emancipation from serfdom and they were more than happy to join.\n\nNow, whether we keep that promise is entirely up to us."
-  fo_bl_goals.4.a: "Let's see where this goes..."
-  fo_bl_goals.5.entry: "GOAL: An army fit for a colony!"
-  fo_bl_goals.5.title: "An army fit for a colony!"
-  fo_bl_goals.5.desc: "Bringing any group of people brings with it potential dangers, biggest of all is their belief that because they had power in the empire, that means they should have power in our new home as well. The wealthier of our members might even bring their own private guards and soldiers to ensure their power is kept.\n\nWhich is why we must also follow suit to ensure we keep control of our investment."
-  fo_bl_goals.5.a: "Hold the line!"
 

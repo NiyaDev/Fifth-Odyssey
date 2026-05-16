@@ -10,7 +10,9 @@ countries = {
       government = {
         type = monarchy
         heir_selection = absolute_cognatic_primogeniture
-        ruler = random
+        ruler = exo_eirene
+
+        ruler_term = { character = fo_demetrius  start_date = 1320.6.1  end_date = 1072.10.7  regnal_number = 1 }
 
 	  		centralization_vs_decentralization = 20
 	  		aristocracy_vs_plutocracy = 70

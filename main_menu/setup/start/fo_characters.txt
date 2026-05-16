@@ -1,0 +1,59 @@
+
+character_db = {
+  exo_demetrios = {
+    first_name = { name = name_demetrius }
+    culture = greek_culture
+    religion = orthodox
+    adm = 43
+    dip = 65
+    mil = 23
+    birth_date = 1302.4.11
+		death_date = 1337.4.1
+    birth = thessaloniki
+    dynasty = hodegetes_dynasty
+    tag = EXO
+    ruler_trait = scholar
+  }
+  exo_eirene = {
+    first_name = { name = name_irene }
+    culture = greek_culture
+    religion = orthodox
+		female = yes
+    adm = 76
+    dip = 65
+    mil = 46
+    father = exo_demetrios
+    birth_date = 1314.12.26
+    birth = thessaloniki
+    dynasty = hodegetes_dynasty
+    tag = EXO
+    ruler_trait = incorruptible
+  }
+  exo_alexios = {
+    first_name = { name = name_alexis }
+    culture = greek_culture
+    religion = orthodox
+    adm = 34  dip = 91  mil = 16
+    father = exo_demetrios
+    birth_date = 1315.7.9
+    birth = thessaloniki
+    dynasty = hodegetes_dynasty
+    tag = EXO
+    ruler_trait = fierce_negotiator
+  }
+  exo_nikephoros = {
+    first_name = { name = name_nikephoros }
+    culture = greek_culture
+    religion = orthodox
+    adm = 21
+    dip = 45
+    mil = 84
+    father = exo_demetrios
+    birth_date = 1318.2.28
+    birth = thessaloniki
+    dynasty = hodegetes_dynasty
+    tag = EXO
+    ruler_trait = tactical_genius
+  }
+}
+

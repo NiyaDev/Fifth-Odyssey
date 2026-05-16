@@ -12,7 +12,7 @@ update_situation_pops = {
       name = clergy
       value = {
         add = num_pop_type_in_country:clergy
-    multiply = 1000
+        multiply = 1000
       }
     }
     set_local_variable = {

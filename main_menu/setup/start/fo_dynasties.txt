@@ -1,0 +1,9 @@
+
+dynasty_manager = {
+  hodegetes_dynasty = {
+    name = { name = hodegetes_dynasty }
+    home = thessaloniki
+    dynasty_name_type = location
+  }
+}
+

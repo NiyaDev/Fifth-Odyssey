@@ -14,111 +14,185 @@ fo_exodus_pack = {
 
   on_completion = {}
 
-  task_clergybonuses = {
-    icon = military_icon
+  task_opinionbyz = {
+    icon = diplomacy_icon
     requires = {}
-    enabled = {
-      situation:fo_fifth_odyssey.var:clergy_count >= 400
-    }
-    duration = 0
-      on_completion = {
-        add_country_modifier = {
-        mode = add_and_replace
-        modifier = fo_goals_clergybonuses
-        years = -1
-      }
-    }
-  }
-  task_noblebonuses = {
-    icon = nobles_estate
-    requires = {}
-    enabled = {
-      situation:fo_fifth_odyssey.var:nobles_count >= 200
-    }
-    duration = 0
-      on_completion = {
-        add_country_modifier = {
-        mode = add_and_replace
-        modifier = fo_goals_noblebonuses
-        years = -1
-      }
-    }
-  }
-  task_burgherbonuses = {
-    icon = military_icon
-    requires = {}
-    enabled = {
-      situation:fo_fifth_odyssey.var:burghers_count >= 400
-    }
-    duration = 0
-      on_completion = {
-        add_country_modifier = {
-        mode = add_and_replace
-        modifier = fo_goals_burgherbonuses
-        years = -1
-      }
-    }
-  }
-  task_commonerbonuses = {
-    icon = military_icon
-    requires = {}
-    enabled = {
-      situation:fo_fifth_odyssey.var:commoners_count >= 2000
-    }
-    duration = 0
-      on_completion = {
-        add_country_modifier = {
-        mode = add_and_replace
-        modifier = fo_goals_commonerbonuses
-        years = -1
-      }
-    }
-  }
-  task_soldierbonuses = {
-    icon = military_icon
-    requires = {}
-    enabled = {
-      situation:fo_fifth_odyssey.var:soldiers_count >= 400
-    }
+    enabled = { c:BYZ = { opinion = { target = c:EXO  value > 100 } } }
     duration = 0
     on_completion = {
-      add_country_modifier = {
-        mode = add_and_replace
-        modifier = fo_goals_soldierbonuses
-        years = -1
-        }
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
     }
   }
-  task_anempireanew = {
-    icon = rmn_the_descendants_of_trajan
-    requires = {
-      task_clergybonuses
-      task_noblebonuses
-      task_burgherbonuses
-      task_commonerbonuses
-      task_soldierbonuses
-    }
-    enabled = {}
+  task_opiniontur = {
+    icon = diplomacy_icon
+    requires = {}
+    enabled = { c:TUR = { opinion = { target = c:EXO  value > 100 } } }
     duration = 0
     on_completion = {
-      # TODO
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
     }
   }
-  task_anewstart = {
-    icon = rmn_the_descendants_of_trajan
-    requires = {
-      task_noblebonuses
-      task_burgherbonuses
-      task_commonerbonuses
-      task_soldierbonuses
-    }
-    enabled = {
-      situation:fo_fifth_odyssey.var:romanyoti_joined ?= yes
-    }
+  
+  task_buildnoble = {
+    icon = diplomacy_icon
+    requires = { task_opinionbyz }
+    enabled = { num_pop_type_in_country:nobles > 0 }
     duration = 0
     on_completion = {
-      # TODO
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
     }
   }
+  task_buildclergy = {
+    icon = diplomacy_icon
+    requires = { task_opinionbyz }
+    enabled = { num_pop_type_in_country:clergy > 0 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_buildburgher = {
+    icon = diplomacy_icon
+    requires = { task_opinionbyz }
+    enabled = { num_pop_type_in_country:burghers > 0 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_buildcommoner = {
+    icon = diplomacy_icon
+    requires = { task_opinionbyz }
+    enabled = { num_pop_type_in_country:peasants > 0.100 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_buildsoldier = {
+    icon = diplomacy_icon
+    requires = { task_opinionbyz }
+    enabled = { num_pop_type_in_country:soldiers > 0 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+
+  task_noblebonus = {
+    icon = diplomacy_icon
+    requires = { task_buildnoble }
+    enabled = { situation:fo_fifth_odyssey.var:nobles_count >= 200 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_clergybonus = {
+    icon = diplomacy_icon
+    requires = { task_buildclergy }
+    enabled = { situation:fo_fifth_odyssey.var:clergy_count >= 300 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_burgherbonus = {
+    icon = diplomacy_icon
+    requires = { task_buildburgher }
+    enabled = { situation:fo_fifth_odyssey.var:burghers_count >= 300 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_commonerbonus = {
+    icon = diplomacy_icon
+    requires = { task_buildcommoner }
+    enabled = { situation:fo_fifth_odyssey.var:commoners_count >= 4000 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_soldierbonus = {
+    icon = diplomacy_icon
+    requires = { task_buildsoldier }
+    enabled = { situation:fo_fifth_odyssey.var:soldiers_count >= 300 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+
+  task_nobleover = {
+    icon = diplomacy_icon
+    requires = { task_noblebonus }
+    enabled = { situation:fo_fifth_odyssey.var:nobles_count >= 400 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_clergyover = {
+    icon = diplomacy_icon
+    requires = { task_clergybonus }
+    enabled = { situation:fo_fifth_odyssey.var:clergy_count >= 600 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_burgherover = {
+    icon = diplomacy_icon
+    requires = { task_burgherbonus }
+    enabled = { situation:fo_fifth_odyssey.var:burghers_count >= 600 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+  task_commonerover = {
+    icon = diplomacy_icon
+    requires = { task_commonerbonus }
+    enabled = { situation:fo_fifth_odyssey.var:commoners_count >= 8000 }
+    duration = 0
+    on_completion = {
+      mode = add
+      modifier = fo_achievedmission
+      years = 10
+    }
+  }
+
 }
 
