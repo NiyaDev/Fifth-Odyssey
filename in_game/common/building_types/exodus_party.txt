@@ -140,33 +140,6 @@ exodus_party_commoners = {
 
   construction_demand = guild_construction
 }
-exodus_party_laborers = {
-  is_foreign = yes
-  need_good_relation = yes
-  pop_type = laborers
-
-  category = trade_category
-
-  max_levels = 5
-  employment_size = 0.250
-
-  rural_settlement = yes
-  town = yes
-  city = yes
-  megalopolis = yes
-
-  location_potential = {
-    dominant_culture = culture:greek_culture
-  }
-  country_potential = { has_reform = government_reform:exodus_party }
-  build_time = 100
-
-  modifier = {
-    gold_to_building_owner = 0.25
-  }
-
-  construction_demand = guild_construction
-}
 exodus_party_soldiers = {
   is_foreign = yes
   need_good_relation = yes

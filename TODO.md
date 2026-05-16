@@ -97,11 +97,12 @@
   - Buy horses from Cossack breeders
     - A province will have Horses in the new world eventually
     - Start with horses advances
-  - (40) Romanyoti offer money for joining and religious freedom (+money/+diffpops)
+  - (40) ~~Romanyoti offer money for joining and religious freedom (+money/+diffpops)~~
     - Can only happen if Clergy not invited
-  - (41) Romanyoti worried about influence of clergy and back out (-diffpops)
-  - The Black Death
-    - For the duration, money gained goes up and new good events. But if BD exists in any location you have buildings it comes with you
+  - (41) ~~Romanyoti worried about influence of clergy and back out (-diffpops)~~
+  - (42) ~~More Romanyoti join (+money/+diffpops)~~
+  - (43) ~~The Black Death warning~~
+  - (44) ~~Black Death follows~~
 - **Good**
   - (20) ~~Nobles join journey (+pops)~~
   - (21) ~~Clergy join journey (+pops)~~

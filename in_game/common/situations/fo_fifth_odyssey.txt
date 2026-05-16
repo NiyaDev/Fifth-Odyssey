@@ -20,26 +20,33 @@ fo_fifth_odyssey = {
       trigger_event_non_silently = fo_fifth_odyssey.1
     }
 
-    set_variable = {
-      name = romanyoti_joined
-      value = no
-    }
-    set_variable = {
-      name = knowledge
-      value = no
-    }
-    set_variable = {
-      name = silk
-      value = no
-    }
-    set_variable = {
-      name = horses
-      value = no
-    }
+    set_variable = { name = nobles_count  value = 0 }
+    set_variable = { name = nobles_pop  value = 0 }
+    set_variable = { name = nobles_additional  value = 0 }
+    set_variable = { name = clergy_count  value = 0 }
+    set_variable = { name = clergy_pop  value = 0 }
+    set_variable = { name = clergy_additional  value = 0 }
+    set_variable = { name = burgehrs_count  value = 0 }
+    set_variable = { name = burghers_pop  value = 0 }
+    set_variable = { name = burghers_additional  value = 0 }
+    set_variable = { name = commoners_count  value = 0 }
+    set_variable = { name = commoners_pop  value = 0 }
+    set_variable = { name = peasants_additional  value = 0 }
+    set_variable = { name = soldiers_count  value = 0 }
+    set_variable = { name = soldiers_pop  value = 0 }
+    set_variable = { name = soldiers_additional  value = 0 }
+
+    set_variable = { name = romanyoti_joined  value = no }
+    set_variable = { name = romanyoti_count  value = 0 }
+
+    set_variable = { name = total_pop  value = 0 }
+
+    set_variable = { name = knowledge  value = no }
+    set_variable = { name = silk  value = no }
+    set_variable = { name = horses  value = no }
   }
 
   on_monthly = {
-    # Calculate pops
     update_situation_pops = yes
 
     # Events
@@ -186,6 +193,21 @@ fo_fifth_odyssey = {
         }
       }
     }
+    
+    if = {
+      limit = { var:romanyoti_joined = yes }
+      if = {
+        limit = { var:clergy_count > 0 }
+        c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.41 }
+      }
+      else = {
+        random_list = {
+          90 = {}
+          10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.42 } }
+        }
+      }
+    }
+    
   }
 }
 

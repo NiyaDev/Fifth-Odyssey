@@ -8,6 +8,7 @@ fo_fifth_odyssey.1 = { # Introduction
   desc = fo_fifth_odyssey.1.desc
  	category = situation_event
  	fire_only_once = yes
+ 	outcome = neutral
 
   option = {
     name = fo_fifth_odyssey.1.a
@@ -23,6 +24,7 @@ fo_fifth_odyssey.20 = { # Nobles join
   title = fo_fifth_odyssey.20.title
   desc = fo_fifth_odyssey.20.desc
  	category = situation_event
+ 	outcome = positive
 
   option = { # Accept them no conditions
     name = fo_fifth_odyssey.20.a
@@ -70,6 +72,7 @@ fo_fifth_odyssey.21 = { # Clergy join
   title = fo_fifth_odyssey.21.title
   desc = fo_fifth_odyssey.21.desc
  	category = situation_event
+ 	outcome = positive
 
   option = { # Accept them no conditions
     name = fo_fifth_odyssey.21.a
@@ -117,6 +120,7 @@ fo_fifth_odyssey.22 = { # Burghers join
   title = fo_fifth_odyssey.22.title
   desc = fo_fifth_odyssey.22.desc
  	category = situation_event
+ 	outcome = positive
 
   option = { # Accept them no conditions
     name = fo_fifth_odyssey.22.a
@@ -164,6 +168,7 @@ fo_fifth_odyssey.23 = { # Commoners join
   title = fo_fifth_odyssey.23.title
   desc = fo_fifth_odyssey.23.desc
  	category = situation_event
+ 	outcome = positive
 
   option = { # Accept them no conditions
     name = fo_fifth_odyssey.23.a
@@ -171,9 +176,9 @@ fo_fifth_odyssey.23 = { # Commoners join
 
     situation:fo_fifth_odyssey = {
       set_variable = {
-        name = commoners_additional
+        name = peasants_additional
         value = {
-          add = var:commoners_additional
+          add = var:peasants_additional
           add = 100
         }
       }
@@ -187,9 +192,9 @@ fo_fifth_odyssey.23 = { # Commoners join
 
     situation:fo_fifth_odyssey = {
       set_variable = {
-        name = commoners_additional
+        name = peasants_additional
         value = {
-          add = var:commoners_additional
+          add = var:peasants_additional
           add = 50
         }
       }
@@ -212,6 +217,7 @@ fo_fifth_odyssey.24 = { # Nobles join with money and pops
   title = fo_fifth_odyssey.24.title
   desc = fo_fifth_odyssey.24.desc
  	category = situation_event
+ 	outcome = positive
 
   option = { # Accept their offer
     name = fo_fifth_odyssey.24.a
@@ -228,9 +234,9 @@ fo_fifth_odyssey.24 = { # Nobles join with money and pops
         }
       }
       set_variable = {
-        name = laborers_additional
+        name = peasants_additional
         value = {
-          add = var:laborers_additional
+          add = var:peasants_additional
           add = 100
         }
       }
@@ -246,6 +252,7 @@ fo_fifth_odyssey.25 = { # Burghers join with money and ships
   title = fo_fifth_odyssey.25.title
   desc = fo_fifth_odyssey.25.desc
  	category = situation_event
+ 	outcome = positive
 
   option = { # Accept their offer
     name = fo_fifth_odyssey.25.a
@@ -280,6 +287,7 @@ fo_fifth_odyssey.26 = { # Peasants flee Frankokratic country
   title = fo_fifth_odyssey.26.title
   desc = fo_fifth_odyssey.26.desc
   category = situation_event
+ 	outcome = positive
 
   immediate = {
     random_country = {
@@ -316,7 +324,7 @@ fo_fifth_odyssey.26 = { # Peasants flee Frankokratic country
   }
   option = { # Refuse them
     name = fo_fifth_odyssey.26.b
-    custom_tooltip = { test = fo_fifth_odyssey.26.bb }
+    custom_tooltip = { text = fo_fifth_odyssey.26.bb }
 
     scope:target_country = {
       add_opinion = {
@@ -331,6 +339,7 @@ fo_fifth_odyssey.27 = { # Peasants flee Turkic country
   title = fo_fifth_odyssey.27.title
   desc = fo_fifth_odyssey.27.desc
   category = situation_event
+ 	outcome = positive
 
   immediate = {
     random_country = {
@@ -383,6 +392,7 @@ fo_fifth_odyssey.28 = { # Bank loan
   title = fo_fifth_odyssey.28.title
   desc = fo_fifth_odyssey.28.desc
   category = situation_event
+ 	outcome = neutral
 
   immediate = {
     random_country = {
@@ -403,6 +413,12 @@ fo_fifth_odyssey.28 = { # Bank loan
         months = 12
       }
     }
+    c:EXO = {
+      set_variable = {
+        name = took_loan
+        value = target_country
+      }
+    }
   }
   option = { # Refuse loan
     name = fo_fifth_odyssey.28.b
@@ -414,6 +430,7 @@ fo_fifth_odyssey.29 = { # Unrest
   title = fo_fifth_odyssey.28.title
   desc = fo_fifth_odyssey.28.desc
   category = situation_event
+ 	outcome = negative
 
   option = {
     name = fo_fifth_odyssey.29.a
@@ -458,16 +475,6 @@ fo_fifth_odyssey.29 = { # Unrest
           }
         }
       }
-      set_variable = {
-        name = laborers_additional
-        value = {
-          add = var:laborers_additional
-          subtract = {
-            add = var:laborers_additional
-            multiply = 0.1
-          }
-        }
-      }
     }
   }
 }
@@ -476,6 +483,7 @@ fo_fifth_odyssey.30 = { # Noble refund
   title = fo_fifth_odyssey.30.title
   desc = fo_fifth_odyssey.30.desc
   category = situation_event
+ 	outcome = negative
 
   option = { # Pay them to stay
     name = fo_fifth_odyssey.30.a
@@ -505,6 +513,7 @@ fo_fifth_odyssey.31 = { # Clergy refund
   title = fo_fifth_odyssey.31.title
   desc = fo_fifth_odyssey.31.desc
   category = situation_event
+ 	outcome = negative
 
   option = { # Pay them to stay
     name = fo_fifth_odyssey.31.a
@@ -534,6 +543,7 @@ fo_fifth_odyssey.32 = { # Burgher refund
   title = fo_fifth_odyssey.32.title
   desc = fo_fifth_odyssey.32.desc
   category = situation_event
+ 	outcome = negative
 
   option = { # Pay them to stay
     name = fo_fifth_odyssey.32.a
@@ -563,6 +573,7 @@ fo_fifth_odyssey.33 = { # Peasant refund
   title = fo_fifth_odyssey.33.title
   desc = fo_fifth_odyssey.33.desc
   category = situation_event
+ 	outcome = negative
 
   option = { # Pay them to stay
     name = fo_fifth_odyssey.33.a
@@ -593,6 +604,14 @@ fo_fifth_odyssey.40 = { # Romanyoti approach
   title = fo_fifth_odyssey.40.title
   desc = fo_fifth_odyssey.40.desc
   fire_only_once = yes
+ 	outcome = positive
+
+  dynamic_historical_event = {
+    tag = EXO
+    from = 1337.1.1
+    to = 1350.1.1
+    monthly_chance = 5
+  }
   
   trigger = {
     has_or_had_tag = EXO
@@ -629,13 +648,7 @@ fo_fifth_odyssey.41 = { # Romanyoti leave
   title = fo_fifth_odyssey.41.title
   desc = fo_fifth_odyssey.41.desc
   fire_only_once = yes
-
-  trigger = {
-    has_or_had_tag = EXO
-    situation:fo_fifth_odyssey = { situation_is_active = yes }
-    situation:fo_fifth_odyssey.var:romanyoti_joined = yes
-    situation:fo_fifth_odyssey.var:clergy_count > 0
-  }
+ 	outcome = negative
 
   option = {
     name = fo_fifth_odyssey.41.a
@@ -658,6 +671,7 @@ fo_fifth_odyssey.42 = { # More Romanyoti join
   type = country_event
   title = fo_fifth_odyssey.42.title
   desc = fo_fifth_odyssey.42.desc
+ 	outcome = positive
 
   trigger = {
     has_or_had_tag = EXO
@@ -681,6 +695,46 @@ fo_fifth_odyssey.42 = { # More Romanyoti join
         }
       }
     }
+  }
+}
+fo_fifth_odyssey.43 = { # Black Death warning
+  type = country_event
+  title = fo_fifth_odyssey.43.title
+  desc = fo_fifth_odyssey.43.desc
+  fire_only_once = yes
+ 	outcome = neutral
+
+ 	dynamic_historical_event = {
+    tag = EXO
+    from = 1337.1.1
+    to = 1350.1.1
+    monthly_chance = 100
+  }
+
+  trigger = {
+    situation:black_death = { situation_is_active = yes }
+  }
+
+  option = {
+    name = fo_fifth_odyssey.43.a
+    custom_tooltip = { text = fo_fifth_odyssey.43.aa }
+  }
+}
+fo_fifth_odyssey.43 = { # Black Death is brought along
+  type = country_event
+  title = fo_fifth_odyssey.44.title
+  desc = fo_fifth_odyssey.44.desc
+  fire_only_once = yes
+ 	outcome = negative
+
+  option = {
+    name = fo_fifth_odyssey.44.a
+    location:patawomeck = {
+      change_disease_presence = {
+		  	disease = disease:bubonic_plague
+		  	value = 0.10
+		  }
+		}
   }
 }
 
