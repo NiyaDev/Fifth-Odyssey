@@ -28,8 +28,6 @@
 - Tribal Land rights
 
 #### Events
-
-#### Goals
 - Get maps of Illysio
   - NOTES: Even though they are weird, I want to integrate Societies of Pops into the mod
   - OPTION: Ask for maps from neighbors
@@ -128,58 +126,6 @@
   - (32) ~~Burghers want their money back (-money/-people) 3+ years~~
   - (33) ~~Peasants want their money back (-money/-people) 3+ years~~
   - (34) Crackdown on exodus (-everything) 5+ years
-
-###### Goals
-- ~~A Noble Goal~~
-  - More Nobles than XXX
-  - Bonus free Nobles
-  - Modifier:
-    - +Noble satisfaction
-    - +Aristocracy
-    - +Levy combat Eff
-    - +Legitimacy
-- ~~A Clerical Error~~
-  - More Clergy than XXX
-  - Bonus free Clergy
-  - Modifier:
-    - +Clergy satisfaction
-    - +Spiritualist
-    - +Base literacy
-    - +Monthly Research
-- ~~Burghers go well with fries~~
-  - More Burghers than XXX
-  - Bonus free Burghers
-  - Modifier:
-    - +Burgher satisfaction
-    - +Plutocracy
-    - +Production Efficiency
-    - +RGO Size
-- ~~Kneel Peasants!~~
-  - More Commoners than XXX
-  - Bonus free Peasants
-  - Modifier:
-    - +Commoner satisfaction
-    - +Free Subjects
-    - +Food production
-    - +Peasant enfranchisement
-- ~~An army fit for a colony!~~
-  - More Soldiers than XXX
-  - Bonus free Soldiers
-  - Modifier:
-    - +Centralization
-    - +Crown power
-    - +army_light_infantry_maintenance_cost_modifier
-- Assuming Direct Control
-  - Settle Illysium with no estate having more than 0 additional power
-  - Modifier:
-    - ???
-- Who needs them?
-  - Settle Illysium with all estates having -150% additional power
-  - Modifier:
-    - ??
-- Bigpox Blankets
-  - Bring the Black death to the New world
-  - No modifier, you're a bad person
 
 
 ## Future
