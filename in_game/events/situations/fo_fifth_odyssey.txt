@@ -712,6 +712,7 @@ fo_fifth_odyssey.43 = { # Black Death warning
   }
 
   trigger = {
+    situation:fo_fifth_odyssey = { situation_is_active = yes }
     situation:black_death = { situation_is_active = yes }
   }
 
@@ -738,6 +739,95 @@ fo_fifth_odyssey.43 = { # Black Death is brought along
   }
 }
 
+fo_fifth_odyssey.50 = { # Allow knowledge
+  type = country_event
+  title = fo_fifth_odyssey.50.title
+  desc = fo_fifth_odyssey.50.desc
+  fire_only_once = yes
+  outcome = neutral
 
-# Important Events
+  dynamic_historical_event = {
+    tag = EXO
+    from = 1337.1.1
+    to = 1350.1.1
+    monthly_chance = 5
+  }
+
+  trigger = {
+    situation:fo_fifth_odyssey = { situation_is_active = yes }
+  }
+
+  option = {
+    name = fo_fifth_odyssey.50.a
+    custom_tooltip = { text = fo_fifth_odyssey.50.aa }
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = can_request_knowledge
+        value = yes
+      }
+    }
+  }
+}
+fo_fifth_odyssey.51 = { # Venice accepts
+  type = country_event
+  title = fo_fifth_odyssey.51.title
+  desc = fo_fifth_odyssey.51.desc
+  fire_only_once = yes
+  outcome = positive
+
+  option = {
+    name = fo_fifth_odyssey.51.a
+    custom_tooltip = { text = fo_fifth_odyssey.51.aa }
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = knowledge
+        value = yes
+      }
+      set_variable = {
+        name = can_request_knowledge
+        value = no
+      }
+    }
+  }
+}
+fo_fifth_odyssey.52 = { # Successful robbery
+  type = country_event
+  title = fo_fifth_odyssey.52.title
+  desc = fo_fifth_odyssey.52.desc
+  fire_only_once = yes
+  outcome = positive
+
+  option = {
+    name = fo_fifth_odyssey.52.a
+    custom_tooltip = { text = fo_fifth_odyssey.51.aa }
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = knowledge
+        value = yes
+      }
+      set_variable = {
+        name = can_request_knowledge
+        value = no
+      }
+    }
+  }
+}
+fo_fifth_odyssey.53 = { # Failure robbery
+  type = country_event
+  title = fo_fifth_odyssey.53.title
+  desc = fo_fifth_odyssey.53.desc
+  fire_only_once = yes
+  outcome = negative
+
+  option = {
+    name = fo_fifth_odyssey.53.a
+    custom_tooltip = { text = fo_fifth_odyssey.52.aa }
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = can_request_knowledge
+        value = no
+      }
+    }
+  }
+}
 

@@ -41,6 +41,14 @@ situation_panel = {
 				}
 			}
 		}
+		situation_card_common = {
+			blockoverride "common_header_text_full" {
+				text_single = {
+					visible = "[GreaterThan_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('ships').GetValue, '(CFixedPoint)0')]"
+					text = "SHIPS"
+				}
+			}
+		}
   }
 }
 
