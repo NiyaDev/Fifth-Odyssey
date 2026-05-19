@@ -1,60 +1,60 @@
 ﻿
-test_bur = {
-  implementation_price = price:implement_bureaucracy_price
-	maintenance_price = price:maintain_bureaucracy_price
-	removal_price = price:remove_bureaucracy_price
-	maintenance_price_modifier = {
-		value = country_economical_base
-		multiply = 0.003
-	}
-
-	estates_that_like = {
-		crown_estate
-		burghers_estate
-	}
-	estates_that_dislike = {
-		nobles_estate
-	}
-
-	potential = {
-	  has_or_had_tag = EXO
-	}
-
-	on_fully_activated = {
-		set_variable = {
-			name = sixty_books_basilika_maintenance
-			value = 1
-		}
-	}
-	on_maintenance_changed = {
-		set_variable = {
-			name = sixty_books_basilika_maintenance
-			value = scope:new_maintenance
-		}
-	}
-	on_deactivate = {
-		remove_variable = sixty_books_basilika_maintenance
-	}
-
-	#neutral
-	neutral_modifier = {
-		tax_income_efficiency = 0.05
-		monthly_legitimacy = 0.05
-	}
-
-	#positive
-	positive_modifier = {
-		scale = { value = scope:maintenance }
-		global_estate_power = -0.5
-	}
-
-	#negative
-	negative_modifier = {
-		scale = {
-			value = 1
-			subtract = scope:maintenance
-		}
-		pop_join_rebel_threshold = 0.05
-	}
-}
+#test_bur = {
+#  implementation_price = price:implement_bureaucracy_price
+#  maintenance_price = price:maintain_bureaucracy_price
+#  removal_price = price:remove_bureaucracy_price
+#  maintenance_price_modifier = {
+#		value = country_economical_base
+#		multiply = 0.003
+#	}
+#
+#	estates_that_like = {
+#		crown_estate
+#		burghers_estate
+#	}
+#	estates_that_dislike = {
+#		nobles_estate
+#	}
+#
+#	potential = {
+#	  has_or_had_tag = EXO
+#	}
+#
+#	on_fully_activated = {
+#		set_variable = {
+#			name = sixty_books_basilika_maintenance
+#			value = 1
+#		}
+#	}
+#	on_maintenance_changed = {
+#		set_variable = {
+#			name = sixty_books_basilika_maintenance
+#			value = scope:new_maintenance
+#		}
+#	}
+#	on_deactivate = {
+#		remove_variable = sixty_books_basilika_maintenance
+#	}
+#
+#	#neutral
+#	neutral_modifier = {
+#		tax_income_efficiency = 0.05
+#		monthly_legitimacy = 0.05
+#	}
+#
+#	#positive
+#	positive_modifier = {
+#		scale = { value = scope:maintenance }
+#		global_estate_power = -0.5
+#	}
+#
+#	#negative
+#	negative_modifier = {
+#		scale = {
+#			value = 1
+#			subtract = scope:maintenance
+#		}
+#		pop_join_rebel_threshold = 0.05
+#	}
+#}
 

@@ -5,7 +5,7 @@ ask_for_knowledge = {
   diplomatic_cost = ask_for_knowledge_cost
   ai_tick = never
 
-  potential = { situations:fo_fifth_odyssey.var:can_request_knowledge }
+  potential = { situation:fo_fifth_odyssey.var:can_request_knowledge ?= yes }
   cooldown = {
     type = ask_for_knowledge
     years = 5
@@ -44,7 +44,7 @@ steal_knowledge = {
 	category = CATEGORY_COVERT_ACTIONS
 	ai_tick = never
 
-  potential = { situations:fo_fifth_odyssey.var:can_request_knowledge }
+  potential = { situation:fo_fifth_odyssey.var:can_request_knowledge ?= yes }
   cooldown = {
     type = steal_knowledge
     years = 5

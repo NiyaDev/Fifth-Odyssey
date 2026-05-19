@@ -12,9 +12,6 @@ fo_fifth_odyssey.1 = { # Introduction
 
   option = {
     name = fo_fifth_odyssey.1.a
-    hidden_effects = {
-      allow_bureaucracy = yes
-    }
   }
 }
 
@@ -377,7 +374,7 @@ fo_fifth_odyssey.27 = { # Peasants flee Turkic country
   }
   option = { # Refuse them
     name = fo_fifth_odyssey.27.b
-    custom_tooltip = { test = fo_fifth_odyssey.27.bb }
+    custom_tooltip = { text = fo_fifth_odyssey.27.bb }
 
     scope:target_country = {
       add_opinion = {
@@ -413,12 +410,18 @@ fo_fifth_odyssey.28 = { # Bank loan
         months = 12
       }
     }
-    c:EXO = {
+    scope:target_country ?= {
       set_variable = {
-        name = took_loan
-        value = target_country
+        name = gave_loan_to_ely
+        value = yes
       }
     }
+    #c:EXO = {
+    #  set_variable = {
+    #    name = took_loan
+    #    value = target_country
+    #  }
+    #}
   }
   option = { # Refuse loan
     name = fo_fifth_odyssey.28.b
@@ -721,7 +724,7 @@ fo_fifth_odyssey.43 = { # Black Death warning
     custom_tooltip = { text = fo_fifth_odyssey.43.aa }
   }
 }
-fo_fifth_odyssey.43 = { # Black Death is brought along
+fo_fifth_odyssey.44 = { # Black Death is brought along
   type = country_event
   title = fo_fifth_odyssey.44.title
   desc = fo_fifth_odyssey.44.desc

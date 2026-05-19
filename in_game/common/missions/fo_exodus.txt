@@ -20,9 +20,11 @@ fo_exodus_pack = {
     enabled = { c:BYZ = { opinion = { target = c:EXO  value > 100 } } }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_opiniontur = {
@@ -31,9 +33,11 @@ fo_exodus_pack = {
     enabled = { c:TUR = { opinion = { target = c:EXO  value > 100 } } }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   
@@ -43,9 +47,11 @@ fo_exodus_pack = {
     enabled = { num_pop_type_in_country:nobles > 0 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_buildclergy = {
@@ -54,9 +60,11 @@ fo_exodus_pack = {
     enabled = { num_pop_type_in_country:clergy > 0 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_buildburgher = {
@@ -65,9 +73,11 @@ fo_exodus_pack = {
     enabled = { num_pop_type_in_country:burghers > 0 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_buildcommoner = {
@@ -76,9 +86,11 @@ fo_exodus_pack = {
     enabled = { num_pop_type_in_country:peasants > 0.100 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_buildsoldier = {
@@ -87,9 +99,11 @@ fo_exodus_pack = {
     enabled = { num_pop_type_in_country:soldiers > 0 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
 
@@ -99,9 +113,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:nobles_count >= 200 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_clergybonus = {
@@ -110,9 +126,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:clergy_count >= 300 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_burgherbonus = {
@@ -121,9 +139,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:burghers_count >= 300 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_commonerbonus = {
@@ -132,9 +152,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:commoners_count >= 4000 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_soldierbonus = {
@@ -143,9 +165,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:soldiers_count >= 300 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
 
@@ -155,9 +179,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:nobles_count >= 400 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_clergyover = {
@@ -166,9 +192,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:clergy_count >= 600 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_burgherover = {
@@ -177,9 +205,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:burghers_count >= 600 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
   task_commonerover = {
@@ -188,9 +218,11 @@ fo_exodus_pack = {
     enabled = { situation:fo_fifth_odyssey.var:commoners_count >= 8000 }
     duration = 0
     on_completion = {
-      mode = add
-      modifier = fo_achievedmission
-      years = 10
+      add_country_modifier = {
+        mode = add
+        modifier = fo_achievedmission
+        years = 10
+      }
     }
   }
 
