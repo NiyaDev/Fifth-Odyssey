@@ -1,0 +1,8 @@
+﻿
+exodus_party_headquarters_maintenance = {
+  category = building_maintenance
+}
+recruitment_maintenance = {
+  category = building_maintenance
+}
+

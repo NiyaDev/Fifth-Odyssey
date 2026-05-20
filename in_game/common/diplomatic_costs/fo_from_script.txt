@@ -1,5 +1,0 @@
-﻿
-ask_for_knowledge_cost = {
-  favors = 10
-}
-

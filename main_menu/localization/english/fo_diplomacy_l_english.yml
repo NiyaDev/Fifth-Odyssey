@@ -1,0 +1,21 @@
+﻿l_english:
+  ask_for_knowledge: "Request to purchase old texts"
+  ask_for_knowledge_desc: "Request to purchase old texts from the Venetians."
+  dip_ask_for_knowledge_CATEGORY: "CATEGORY_ECONOMY_ACTIONS"
+  PROPOSE_ask_for_knowledge: "Would we like to ask $RECIPIENT$ for our old texts?\n\n$INFO$"
+  ask_for_knowledge_act: "Pay to have Venice return ancient greek texts."
+  ask_for_knowledge_effect_text: "[SCOPE.sCountry('actor').GetName] get ancient texts from [SCOPE.sCountry('recipient').GetName]."
+  ask_for_knowledge_effect_text_past: "[SCOPE.sCountry('actor').GetName] got ancient texts from [SCOPE.sCountry('recipient').GetName]."
+  WE_PERFORM_ask_for_knowledge_ACTION: "When we $ask_for_knowledge$."
+  ACTION_ask_for_knowledge_PERFORMED_ON_US: "When another [country|e] attempts to buy their old texts."
+
+  steal_knowledge: "Attempt to steal old texts"
+  steal_knowledge_desc: "Attempt to steal old texts from the Venetians."
+  dip_steal_knowledge_CATEGORY: "CATEGORY_COVERT_ACTIONS"
+  PROPOSE_steal_knowledge: "Would we like to try to steal our old texts from $RECIPIENT$?\n\n$INFO$"
+  steal_knowledge_act: "Steal our ancient greek texts from [SCOPE.sCountry('recipient').GetName]."
+  steal_knowledge_effect_text: "[SCOPE.sCountry('actor').GetName] is stealing ancient texts from [SCOPE.sCountry('recipient').GetName]."
+  steal_knowledge_effect_text_past: "[SCOPE.sCountry('actor').GetName] stole ancient texts from [SCOPE.sCountry('recipient').GetName]."
+  WE_PERFORM_steal_knowledge_ACTION: "When we $steal_knowledge$."
+  ACTION_steal_knowledge_PERFORMED_ON_US: "When another [country|e] attempts to steal back their old texts."
+

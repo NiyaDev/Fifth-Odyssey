@@ -1,0 +1,12 @@
+﻿
+fo_fifth_odyssey_list = {
+  potential = {
+    can_see_situation = situation:fo_fifth_odyssey
+  }
+
+  actions = {
+    fo_fifthodyssey_buy_ships
+    fo_fifthodyssey_leave
+  }
+}
+

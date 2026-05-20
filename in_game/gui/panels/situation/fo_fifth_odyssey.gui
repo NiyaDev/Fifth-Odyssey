@@ -25,12 +25,10 @@ situation_panel = {
 				datacontext = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('target').GetCountry]"
 				country_flag_small_plus = { size = { 50 30 } }
 			}
-			blockoverride "header_text" = {
-				margin_left = 50
+			blockoverride "header_text" {
+				margin_left = 25
 				align = nobaseline
 				text = "FO_FIFTH_ODYSSEY_POPULATION"
-
-				#tooltipwidget = {}
 			}
 			blockoverride "bottom_content" {
 				text_multi = {
@@ -45,7 +43,7 @@ situation_panel = {
 			blockoverride "common_header_text_full" {
 				text_single = {
 					visible = "[GreaterThan_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('ships').GetValue, '(CFixedPoint)0')]"
-					text = "SHIPS"
+					text = "FO_FIFTH_ODYSSEY_SHIPS"
 				}
 			}
 		}

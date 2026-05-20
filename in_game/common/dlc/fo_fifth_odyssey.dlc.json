@@ -1,0 +1,19 @@
+{
+  "name": "fo_fifth_odyssey",
+  "localizable_name": "fifth_odyssey_key",
+  "path": "mod/Fifth Odyssey",
+  "picture": "thumbnail.dds",
+  
+  "description": "",
+  "supported_version": "",
+  "dependencies": [],
+  "replace_path": [],
+  "tags": [],
+  "pops_id": "fo_fifth_odyssey",
+  "msgr_id": "",
+	"affects_save_compatibility":	true,
+	"mp_synced":	true,
+	"third_party_content":	false,
+	"enabled":	true,
+	"hidden":	false
+}
