@@ -1,4 +1,9 @@
 ﻿
+#####################
+# Opinion Modifiers #
+#####################
+
+
 opinion_invited_peasants_soft = {
   value = -50
   yearly_decay = 2

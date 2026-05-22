@@ -1,11 +1,15 @@
 ﻿
+#############
+# Buildings #
+#############
+
+
 exodus_party_headquarters = {
   is_special = yes
   is_foreign = yes
   need_good_relation = yes
   pop_type = peasants
 	forbidden_for_estates = yes
-
   category = trade_category
 
   max_levels = 1
@@ -20,12 +24,8 @@ exodus_party_headquarters = {
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
 
-  modifier = {
-    gold_to_building_owner = 2.00
-  }
-
+  modifier = { gold_to_building_owner = 2.00 }
   possible_production_methods = { exodus_party_headquarters_maintenance }
-
   construction_demand = town_building_construction
 }
 
@@ -34,7 +34,6 @@ exodus_party_nobles = {
   need_good_relation = yes
   pop_type = nobles
 	forbidden_for_estates = yes
-
   category = trade_category
 
   max_levels = 2
@@ -45,17 +44,12 @@ exodus_party_nobles = {
   city = yes
   megalopolis = yes
 
-  location_potential = {
-    dominant_culture = culture:greek_culture
-  }
+  location_potential = { dominant_culture = culture:greek_culture }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
 
-  modifier = {
-    gold_to_building_owner = 0.40
-  }
+  modifier = { gold_to_building_owner = 0.40 }
   possible_production_methods = { recruitment_maintenance }
-
   construction_demand = guild_construction
 }
 exodus_party_clergy = {
@@ -63,7 +57,6 @@ exodus_party_clergy = {
   need_good_relation = yes
   pop_type = clergy
 	forbidden_for_estates = yes
-
   category = trade_category
 
   max_levels = 4
@@ -74,17 +67,12 @@ exodus_party_clergy = {
   city = yes
   megalopolis = yes
 
-  location_potential = {
-    dominant_culture = culture:greek_culture
-  }
+  location_potential = { dominant_culture = culture:greek_culture }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
 
-  modifier = {
-    gold_to_building_owner = 0.10
-  }
+  modifier = { gold_to_building_owner = 0.10 }
   possible_production_methods = { recruitment_maintenance }
-
   construction_demand = guild_construction
 }
 exodus_party_burghers = {
@@ -92,7 +80,6 @@ exodus_party_burghers = {
   need_good_relation = yes
   pop_type = burghers
 	forbidden_for_estates = yes
-
   category = trade_category
 
   max_levels = 4
@@ -103,17 +90,12 @@ exodus_party_burghers = {
   city = yes
   megalopolis = yes
 
-  location_potential = {
-    dominant_culture = culture:greek_culture
-  }
+  location_potential = { dominant_culture = culture:greek_culture }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
 
-  modifier = {
-    gold_to_building_owner = 0.20
-  }
+  modifier = { gold_to_building_owner = 0.20 }
   possible_production_methods = { recruitment_maintenance }
-
   construction_demand = guild_construction
 }
 exodus_party_commoners = {
@@ -121,7 +103,6 @@ exodus_party_commoners = {
   need_good_relation = yes
   pop_type = peasants
 	forbidden_for_estates = yes
-
   category = trade_category
 
   max_levels = 5
@@ -132,24 +113,18 @@ exodus_party_commoners = {
   city = yes
   megalopolis = yes
 
-  location_potential = {
-    dominant_culture = culture:greek_culture
-  }
+  location_potential = { dominant_culture = culture:greek_culture }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
 
-  modifier = {
-    gold_to_building_owner = 0.10
-  }
+  modifier = { gold_to_building_owner = 0.10 }
   possible_production_methods = { recruitment_maintenance }
-
   construction_demand = guild_construction
 }
 exodus_party_soldiers = {
   is_foreign = yes
   need_good_relation = yes
   pop_type = soldiers
-
   category = trade_category
 
   max_levels = 5
@@ -160,17 +135,12 @@ exodus_party_soldiers = {
   city = yes
   megalopolis = yes
 
-  location_potential = {
-    dominant_culture = culture:greek_culture
-  }
+  location_potential = { dominant_culture = culture:greek_culture }
   country_potential = { has_reform = government_reform:exodus_party }
   build_time = 100
 
-  modifier = {
-    gold_to_building_owner = 0.10
-  }
+  modifier = { gold_to_building_owner = 0.10 }
   possible_production_methods = { recruitment_maintenance }
-
   construction_demand = guild_construction
 }
 
