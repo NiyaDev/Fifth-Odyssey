@@ -694,7 +694,7 @@ fo_fifth_odyssey.42 = { # More Romanyoti join
         name = romanyoti_count
         value = {
           add = var:romanyoti_count
-          add = 200
+          add = 100
         }
       }
     }
@@ -831,6 +831,243 @@ fo_fifth_odyssey.53 = { # Failure robbery
         value = no
       }
     }
+  }
+}
+
+fo_fifth_odyssey.100 = { # The voyage begins
+  type = country_event
+  title = fo_fifth_odyssey.100.title
+  desc = fo_fifth_odyssey.100.desc
+  fire_only_once = yes
+  outcome = neutral
+  
+  option = {
+    name = fo_fifth_odyssey.100.a
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.101
+      days = 60
+    }
+  }
+}
+fo_fifth_odyssey.101 = { # Sicily
+  type = country_event
+  title = fo_fifth_odyssey.101.title
+  desc = fo_fifth_odyssey.101.desc
+  fire_only_once = yes
+  outcome = neutral
+  
+  option = {
+    name = fo_fifth_odyssey.101.a
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.102
+      days = 30
+    }
+  }
+}
+fo_fifth_odyssey.102 = { # Tunisian raiders
+  type = country_event
+  title = fo_fifth_odyssey.102.title
+  desc = fo_fifth_odyssey.102.desc
+  fire_only_once = yes
+  outcome = negative
+  
+  option = { # Fight!
+    name = fo_fifth_odyssey.102.a
+    custom_tooltip = fo_fifth_odyssey.102.aa
+    trigger = { situation:fo_fifth_odyssey.var:ships >= 4 }
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.103
+      days = 30
+    }
+  }
+  option = { # Bargin!
+    name = fo_fifth_odyssey.102.b
+    custom_tooltip = fo_fifth_odyssey.102.bb
+    trigger = { gold >= 30 }
+    add_gold = -30
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.103
+      days = 30
+    }
+  }
+  option = { # Flee!
+    name = fo_fifth_odyssey.102.c
+    custom_tooltip = fo_fifth_odyssey.102.cc
+    add_gold = {
+      value = {
+        add = gold
+        multiply = -0.75
+      }
+    }
+    situation:fo_fifth_odyssey = {
+      set_variable = { # Nobles
+        name = nobles_additional
+        value = {
+          add = var:nobles_additional
+          multiply = 0.9
+        }
+      }
+      set_variable = { # Clergy
+        name = clergy_additional
+        value = {
+          add = var:clergy_additional
+          multiply = 0.9
+        }
+      }
+      set_variable = { # Burghers
+        name = burghers_additional
+        value = {
+          add = var:burghers_additional
+          multiply = 0.9
+        }
+      }
+      set_variable = { # Commoners
+        name = peasants_additional
+        value = {
+          add = var:peasants_additional
+          multiply = 0.9
+        }
+      }
+      set_variable = { # Romanyoti
+        name = romanyoti_count
+        value = {
+          add = var:romanyoti_count
+          multiply = 0.9
+        }
+      }
+    }
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.103
+      days = 30
+    }
+  }
+}
+fo_fifth_odyssey.103 = { # Pillars of Hercules
+  type = country_event
+  title = fo_fifth_odyssey.103.title
+  desc = fo_fifth_odyssey.103.desc
+  fire_only_once = yes
+  outcome = neutral
+  
+  option = {
+    name = fo_fifth_odyssey.103.a
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.104
+      days = 20
+    }
+  }
+}
+fo_fifth_odyssey.104 = { # The Portuguese
+  type = country_event
+  title = fo_fifth_odyssey.104.title
+  desc = fo_fifth_odyssey.104.desc
+  fire_only_once = yes
+  outcome = neutral
+  
+  option = { # Tell the truth
+    name = fo_fifth_odyssey.104.a
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.105
+      days = 80
+    }
+  }
+  option = { # Lie
+    name = fo_fifth_odyssey.104.b
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.105
+      days = 80
+    }
+  }
+}
+fo_fifth_odyssey.105 = { # Losing hope
+  type = country_event
+  title = fo_fifth_odyssey.105.title
+  desc = fo_fifth_odyssey.105.desc
+  fire_only_once = yes
+  outcome = negative
+  
+  option = { # Normal
+    name = fo_fifth_odyssey.105.a
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.106
+      days = 10
+    }
+  }
+  option = { # Allow conversions
+    name = fo_fifth_odyssey.105.a
+    trigger = { situation:fo_fifth_odyssey.var:clergy_count > 0 }
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = allowing_conversions
+        value = yes
+      }
+    }
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.106
+      days = 10
+    }
+  }
+}
+fo_fifth_odyssey.106 = { # The Storm
+  type = country_event
+  title = fo_fifth_odyssey.106.title
+  desc = fo_fifth_odyssey.106.desc
+  fire_only_once = yes
+  outcome = negative
+  
+  option = {
+    name = fo_fifth_odyssey.106.a
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.107
+      days = 10
+    }
+  }
+}
+fo_fifth_odyssey.107 = { # St Elmo's Fire / Helene
+  type = country_event
+  title = fo_fifth_odyssey.107.title
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        desc = fo_fifth_odyssey.107.desc_b
+        trigger = { situation:fo_fifth_odyssey.var:allowing_conversions ?= yes }
+      }
+      desc = fo_fifth_odyssey.107.desc_a
+    }
+  } 
+  fire_only_once = yes
+  outcome = negative
+  
+  option = {
+    name = fo_fifth_odyssey.107.a
+    trigger = { situation:fo_fifth_odyssey.var:allowing_conversions ?= no }
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.108
+      days = 10
+    }
+  }
+  option = {
+    name = fo_fifth_odyssey.107.b
+    trigger = { situation:fo_fifth_odyssey.var:allowing_conversions ?= yes }
+    trigger_event_non_silently = {
+      id = fo_fifth_odyssey.108
+      days = 10
+    }
+  }
+}
+fo_fifth_odyssey.108 = { # The Arrival
+  type = country_event
+  title = fo_fifth_odyssey.108.title
+  desc = fo_fifth_odyssey.108.desc
+  fire_only_once = yes
+  outcome = positive
+  
+  option = {
+    name = fo_fifth_odyssey.108.a
+
+    fo_arrival_province = yes
+    fo_arrival_country = yes
+    fo_arrival_situation = yes
   }
 }
 

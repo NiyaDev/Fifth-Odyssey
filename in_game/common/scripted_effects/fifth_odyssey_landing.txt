@@ -1,0 +1,15 @@
+﻿
+fo_arrival_province = {
+  location:patawomeck = {}
+}
+
+fo_arrival_country = {
+  c:EXO = {
+    change_country_type = location
+  }
+}
+
+fo_arrival_situation = {
+  end_situation = situation:fo_fifth_odyssey
+}
+

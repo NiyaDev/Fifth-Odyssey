@@ -16,7 +16,18 @@ fo_fifthodyssey_buy_ships = {
     }
   }
 
-  effect = { scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.1 } }
+  effect = {
+    scope:actor = { add_gold = -20 }
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = ships
+        value = {
+          add = situation:fo_fifth_odyssey.var:ships
+          add = 1
+        }
+      }
+    }
+  }
 }
 
 fo_fifthodyssey_leave = {
@@ -35,6 +46,6 @@ fo_fifthodyssey_leave = {
     }
   }
 
-  effect = { scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.1 } }
+  effect = { scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.100 } }
 }
 

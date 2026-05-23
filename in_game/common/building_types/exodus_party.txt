@@ -106,7 +106,7 @@ exodus_party_commoners = {
   category = trade_category
 
   max_levels = 5
-  employment_size = 0.100
+  employment_size = 0.150
 
   rural_settlement = yes
   town = yes
