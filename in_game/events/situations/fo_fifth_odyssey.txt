@@ -852,6 +852,21 @@ fo_fifth_odyssey.100 = { # The voyage begins
       id = fo_fifth_odyssey.101
       days = 60
     }
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = started_voyage
+        value = yes
+      }
+    }
+    if = { #This probably doesn't work, but its not a priority right now
+      limit = { any_owned_location = { disease_presence = { disease = disease:bubonic_plague  value > 0 } } }
+      situation:fo_fifth_odyssey = {
+        set_variable = {
+          name = bubonic
+          value = yes
+        }
+      }
+    }
   }
 }
 fo_fifth_odyssey.101 = { # Sicily
@@ -975,12 +990,20 @@ fo_fifth_odyssey.104 = { # The Portuguese
       id = fo_fifth_odyssey.105
       days = 80
     }
+    set_variable = {
+      name = port_lied
+      value = yes
+    }
   }
   option = { # Lie
     name = fo_fifth_odyssey.104.b
     trigger_event_non_silently = {
       id = fo_fifth_odyssey.105
       days = 80
+    }
+    set_variable = {
+      name = port_lied
+      value = no
     }
   }
 }
@@ -1073,6 +1096,11 @@ fo_fifth_odyssey.108 = { # The Arrival
     fo_arrival_province = yes
     fo_arrival_country = yes
     fo_arrival_situation = yes
+
+    if = {
+      limit = { var:bubonic ?= yes }
+      hidden_effect = { trigger_event_non_silently = fo_fifth_odyssey.44 }
+    }
   }
 }
 

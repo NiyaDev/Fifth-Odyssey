@@ -19,174 +19,178 @@ fo_fifth_odyssey = {
     c:EXO = {
       trigger_event_non_silently = fo_fifth_odyssey.1
     }
-
-    set_variable = { name = nobles_count  value = 0 }
-    set_variable = { name = nobles_pop  value = 0 }
-    set_variable = { name = nobles_additional  value = 0 }
-    set_variable = { name = clergy_count  value = 0 }
-    set_variable = { name = clergy_pop  value = 0 }
-    set_variable = { name = clergy_additional  value = 0 }
-    set_variable = { name = burgehrs_count  value = 0 }
-    set_variable = { name = burghers_pop  value = 0 }
+    
+    set_variable = { name = started_voyage       value = no }
+    set_variable = { name = nobles_count         value = 0 }
+    set_variable = { name = nobles_pop           value = 0 }
+    set_variable = { name = nobles_additional    value = 0 }
+    set_variable = { name = clergy_count         value = 0 }
+    set_variable = { name = clergy_pop           value = 0 }
+    set_variable = { name = clergy_additional    value = 0 }
+    set_variable = { name = burgehrs_count       value = 0 }
+    set_variable = { name = burghers_pop         value = 0 }
     set_variable = { name = burghers_additional  value = 0 }
-    set_variable = { name = commoners_count  value = 0 }
-    set_variable = { name = commoners_pop  value = 0 }
+    set_variable = { name = commoners_count      value = 0 }
+    set_variable = { name = commoners_pop        value = 0 }
     set_variable = { name = peasants_additional  value = 0 }
-    set_variable = { name = soldiers_count  value = 0 }
-    set_variable = { name = soldiers_pop  value = 0 }
+    set_variable = { name = soldiers_count       value = 0 }
+    set_variable = { name = soldiers_pop         value = 0 }
     set_variable = { name = soldiers_additional  value = 0 }
 
-    set_variable = { name = romanyoti_joined  value = no }
-    set_variable = { name = romanyoti_count  value = 0 }
+    set_variable = { name = romanyoti_joined     value = no }
+    set_variable = { name = romanyoti_count      value = 0 }
 
-    set_variable = { name = total_pop  value = 0 }
+    set_variable = { name = total_pop            value = 0 }
 
-    set_variable = { name = knowledge  value = no }
-    set_variable = { name = silk  value = no }
-    set_variable = { name = horses  value = no }
+    set_variable = { name = knowledge            value = no }
+    set_variable = { name = silk                 value = no }
+    set_variable = { name = horses               value = no }
   }
 
   on_monthly = {
     update_situation_pops = yes
 
     # Events
-    random_list = {
-      80 = {}
-      20 = {
-        if = { # More positive events than negative
-          limit = { current_year <= 1342 }
-          random_list = {
-            40 = { # Estates join
-              random_list = {
-                10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.20 } } # Nobles
-                 5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.21 } } # Clergy
-                25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.22 } } # Burghers
-                60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.23 } } # Peasants
-              }
-            }
-            20 = { # Estates offer deals
-              random_list = {
-                30 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.24 } } # Nobles
-                70 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.25 } } # Burghers
-              }
-            }
-            30 = { # Foreign peasants
-              random_list = {
-                50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.26 } } # Frankokratia
-                50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.27 } } # Turkic
-              }
-            }
-            10 = { # Bank loan
-              c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.28 }
-            }
-          }
-        }
-        else_if = { # Equal chance of good and bad
-          limit = {
-            current_year > 1342
-            current_year <= 1346
-          }
-          random_list = {
-            50 = { # Good
-              random_list = {
-                40 = { # Estates join
-                  random_list = {
-                    10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.20 } } # Nobles
-                     5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.21 } } # Clergy
-                    25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.22 } } # Burghers
-                    60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.23 } } # Peasants
-                  }
-                }
-                20 = { # Estates offer deals
-                  random_list = {
-                    30 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.24 } } # Nobles
-                    70 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.25 } } # Burghers
-                  }
-                }
-                30 = { # Foreign peasants
-                  random_list = {
-                    50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.26 } } # Frankokratia
-                    50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.27 } } # Turkic
-                  }
-                }
-                10 = { # Bank loan
-                  c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.28 }
+    if = {
+      limit = { var:started_voyage ?= no }
+      random_list = {
+        80 = {}
+        20 = {
+          if = { # More positive events than negative
+            limit = { current_year <= 1342 }
+            random_list = {
+              40 = { # Estates join
+                random_list = {
+                  10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.20 } } # Nobles
+                   5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.21 } } # Clergy
+                  25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.22 } } # Burghers
+                  60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.23 } } # Peasants
                 }
               }
-            }
-            50 = { # Bad
-              random_list = {
-                50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.29 } } # Unrest
-                50 = { # Estates want refend
-                  random_list = {
-                    10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.30 } } # Nobles
-                     5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.31 } } # Clergy
-                    25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.32 } } # Burghers
-                    60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.33 } } # Peasants
-                  }
+              20 = { # Estates offer deals
+                random_list = {
+                  30 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.24 } } # Nobles
+                  70 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.25 } } # Burghers
                 }
+              }
+              30 = { # Foreign peasants
+                random_list = {
+                  50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.26 } } # Frankokratia
+                  50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.27 } } # Turkic
+                }
+              }
+              10 = { # Bank loan
+                c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.28 }
               }
             }
           }
-        }
-        else_if = { # More negative than good
-          limit = {
-            current_year > 1346
-            current_year <= 1350
-          }
-          random_list = {
-            10 = { # Good
-              random_list = {
-                40 = { # Estates join
-                  random_list = {
-                    10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.20 } } # Nobles
-                     5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.21 } } # Clergy
-                    25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.22 } } # Burghers
-                    60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.23 } } # Peasants
+          else_if = { # Equal chance of good and bad
+            limit = {
+              current_year > 1342
+              current_year <= 1346
+            }
+            random_list = {
+              50 = { # Good
+                random_list = {
+                  40 = { # Estates join
+                    random_list = {
+                      10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.20 } } # Nobles
+                       5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.21 } } # Clergy
+                      25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.22 } } # Burghers
+                      60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.23 } } # Peasants
+                    }
                   }
-                }
-                20 = { # Estates offer deals
-                  random_list = {
-                    30 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.24 } } # Nobles
-                    70 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.25 } } # Burghers
+                  20 = { # Estates offer deals
+                    random_list = {
+                      30 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.24 } } # Nobles
+                      70 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.25 } } # Burghers
+                    }
                   }
-                }
-                30 = { # Foreign peasants
-                  random_list = {
-                    50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.26 } } # Frankokratia
-                    50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.27 } } # Turkic
+                  30 = { # Foreign peasants
+                    random_list = {
+                      50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.26 } } # Frankokratia
+                      50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.27 } } # Turkic
+                    }
                   }
-                }
-                10 = { # Bank loan
-                  c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.28 }
+                  10 = { # Bank loan
+                    c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.28 }
+                  }
                 }
               }
-            }
-            90 = { # Bad
-              random_list = {
-                50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.29 } } # Unrest
-                50 = { # Estates want refend
-                  random_list = {
-                    10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.30 } } # Nobles
-                     5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.31 } } # Clergy
-                    25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.32 } } # Burghers
-                    60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.33 } } # Peasants
+              50 = { # Bad
+                random_list = {
+                  50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.29 } } # Unrest
+                  50 = { # Estates want refend
+                    random_list = {
+                      10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.30 } } # Nobles
+                       5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.31 } } # Clergy
+                      25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.32 } } # Burghers
+                      60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.33 } } # Peasants
+                    }
                   }
                 }
               }
             }
           }
-        }
-        else_if = { # Only bad
-          limit = { current_year > 1350 }
-          random_list = {
-            50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.29 } } # Unrest
-            50 = { # Estates want refend
-              random_list = {
-                10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.30 } } # Nobles
-                 5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.31 } } # Clergy
-                25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.32 } } # Burghers
-                60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.33 } } # Peasants
+          else_if = { # More negative than good
+            limit = {
+              current_year > 1346
+              current_year <= 1350
+            }
+            random_list = {
+              10 = { # Good
+                random_list = {
+                  40 = { # Estates join
+                    random_list = {
+                      10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.20 } } # Nobles
+                       5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.21 } } # Clergy
+                      25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.22 } } # Burghers
+                      60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.23 } } # Peasants
+                    }
+                  }
+                  20 = { # Estates offer deals
+                    random_list = {
+                      30 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.24 } } # Nobles
+                      70 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.25 } } # Burghers
+                    }
+                  }
+                  30 = { # Foreign peasants
+                    random_list = {
+                      50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.26 } } # Frankokratia
+                      50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.27 } } # Turkic
+                    }
+                  }
+                  10 = { # Bank loan
+                    c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.28 }
+                  }
+                }
+              }
+              90 = { # Bad
+                random_list = {
+                  50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.29 } } # Unrest
+                  50 = { # Estates want refend
+                    random_list = {
+                      10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.30 } } # Nobles
+                       5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.31 } } # Clergy
+                      25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.32 } } # Burghers
+                      60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.33 } } # Peasants
+                    }
+                  }
+                }
+              }
+            }
+          }
+          else_if = { # Only bad
+            limit = { current_year > 1350 }
+            random_list = {
+              50 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.29 } } # Unrest
+              50 = { # Estates want refend
+                random_list = {
+                  10 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.30 } } # Nobles
+                   5 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.31 } } # Clergy
+                  25 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.32 } } # Burghers
+                  60 = { c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.33 } } # Peasants
+                }
               }
             }
           }
@@ -195,7 +199,10 @@ fo_fifth_odyssey = {
     }
     
     if = {
-      limit = { var:romanyoti_joined = yes }
+      limit = {
+        var:romanyoti_joined ?= yes
+        var:started_voyage   ?= no
+      }
       if = {
         limit = { var:clergy_count > 0 }
         c:EXO = { trigger_event_non_silently = fo_fifth_odyssey.41 }

@@ -20,8 +20,8 @@
 					sub_continent = sub_continent:western_europe
 					sub_continent = sub_continent:north_africa
 					area = area:elysium_area
-					area = area:cuba_area
-					area = area:newfoundland_area
+					#area = area:california?
+					#area = area:Malicolony?
 				}
 				has_owner = yes
 				is_port = yes
@@ -35,16 +35,18 @@
 						has_discovered_area = area:bermuda_area
 					}
 				}
-				OR = {
-					OR = {
-						owner = { has_country_modifier = fo_lied_por }
-						NOT = { country_exists = c:FO0 }
+				OR = { # port_lied
+					# Lied and still exists
+					and = {
+						owner = c:EXO
+						c:EXO = { var:port_lied ?= yes }
 					}
-					AND = {
-						c:FO0 = { has_country_modifier = fo_truth_por }
-						OR = {
-							owner = c:FO0
-							owner = c:POR
+					# Told truth / Doesn't exist
+					or = {
+						not = { country_exists = c:EXO }
+						and = {
+							country_exists = c:EXO
+							c:EXO = { var:port_lied ?= no }
 						}
 					}
 				}
