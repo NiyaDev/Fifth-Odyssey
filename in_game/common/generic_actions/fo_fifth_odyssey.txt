@@ -45,7 +45,23 @@ fo_fifthodyssey_leave = {
       situation_is_active = yes
     }
   }
+  allow = {
+    situation:fo_fifth_odyssey = {
+      or = {
+        not = { has_variable = started_voyage }
+        var:started_voyage = no
+      }
+    }
+  }
 
-  effect = { scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.100 } }
+  effect = {
+    scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.1000 }
+    situation:fo_fifth_odyssey = {
+      set_variable = {
+        name = started_voyage
+        value = yes
+      }
+    }
+  }
 }
 

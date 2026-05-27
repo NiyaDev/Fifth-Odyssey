@@ -418,12 +418,6 @@ fo_fifth_odyssey.28 = { # Bank loan
         value = yes
       }
     }
-    #c:EXO = {
-    #  set_variable = {
-    #    name = took_loan
-    #    value = target_country
-    #  }
-    #}
   }
   option = { # Refuse loan
     name = fo_fifth_odyssey.28.b
@@ -807,7 +801,7 @@ fo_fifth_odyssey.52 = { # Successful robbery
 
   option = {
     name = fo_fifth_odyssey.52.a
-    custom_tooltip = { text = fo_fifth_odyssey.51.aa }
+    custom_tooltip = { text = fo_fifth_odyssey.52.aa }
     situation:fo_fifth_odyssey = {
       set_variable = {
         name = knowledge
@@ -839,7 +833,7 @@ fo_fifth_odyssey.53 = { # Failure robbery
   }
 }
 
-fo_fifth_odyssey.100 = { # The voyage begins
+fo_fifth_odyssey.1000 = { # The voyage begins
   type = country_event
   title = fo_fifth_odyssey.100.title
   desc = fo_fifth_odyssey.100.desc
@@ -849,14 +843,8 @@ fo_fifth_odyssey.100 = { # The voyage begins
   option = {
     name = fo_fifth_odyssey.100.a
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.101
+      id = fo_fifth_odyssey.1001
       days = 60
-    }
-    situation:fo_fifth_odyssey = {
-      set_variable = {
-        name = started_voyage
-        value = yes
-      }
     }
     if = { #This probably doesn't work, but its not a priority right now
       limit = { any_owned_location = { disease_presence = { disease = disease:bubonic_plague  value > 0 } } }
@@ -869,7 +857,7 @@ fo_fifth_odyssey.100 = { # The voyage begins
     }
   }
 }
-fo_fifth_odyssey.101 = { # Sicily
+fo_fifth_odyssey.1001 = { # Sicily
   type = country_event
   title = fo_fifth_odyssey.101.title
   desc = fo_fifth_odyssey.101.desc
@@ -879,12 +867,12 @@ fo_fifth_odyssey.101 = { # Sicily
   option = {
     name = fo_fifth_odyssey.101.a
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.102
+      id = fo_fifth_odyssey.1002
       days = 30
     }
   }
 }
-fo_fifth_odyssey.102 = { # Tunisian raiders
+fo_fifth_odyssey.1002 = { # Tunisian raiders
   type = country_event
   title = fo_fifth_odyssey.102.title
   desc = fo_fifth_odyssey.102.desc
@@ -896,7 +884,7 @@ fo_fifth_odyssey.102 = { # Tunisian raiders
     custom_tooltip = fo_fifth_odyssey.102.aa
     trigger = { situation:fo_fifth_odyssey.var:ships >= 4 }
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.103
+      id = fo_fifth_odyssey.1003
       days = 30
     }
   }
@@ -906,7 +894,7 @@ fo_fifth_odyssey.102 = { # Tunisian raiders
     trigger = { gold >= 30 }
     add_gold = -30
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.103
+      id = fo_fifth_odyssey.1003
       days = 30
     }
   }
@@ -957,12 +945,12 @@ fo_fifth_odyssey.102 = { # Tunisian raiders
       }
     }
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.103
+      id = fo_fifth_odyssey.1003
       days = 30
     }
   }
 }
-fo_fifth_odyssey.103 = { # Pillars of Hercules
+fo_fifth_odyssey.1003 = { # Pillars of Hercules
   type = country_event
   title = fo_fifth_odyssey.103.title
   desc = fo_fifth_odyssey.103.desc
@@ -972,12 +960,12 @@ fo_fifth_odyssey.103 = { # Pillars of Hercules
   option = {
     name = fo_fifth_odyssey.103.a
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.104
+      id = fo_fifth_odyssey.1004
       days = 20
     }
   }
 }
-fo_fifth_odyssey.104 = { # The Portuguese
+fo_fifth_odyssey.1004 = { # The Portuguese
   type = country_event
   title = fo_fifth_odyssey.104.title
   desc = fo_fifth_odyssey.104.desc
@@ -998,7 +986,7 @@ fo_fifth_odyssey.104 = { # The Portuguese
   option = { # Lie
     name = fo_fifth_odyssey.104.b
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.105
+      id = fo_fifth_odyssey.1005
       days = 80
     }
     set_variable = {
@@ -1007,7 +995,7 @@ fo_fifth_odyssey.104 = { # The Portuguese
     }
   }
 }
-fo_fifth_odyssey.105 = { # Losing hope
+fo_fifth_odyssey.1005 = { # Losing hope
   type = country_event
   title = fo_fifth_odyssey.105.title
   desc = fo_fifth_odyssey.105.desc
@@ -1017,7 +1005,7 @@ fo_fifth_odyssey.105 = { # Losing hope
   option = { # Normal
     name = fo_fifth_odyssey.105.a
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.106
+      id = fo_fifth_odyssey.1006
       days = 10
     }
   }
@@ -1031,12 +1019,12 @@ fo_fifth_odyssey.105 = { # Losing hope
       }
     }
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.106
+      id = fo_fifth_odyssey.1006
       days = 10
     }
   }
 }
-fo_fifth_odyssey.106 = { # The Storm
+fo_fifth_odyssey.1006 = { # The Storm
   type = country_event
   title = fo_fifth_odyssey.106.title
   desc = fo_fifth_odyssey.106.desc
@@ -1046,12 +1034,12 @@ fo_fifth_odyssey.106 = { # The Storm
   option = {
     name = fo_fifth_odyssey.106.a
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.107
+      id = fo_fifth_odyssey.1007
       days = 10
     }
   }
 }
-fo_fifth_odyssey.107 = { # St Elmo's Fire / Helene
+fo_fifth_odyssey.1007 = { # St Elmo's Fire / Helene
   type = country_event
   title = fo_fifth_odyssey.107.title
   desc = {
@@ -1068,9 +1056,14 @@ fo_fifth_odyssey.107 = { # St Elmo's Fire / Helene
   
   option = {
     name = fo_fifth_odyssey.107.a
-    trigger = { situation:fo_fifth_odyssey.var:allowing_conversions ?= no }
+    trigger = {
+      or = {
+        situation:fo_fifth_odyssey.var:allowing_conversions ?= no
+        not = { situation:fo_fifth_odyssey.has_variable = allowing_conversions }
+      }
+    }
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.108
+      id = fo_fifth_odyssey.1008
       days = 10
     }
   }
@@ -1078,12 +1071,12 @@ fo_fifth_odyssey.107 = { # St Elmo's Fire / Helene
     name = fo_fifth_odyssey.107.b
     trigger = { situation:fo_fifth_odyssey.var:allowing_conversions ?= yes }
     trigger_event_non_silently = {
-      id = fo_fifth_odyssey.108
+      id = fo_fifth_odyssey.1008
       days = 10
     }
   }
 }
-fo_fifth_odyssey.108 = { # The Arrival
+fo_fifth_odyssey.1008 = { # The Arrival
   type = country_event
   title = fo_fifth_odyssey.108.title
   desc = fo_fifth_odyssey.108.desc
@@ -1093,8 +1086,8 @@ fo_fifth_odyssey.108 = { # The Arrival
   option = {
     name = fo_fifth_odyssey.108.a
 
-    fo_arrival_province = yes
     fo_arrival_country = yes
+    fo_arrival_province = yes
     fo_arrival_situation = yes
 
     if = {

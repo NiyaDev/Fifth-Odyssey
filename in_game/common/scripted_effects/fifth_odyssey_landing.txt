@@ -1,11 +1,110 @@
 ﻿
 fo_arrival_province = {
-  location:patawomeck = {}
+  location:patawomeck = {
+    # General
+    change_location_owner = c:EXO
+    hidden_effect = { add_core = c:EXO }
+    change_location_rank = location_rank:town
+
+    # Population
+
+    # buildings
+    construct_building = { # Overforaging
+      building_type = building_type:overforage
+      cost_multiplier = 0
+      instant = yes
+    }
+  }
 }
 
 fo_arrival_country = {
   c:EXO = {
     change_country_type = location
+    set_global_variable = { name = temp_pop_count  value = 0 }
+    set_global_variable = { name = temp_pop_type   value = pop_type:peasants }
+    hidden_effect = {
+      every_owned_foreign_building = {
+        linked_pop = {
+          set_global_variable = { name = temp_pop_count  value = pop_size }
+          set_global_variable = { name = temp_pop_type   value = pop_type }
+          add_pop_size = { value = pop_size  multiply = -1 }
+        }
+        location:patawomeck = {
+          add_pop = {
+            culture = culture:old_world_greek
+            religion = religion:orthodox
+            type = global_var:temp_pop_type
+            size = global_var:temp_pop_count
+          }
+        }
+        change_building_level = -10
+      }
+      location:patawomeck = {
+        add_pop = {
+          culture = culture:old_world_greek
+          religion = religion:orthodox
+          type = pop_type:nobles
+          size = {
+            value = situation:fo_fifth_odyssey.var:nobles_additional
+            multiply = 0.001
+          }
+        }
+        add_pop = {
+          culture = culture:old_world_greek
+          religion = religion:orthodox
+          type = pop_type:clergy
+          size = {
+            value = situation:fo_fifth_odyssey.var:clergy_additional
+            multiply = 0.001
+          }
+        }
+        add_pop = {
+          culture = culture:old_world_greek
+          religion = religion:orthodox
+          type = pop_type:burghers
+          size = {
+            value = situation:fo_fifth_odyssey.var:burghers_additional
+            multiply = 0.001
+          }
+        }
+        add_pop = {
+          culture = culture:old_world_greek
+          religion = religion:orthodox
+          type = pop_type:peasants
+          size = {
+            value = situation:fo_fifth_odyssey.var:peasants_additional
+            multiply = 0.001
+          }
+        }
+        add_pop = {
+          culture = culture:old_world_greek
+          religion = religion:orthodox
+          type = pop_type:soldiers
+          size = {
+            value = situation:fo_fifth_odyssey.var:soldiers_additional
+            multiply = 0.001
+          }
+        }
+        add_pop = {
+          culture = culture:romanyoti
+          religion = religion:judaism
+          type = pop_type:burghers
+          size = {
+            value = situation:fo_fifth_odyssey.var:romanyoti_count
+            multiply = 0.00025
+          }
+        }
+        add_pop = {
+          culture = culture:romanyoti
+          religion = religion:judaism
+          type = pop_type:peasants
+          size = {
+            value = situation:fo_fifth_odyssey.var:romanyoti_count
+            multiply = 0.00075
+          }
+        }
+      }
+    }
   }
 }
 
