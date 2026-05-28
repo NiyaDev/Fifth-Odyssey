@@ -2,27 +2,42 @@
 fo_arrival_province = {
   location:patawomeck = {
     # General
-    change_location_owner = c:EXO
-    hidden_effect = { add_core = c:EXO }
+    change_location_owner = c:ILY
+    hidden_effect = { add_core = c:ILY }
     change_location_rank = location_rank:town
 
-    # Population
-
     # buildings
-    construct_building = { # Overforaging
-      building_type = building_type:overforage
-      cost_multiplier = 0
-      instant = yes
-    }
+    change_max_raw_material_workers = 1
+    change_building_level_in_location = { building_type = building_type:overforage  value = 1 }
   }
 }
 
 fo_arrival_country = {
+  c:ILY = {
+    #hidden_effect = {
+      change_government_type = government_type:monarchy
+      set_new_ruler = exo_eirene
+      set_gold = c:EXO.gold
+
+      c:EXO = {
+        every_policy = {
+          set_local_variable = {
+            name = temp_policy
+            value = this
+          }
+          c:ILY = { add_policy = local_var:temp_policy }
+        }
+      }
+    #}
+  }
   c:EXO = {
-    change_country_type = location
+    every_character = { move_country = c:ILY }
+    change_player = c:ILY
+
     set_global_variable = { name = temp_pop_count  value = 0 }
     set_global_variable = { name = temp_pop_type   value = pop_type:peasants }
     hidden_effect = {
+      # Iterating through every building and taking pops
       every_owned_foreign_building = {
         linked_pop = {
           set_global_variable = { name = temp_pop_count  value = pop_size }
@@ -39,6 +54,7 @@ fo_arrival_country = {
         }
         change_building_level = -10
       }
+      # Giving additional pops
       location:patawomeck = {
         add_pop = {
           culture = culture:old_world_greek
@@ -103,6 +119,24 @@ fo_arrival_country = {
             multiply = 0.00075
           }
         }
+        if = {
+          limit = { situation:fo_fifth_odyssey.var:romanyoti_joined ?= yes }
+          add_tolerated_culture = culture:romanyoti
+        }
+      }
+      # Removing loans and adding variable
+      every_loan = {
+        set_local_variable = {
+          name = temp_scope
+          value = owner
+        }
+        c:EXO = {
+          add_to_variable_list = {
+            name = loans
+            target = local_var:temp_scope
+          }
+        }
+        cancel_loan = this
       }
     }
   }

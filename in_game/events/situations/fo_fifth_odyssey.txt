@@ -1086,8 +1086,8 @@ fo_fifth_odyssey.1008 = { # The Arrival
   option = {
     name = fo_fifth_odyssey.108.a
 
-    fo_arrival_country = yes
     fo_arrival_province = yes
+    fo_arrival_country = yes
     fo_arrival_situation = yes
 
     if = {

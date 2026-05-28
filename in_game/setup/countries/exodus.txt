@@ -6,6 +6,13 @@ EXO = { # Exodus party
   religion_definition = orthodox
 }
 
+ILY = {
+  color = rgb { 92 174 219 }
+
+  culture_definition = old_world_greek
+  religion_definition = orthodox
+}
+
 #MANK = {
 #  color = rgb { 222, 221, 146 }
 #

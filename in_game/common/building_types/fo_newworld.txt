@@ -12,10 +12,10 @@ overforage = {
   city = no
   megalopolis = no
   allow = {
-    c:EXO.var:settled ?= no
-    tag = c:EXO
+    c:ILY.var:settled ?= no
+    tag = c:ILY
   }
-  remove_if = { c:EXO.var:settled ?= yes }
+  remove_if = { c:ILY.var:settled ?= yes }
   build_time = 0
 
   modifier = {
