@@ -39,12 +39,14 @@ situation_panel = {
 				}
 			}
 		}
-		situation_card_common = {
-			blockoverride "common_header_text_full" {
-				text_single = {
-					visible = "[GreaterThan_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('ships').GetValue, '(CFixedPoint)0')]"
-					text = "FO_FIFTH_ODYSSEY_SHIPS"
-				}
+		situation_card_one_line = {
+			visible = "[GreaterThan_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('ships').GetValue, '(CFixedPoint)0')]"
+			blockoverride "header_icon" {
+				# TEMP
+				texture = "gfx/interface/icons/situations/council_of_trent.dds"
+			}
+			blockoverride "header_text" {
+				text = "FO_FIFTH_ODYSSEY_SHIPS"
 			}
 		}
   }

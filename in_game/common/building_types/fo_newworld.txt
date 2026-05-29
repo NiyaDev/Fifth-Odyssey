@@ -11,10 +11,8 @@ overforage = {
   town = yes
   city = no
   megalopolis = no
-  allow = {
-    c:ILY.var:settled ?= no
-    tag = c:ILY
-  }
+  allow = { c:ILY.var:settled ?= no }
+  country_potential = { tag = c:ILY }
   remove_if = { c:ILY.var:settled ?= yes }
   build_time = 0
 

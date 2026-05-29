@@ -38,15 +38,15 @@
 				OR = { # port_lied
 					# Lied and still exists
 					and = {
-						owner = c:EXO
-						c:EXO = { var:port_lied ?= yes }
+						owner = c:ILY
+						c:ILY = { var:port_lied ?= yes }
 					}
 					# Told truth / Doesn't exist
 					or = {
-						not = { country_exists = c:EXO }
+						not = { country_exists = c:ILY }
 						and = {
-							country_exists = c:EXO
-							c:EXO = { var:port_lied ?= no }
+							country_exists = c:ILY
+							c:ILY = { var:port_lied ?= no }
 						}
 					}
 				}

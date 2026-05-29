@@ -32,7 +32,7 @@ fo_fifth_odyssey.20 = { # Nobles join
         name = nobles_additional
         value = {
           add = var:nobles_additional
-          add = 20
+          add = 10
         }
       }
     }
@@ -48,7 +48,7 @@ fo_fifth_odyssey.20 = { # Nobles join
         name = nobles_additional
         value = {
           add = var:nobles_additional
-          add = 10
+          add = 5
         }
       }
     }
@@ -227,7 +227,7 @@ fo_fifth_odyssey.24 = { # Nobles join with money and pops
         name = nobles_additional
         value = {
           add = var:nobles_additional
-          add = 10
+          add = 5
         }
       }
       set_variable = {
@@ -626,7 +626,7 @@ fo_fifth_odyssey.40 = { # Romanyoti approach
     custom_tooltip = { text = fo_fifth_odyssey.40.aa }
 
     add_gold = 50
-    add_tolerated_culture = culture:romanyoti
+    set_cultural_view = { target = culture:old_world_greek  value = positive }
 
     situation:fo_fifth_odyssey = {
       set_variable = {
@@ -654,7 +654,7 @@ fo_fifth_odyssey.41 = { # Romanyoti leave
   option = {
     name = fo_fifth_odyssey.41.a
     custom_tooltip = { text = fo_fifth_odyssey.41.aa }
-    remove_tolerated_culture = culture:romanyoti
+    set_cultural_view = { target = culture:old_world_greek  value = neutral }
 
     situation:fo_fifth_odyssey = {
       set_variable = {
@@ -1010,8 +1010,8 @@ fo_fifth_odyssey.1005 = { # Losing hope
     }
   }
   option = { # Allow conversions
-    name = fo_fifth_odyssey.105.a
-    trigger = { situation:fo_fifth_odyssey.var:clergy_count > 0 }
+    name = fo_fifth_odyssey.105.b
+    trigger = { not = { situation:fo_fifth_odyssey.var:clergy_count > 0 } }
     situation:fo_fifth_odyssey = {
       set_variable = {
         name = allowing_conversions
@@ -1059,7 +1059,7 @@ fo_fifth_odyssey.1007 = { # St Elmo's Fire / Helene
     trigger = {
       or = {
         situation:fo_fifth_odyssey.var:allowing_conversions ?= no
-        not = { situation:fo_fifth_odyssey.has_variable = allowing_conversions }
+        not = { situation:fo_fifth_odyssey = { has_variable = allowing_conversions } }
       }
     }
     trigger_event_non_silently = {

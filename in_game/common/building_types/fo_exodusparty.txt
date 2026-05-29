@@ -32,7 +32,7 @@ exodus_party_nobles = {
   category = trade_category
 
   max_levels = 2
-  employment_size = 0.025
+  employment_size = 0.010
 
   rural_settlement = yes
   town = yes

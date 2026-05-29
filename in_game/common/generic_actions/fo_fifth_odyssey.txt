@@ -15,6 +15,13 @@ fo_fifthodyssey_buy_ships = {
       situation_is_active = yes
     }
   }
+  allow = {
+    c:EXO.gold > 20
+  }
+	cooldown = {
+		type = funding_cooldown_key
+		months = 4
+	}
 
   effect = {
     scope:actor = { add_gold = -20 }

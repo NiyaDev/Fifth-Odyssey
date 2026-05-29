@@ -2,7 +2,7 @@
 character_db = {
   exo_demetrios = {
     first_name = { name = name_demetrius }
-    culture = greek_culture
+    culture = old_world_greek
     religion = orthodox
     adm = 43
     dip = 65
@@ -16,7 +16,7 @@ character_db = {
   }
   exo_eirene = {
     first_name = { name = name_irene }
-    culture = greek_culture
+    culture = old_world_greek
     religion = orthodox
 		female = yes
     adm = 76
@@ -31,7 +31,7 @@ character_db = {
   }
   exo_alexios = {
     first_name = { name = name_alexis }
-    culture = greek_culture
+    culture = old_world_greek
     religion = orthodox
     adm = 34  dip = 91  mil = 16
     father = exo_demetrios
@@ -43,7 +43,7 @@ character_db = {
   }
   exo_nikephoros = {
     first_name = { name = name_nikephoros }
-    culture = greek_culture
+    culture = old_world_greek
     religion = orthodox
     adm = 21
     dip = 45

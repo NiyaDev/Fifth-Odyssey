@@ -8,19 +8,102 @@ fo_arrival_province = {
 
     # buildings
     change_max_raw_material_workers = 1
-    change_building_level_in_location = { building_type = building_type:overforage  value = 1 }
+    change_building_level_in_location = { building = building_type:overforage  value = 1 }
   }
 }
 
 fo_arrival_country = {
   c:ILY = {
-    #hidden_effect = {
+    hidden_effect = {
       change_government_type = government_type:monarchy
-      set_new_ruler = exo_eirene
       set_gold = c:EXO.gold
+      set_stability = c:EXO.stability
+      set_legitimacy = c:EXO.legitimacy
+      align_societal_values_to = c:EXO
 
+      # All advances
+      # Don't believe there's a way to copy advances over,
+      #   if there is I'll do that instead.
+      research_advance = advance_type:written_alphabet
+      research_advance = advance_type:cultural_traditions_law_advance
+      research_advance = advance_type:mapmaking
+      research_advance = advance_type:codified_laws
+      research_advance = advance_type:cultural_acceptance_advance
+      research_advance = advance_type:colonies
+      research_advance = advance_type:distribution_of_power_advance
+      research_advance = advance_type:subjects_advance
+      research_advance = advance_type:taxation_advance
+      research_advance = advance_type:legalism_advance
+      research_advance = advance_type:chancery_advance
+      research_advance = advance_type:monarchy_reform_traditions_advance
+      research_advance = advance_type:monarchy_royal_court_advance
+      research_advance = advance_type:state_administration_advance
+      research_advance = advance_type:medieval_administration
+      research_advance = advance_type:pest_house_advance
+      research_advance = advance_type:feudal_de_jure_law_advance
+      research_advance = advance_type:hospital_advance
+      research_advance = advance_type:salic_law_advance
+      research_advance = advance_type:partition_inheritance_advance
+      research_advance = advance_type:semi_salic_law_advance
+      research_advance = advance_type:scriptorium_advance
+      research_advance = advance_type:paper_guild_advance
+      research_advance = advance_type:library_advance
+      research_advance = advance_type:paper_guild_fiber_pulp_maintenance_advance
+      research_advance = advance_type:agriculture_advance
+      research_advance = advance_type:windmills_advance
+      research_advance = advance_type:city_building_advance
+      research_advance = advance_type:alchemy_advance
+      research_advance = advance_type:road_building
+      research_advance = advance_type:apothecary_advance
+      research_advance = advance_type:feudalism_advance
+      research_advance = advance_type:castle_advance
+      research_advance = advance_type:unlock_feudal_levy_advance
+      research_advance = advance_type:noble_knights
+      research_advance = advance_type:royal_court_advance
+      research_advance = advance_type:republican_assembly_advance
+      research_advance = advance_type:fort_limit_1_advance
+      research_advance = advance_type:byz_akritai_advance
+      research_advance = advance_type:serfdom
+      research_advance = advance_type:mining_advance
+      research_advance = advance_type:ship_building_advance
+      research_advance = advance_type:metallurgy
+      research_advance = advance_type:mining_law_advance
+      research_advance = advance_type:trade_advance_age_of_trad
+      research_advance = advance_type:unlock_traditional_galley_advance
+      research_advance = advance_type:bronze_working
+      research_advance = advance_type:iron_working
+      research_advance = advance_type:weapon_guild_advance
+      research_advance = advance_type:more_merchants_age_of_trad
+      research_advance = advance_type:unlock_cog_advance
+      research_advance = advance_type:fine_metals_mining
+      research_advance = advance_type:local_smelters_advance
+      research_advance = advance_type:advanced_mining
+      research_advance = advance_type:faster_levy_recruitment
+      research_advance = advance_type:unlock_footmen_advance
+      research_advance = advance_type:unlock_archers_advance
+
+      if = { # Horses
+        limit = { situation:fo_fifth_odyssey.var:horses = yes }
+        research_advance = advance_type:ranching
+        research_advance = advance_type:horse_riding_advance
+        research_advance = advance_type:unlock_horsemen_advance
+        research_advance = advance_type:unlock_armored_horsemen_advance
+        research_advance = advance_type:byz_cataphracts_advance
+      }
+
+      if = { # Orthodox
+        limit = { c:ILY.religion = religion:orthodox }
+        research_advance = advance_type:the_pentarchy
+        research_advance = advance_type:imperial_creed
+        research_advance = advance_type:filioque_issue
+        research_advance = advance_type:septuagint
+        research_advance = advance_type:anagignoskomena
+        research_advance = advance_type:cathedral_advance
+      }
+
+      # Copy over all laws
       c:EXO = {
-        every_policy = {
+        every_current_policy = {
           set_local_variable = {
             name = temp_policy
             value = this
@@ -28,10 +111,20 @@ fo_arrival_country = {
           c:ILY = { add_policy = local_var:temp_policy }
         }
       }
-    #}
+
+      # Copy over variables
+      c:ILY = {
+        set_variable = { name = knowledge  value = situation:fo_fifth_odyssey.var:knowledge }
+        set_variable = { name = silk       value = situation:fo_fifth_odyssey.var:silk }
+        set_variable = { name = horses     value = situation:fo_fifth_odyssey.var:horses }
+      }
+    }
   }
   c:EXO = {
-    every_character = { move_country = c:ILY }
+    hidden_effect = {
+      every_character = { move_country = c:ILY }
+      c:ILY = { set_new_ruler = character:exo_eirene }
+    }
     change_player = c:ILY
 
     set_global_variable = { name = temp_pop_count  value = 0 }
@@ -121,7 +214,7 @@ fo_arrival_country = {
         }
         if = {
           limit = { situation:fo_fifth_odyssey.var:romanyoti_joined ?= yes }
-          add_tolerated_culture = culture:romanyoti
+          set_variable = { name = romanyoti_joined  value = yes }
         }
       }
       # Removing loans and adding variable
