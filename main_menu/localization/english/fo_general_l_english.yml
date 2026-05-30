@@ -36,6 +36,11 @@
   STATIC_MODIFIER_NAME_fo_goals_commonerbonuses: "Kneel Peasants!"
   STATIC_MODIFIER_NAME_fo_goals_soldierbonuses: "An army fit for a colony!"
 
+  # Cabinet Actions
+  fifthodyssey_cabinet: "Recruitment drive"
+  fifthodyssey_cabinet_active: "Recruiting for voyage"
+  fifthodyssey_cabinet_desc: "The [cabinet|e] will put an effort to further recruit new members for our voyage."
+
   # Buildings
   exodus_party_headquarters: "Family Estate"
   exodus_party_headquarters_desc: "The manorial home of the party leaders from which everything is organized."

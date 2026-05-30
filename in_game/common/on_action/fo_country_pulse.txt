@@ -1,0 +1,31 @@
+﻿
+monthly_country_pulse = {
+  on_actions = {
+    on_fifthodyssey_cabinet_action
+  }
+}
+
+on_fifthodyssey_cabinet_action = {
+  trigger = {
+    any_cabinet = {
+      has_cabinet_action = yes
+      acabinet_action = cabinet_action:fifthodyssey_cabinet
+    }
+  }
+  random_events = {
+     6 = fo_fifth_odyssey.20
+     3 = fo_fifth_odyssey.21
+    15 = fo_fifth_odyssey.22
+    36 = fo_fifth_odyssey.23
+    
+     6 = fo_fifth_odyssey.24
+    14 = fo_fifth_odyssey.25
+
+     5 = fo_fifth_odyssey.26
+     5 = fo_fifth_odyssey.27
+
+    chance_to_happen = 10
+    chance_of_no_event = { value = 10 }
+  }
+}
+

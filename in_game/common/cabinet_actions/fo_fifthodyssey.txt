@@ -1,0 +1,10 @@
+﻿
+fifthodyssey_cabinet = {
+  ability = dip
+
+  potential = {
+    country_type = building
+    has_or_had_tag = EXO
+  }
+}
+

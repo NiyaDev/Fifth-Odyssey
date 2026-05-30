@@ -1,5 +1,4 @@
-﻿#namespace = fo_fifthodyssey_actions
-
+﻿
 fo_fifthodyssey_buy_ships = {
   type = situation
   show_message = no
@@ -33,6 +32,161 @@ fo_fifthodyssey_buy_ships = {
           add = 1
         }
       }
+    }
+  }
+}
+
+fo_fifthodyssey_buyknowledge = {
+  type = situation
+  show_message = no
+
+  select_trigger = {
+    looking_for_a = situation
+    interaction_source_list = { situation:fo_fifth_odyssey = { add_to_list = source } }
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:fo_fifth_odyssey = this
+      situation_is_active = yes
+      situation:fo_fifth_odyssey = { var:can_request_knowledge = yes }
+    }
+  }
+  allow = {
+    c:VEN = {
+      opinion = {
+        target = c:EXO
+        value >= 200
+      }
+    }
+    scope:actor = { gold > 20 }
+  }
+
+  effect = {
+    scope:actor = {
+      add_gold = -40
+      trigger_event_non_silently = fo_fifth_odyssey.51
+    }
+  }
+}
+fo_fifthodyssey_stealknowledge = {
+  type = situation
+  show_message = no
+
+  select_trigger = {
+    looking_for_a = situation
+    interaction_source_list = { situation:fo_fifth_odyssey = { add_to_list = source } }
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:fo_fifth_odyssey = this
+      situation_is_active = yes
+      situation:fo_fifth_odyssey = { var:can_request_knowledge = yes }
+    }
+  }
+  allow = {
+    c:EXO = {
+      spy_network = {
+        target = c:VEN
+        value > 20
+      }
+    }
+  }
+
+  effect = {
+    scope:actor = { add_spy_network = { target = c:VEN  value = -20 } }
+    if = {
+      limit = { c:EXO = { spy_network = { target = c:VEN  value < 40 } } }
+      random_list = {
+        50 = { scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.52 } }
+        50 = { scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.53 } }
+      }
+    }
+    else_if = {
+      limit = { c:EXO = { spy_network = { target = c:VEN  value > 40 } } }
+      scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.52 }
+    }
+  }
+}
+
+fo_fifthodyssey_buysilk = {
+  type = situation
+  show_message = no
+
+  select_trigger = {
+    looking_for_a = situation
+    interaction_source_list = { situation:fo_fifth_odyssey = { add_to_list = source } }
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:fo_fifth_odyssey = this
+      situation_is_active = yes
+      situation:fo_fifth_odyssey = { var:can_request_silk = yes }
+    }
+  }
+  allow = {
+    c:BYZ = {
+      opinion = {
+        target = c:EXO
+        value >= 200
+      }
+    }
+    scope:actor = {
+      favors = {
+        target = c:BYZ
+        value >= 20
+      }
+      gold > 100
+    }
+  }
+
+  effect = {
+    scope:actor = {
+      add_gold = -100
+      add_favors = { target = c:BYZ  value = -20 }
+      trigger_event_non_silently = fo_fifth_odyssey.56
+    }
+  }
+}
+fo_fifthodyssey_stealsilk = {
+  type = situation
+  show_message = no
+
+  select_trigger = {
+    looking_for_a = situation
+    interaction_source_list = { situation:fo_fifth_odyssey = { add_to_list = source } }
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:fo_fifth_odyssey = this
+      situation_is_active = yes
+      situation:fo_fifth_odyssey = { var:can_request_silk = yes }
+    }
+  }
+  allow = {
+    c:EXO = {
+      spy_network = {
+        target = c:BYZ
+        value > 40
+      }
+    }
+  }
+
+  effect = {
+    scope:actor = { add_spy_network = { target = c:BYZ  value = -40 } }
+    if = {
+      limit = { c:EXO = { spy_network = { target = c:BYZ  value < 40 } } }
+      random_list = {
+        50 = { scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.57 } }
+        50 = { scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.58 } }
+      }
+    }
+    else_if = {
+      limit = { c:EXO = { spy_network = { target = c:BYZ  value > 40 } } }
+      scope:actor = { trigger_event_non_silently = fo_fifth_odyssey.57 }
     }
   }
 }

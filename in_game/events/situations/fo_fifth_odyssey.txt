@@ -833,6 +833,97 @@ fo_fifth_odyssey.53 = { # Failure robbery
   }
 }
 
+fo_fifth_odyssey.54 = { # Horses
+  type = country_event
+  title = fo_fifth_odyssey.54.title
+  desc = fo_fifth_odyssey.54.desc
+  fire_only_once = yes
+  outcome = neutral
+
+  dynamic_historical_event = {
+    tag = EXO
+    from = 1337.1.1
+    to = 1350.1.1
+    monthly_chance = 5
+  }
+
+  trigger = { situation:fo_fifth_odyssey = { situation_is_active = yes } }
+
+  option = {
+    name = fo_fifth_odyssey.54.a
+    situation:fo_fifth_odyssey = { set_variable = { name = horses  value = yes } }
+    add_gold = -40
+  }
+  option = { name = fo_fifth_odyssey.54.b }
+}
+fo_fifth_odyssey.55 = { # Silk
+  type = country_event
+  title = fo_fifth_odyssey.55.title
+  desc = fo_fifth_odyssey.55.desc
+  fire_only_once = yes
+  outcome = positive
+
+  dynamic_historical_event = {
+    tag = EXO
+    from = 1337.1.1
+    to = 1350.1.1
+    monthly_chance = 5
+  }
+
+  trigger = { situation:fo_fifth_odyssey = { situation_is_active = yes } }
+
+  option = {
+    name = fo_fifth_odyssey.55.a
+    situation:fo_fifth_odyssey = { set_variable = { name = can_request_silk  value = yes } }
+  }
+}
+fo_fifth_odyssey.56 = { # Byzantium accepts
+  type = country_event
+  title = fo_fifth_odyssey.56.title
+  desc = fo_fifth_odyssey.56.desc
+  fire_only_once = yes
+  outcome = positive
+
+  option = {
+    name = fo_fifth_odyssey.56.a
+    custom_tooltip = { text = fo_fifth_odyssey.56.aa }
+    situation:fo_fifth_odyssey = {
+      set_variable = { name = silk              value = yes }
+      set_variable = { name = can_request_silk  value = no  }
+    }
+  }
+}
+fo_fifth_odyssey.57 = { # Heist Successful
+  type = country_event
+  title = fo_fifth_odyssey.57.title
+  desc = fo_fifth_odyssey.57.desc
+  fire_only_once = yes
+  outcome = positive
+
+  option = {
+    name = fo_fifth_odyssey.57.a
+    custom_tooltip = { text = fo_fifth_odyssey.56.aa }
+    situation:fo_fifth_odyssey = {
+      set_variable = { name = silk              value = yes }
+      set_variable = { name = can_request_silk  value = no  }
+    }
+  }
+}
+fo_fifth_odyssey.58 = { # Heist Failure
+  type = country_event
+  title = fo_fifth_odyssey.58.title
+  desc = fo_fifth_odyssey.58.desc
+  fire_only_once = yes
+  outcome = positive
+
+  option = {
+    name = fo_fifth_odyssey.58.a
+    custom_tooltip = { text = fo_fifth_odyssey.58.aa }
+    situation:fo_fifth_odyssey = { set_variable = { name = can_request_silk  value = no } }
+    c:BYZ = { add_opinion = { target = c:EXO  modifier = opinion_attempted_to_steal } }
+  }
+}
+
 fo_fifth_odyssey.1000 = { # The voyage begins
   type = country_event
   title = fo_fifth_odyssey.100.title

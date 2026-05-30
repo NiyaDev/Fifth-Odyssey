@@ -4,3 +4,13 @@
   fo_fifthodyssey_leave: "Begin the Voyage"
   fo_fifthodyssey_leave_desc: "It is time for us to leave on our great journey west."
 
+  fo_fifthodyssey_buyknowledge: "Buy back books from the Venetians"
+  fo_fifthodyssey_buyknowledge_desc: "If we get in the good graces of the Venetians we might be able to buy our peoples history back."
+  fo_fifthodyssey_stealknowledge: "Steal back books from the Venetians"
+  fo_fifthodyssey_stealknowledge_desc: "If we build up enough of a network within the Republic we might be able to sneak in and steal our books from under their noses. We will only get one shot though."
+
+  fo_fifthodyssey_buysilk: "Buy the methods to produce Silk from the Byzantines"
+  fo_fifthodyssey_buysilk_desc: "If we get in the good graces of the Basileus we might be able to purchase the method of producing silk."
+  fo_fifthodyssey_stealsilk: "Steal the method to produce silk from the Byzantines"
+  fo_fifthodyssey_stealsilk_desc: "If we build up enough of a network within the Empire we might be able to sneak in and steal the methodology from under their noses. We will only get one shot though."
+
