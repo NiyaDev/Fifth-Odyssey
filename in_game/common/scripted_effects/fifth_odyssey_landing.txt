@@ -212,11 +212,14 @@ fo_arrival_country = {
             multiply = 0.00075
           }
         }
-        if = {
-          limit = { situation:fo_fifth_odyssey.var:romanyoti_joined ?= yes }
-          set_variable = { name = romanyoti_joined  value = yes }
-        }
       }
+      if = {
+        limit = { situation:fo_fifth_odyssey.var:romanyoti_joined ?= yes }
+        set_variable = { name = romanyoti_joined  value = yes }
+      }
+
+      # Setting modifiers for each estate
+
       # Removing loans and adding variable
       every_loan = {
         set_local_variable = {

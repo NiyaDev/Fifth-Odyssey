@@ -626,7 +626,8 @@ fo_fifth_odyssey.40 = { # Romanyoti approach
     custom_tooltip = { text = fo_fifth_odyssey.40.aa }
 
     add_gold = 50
-    set_cultural_view = { target = culture:old_world_greek  value = positive }
+    culture:romanyoti = { set_cultural_view = { target = culture:old_world_greek  value = positive } }
+    culture:old_world_greek = { set_cultural_view = { target = culture:romanyoti  value = positive } }
 
     situation:fo_fifth_odyssey = {
       set_variable = {
@@ -654,7 +655,8 @@ fo_fifth_odyssey.41 = { # Romanyoti leave
   option = {
     name = fo_fifth_odyssey.41.a
     custom_tooltip = { text = fo_fifth_odyssey.41.aa }
-    set_cultural_view = { target = culture:old_world_greek  value = neutral }
+    culture:romanyoti = { set_cultural_view = { target = culture:old_world_greek  value = neutral } }
+    culture:old_world_greek = { set_cultural_view = { target = culture:romanyoti  value = neutral } }
 
     situation:fo_fifth_odyssey = {
       set_variable = {

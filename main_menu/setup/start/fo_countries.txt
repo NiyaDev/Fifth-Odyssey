@@ -30,6 +30,7 @@ countries = {
 	  		laws = {
 	  			marriage_law = monogamous_marriage
   				heir_religion_law = heir_same_religion
+  				legal_code_law = byzantine_law_lesser
 	  		}
 	  		reforms = {
 	  		  exodus_party

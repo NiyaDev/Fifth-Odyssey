@@ -9,7 +9,7 @@ on_fifthodyssey_cabinet_action = {
   trigger = {
     any_cabinet = {
       has_cabinet_action = yes
-      acabinet_action = cabinet_action:fifthodyssey_cabinet
+      cabinet_action = cabinet_action:fifthodyssey_cabinet
     }
   }
   random_events = {

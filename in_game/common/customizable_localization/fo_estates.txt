@@ -1,0 +1,15 @@
+﻿
+soldiers_estate = {
+  type = country
+
+  text = {
+    trigger = { culture = culture:old_world_greek }
+    localization_key = soldiers_estate_gr
+  }
+
+  text = {
+    localization_key = soldiers_estate
+    fallback = yes
+  }
+}
+

@@ -1,0 +1,5 @@
+﻿
+INSERT:country_base_values = {
+  soldiers_estate_target_satisfaction = 0.5
+}
+
