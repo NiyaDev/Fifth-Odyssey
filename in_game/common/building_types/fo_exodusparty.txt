@@ -45,7 +45,7 @@ exodus_party_nobles = {
 
   modifier = { gold_to_building_owner = 0.40 }
   possible_production_methods = { recruitment_maintenance }
-  construction_demand = guild_construction
+  construction_demand = guild_construction # Increase cost
 }
 exodus_party_clergy = {
   is_foreign = yes

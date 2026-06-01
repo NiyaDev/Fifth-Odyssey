@@ -5,6 +5,7 @@ fo_arrival_province = {
     change_location_owner = c:ILY
     hidden_effect = { add_core = c:ILY }
     change_location_rank = location_rank:town
+    rename_location = illysium_capital
 
     # buildings
     change_max_raw_material_workers = 1
@@ -112,12 +113,109 @@ fo_arrival_country = {
         }
       }
 
+      # Setting modifiers for each estate
+      add_country_modifier = { # Nobles
+        modifier = fo_noblesbonusstrength
+        years = -1
+        size = { # output = 1 * ((nobles/300) - (soldiers.max(300) / 300))
+          value = 1
+          multiply = {
+            value = {
+              value = situation:fo_fifth_odyssey.var:nobles_count
+              divide = 100
+            }
+            subtract = {
+              value = {
+                value = situation:fo_fifth_odyssey.var:soldiers_count
+                max = 300
+              }
+              divide = 300
+            }
+          }
+        }
+      }
+      add_country_modifier = { # Clergy
+        modifier = fo_clergybonusstrength
+        years = -1
+        size = { # output = 1 * ((clergy/300) - (soldiers.max(300) / 300))
+          value = 1
+          multiply = {
+            value = {
+              value = situation:fo_fifth_odyssey.var:clergy_count
+              divide = 300
+            }
+            subtract = {
+              value = {
+                value = situation:fo_fifth_odyssey.var:soldiers_count
+                max = 300
+              }
+              divide = 300
+            }
+          }
+        }
+      }
+      add_country_modifier = { # Burghers
+        modifier = fo_burghersbonusstrength
+        years = -1
+        size = { # output = 1 * ((burghers/300) - (soldiers.max(300) / 300))
+          value = 1
+          multiply = {
+            value = {
+              value = situation:fo_fifth_odyssey.var:burghers_count
+              divide = 400
+            }
+            subtract = {
+              value = {
+                value = situation:fo_fifth_odyssey.var:soldiers_count
+                max = 300
+              }
+              divide = 300
+            }
+          }
+        }
+      }
+      add_country_modifier = { # Peasants
+        modifier = fo_commonersbonusstrength
+        years = -1
+        size = { # output = 1 * ((peasants/300) - (soldiers.max(300) / 300))
+          value = 1
+          multiply = {
+            value = {
+              value = situation:fo_fifth_odyssey.var:commoners_count
+              divide = 2000
+            }
+            subtract = {
+              value = {
+                value = situation:fo_fifth_odyssey.var:soldiers_count
+                max = 300
+              }
+              divide = 300
+            }
+          }
+        }
+      }
+      add_country_modifier = {
+        modifier = fo_soldiersbonusstrength
+        years = -1
+        size = { # output = 1 * (soldiers / 300)
+          value = 1
+          multiply = {
+            value = {
+              value = situation:fo_fifth_odyssey.var:soldiers_count
+              divide = 300
+            }
+          }
+        }
+      }
+
       # Copy over variables
-      c:ILY = {
+      #c:ILY = {
         set_variable = { name = knowledge  value = situation:fo_fifth_odyssey.var:knowledge }
         set_variable = { name = silk       value = situation:fo_fifth_odyssey.var:silk }
         set_variable = { name = horses     value = situation:fo_fifth_odyssey.var:horses }
-      }
+      #}
+
+      
     }
   }
   c:EXO = {
@@ -217,8 +315,6 @@ fo_arrival_country = {
         limit = { situation:fo_fifth_odyssey.var:romanyoti_joined ?= yes }
         set_variable = { name = romanyoti_joined  value = yes }
       }
-
-      # Setting modifiers for each estate
 
       # Removing loans and adding variable
       every_loan = {

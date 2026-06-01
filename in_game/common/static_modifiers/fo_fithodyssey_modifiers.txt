@@ -1,14 +1,27 @@
 ﻿
 soldiers_estate_tax_impact = {
-  game_data = {
-    category = country
-  }
+  game_data = { category = country }
   soldiers_estate_target_satisfaction = -1
 }
 
-fo_noblesbonusstrength = {}
-fo_clergybonusstrength = {}
-fo_burghersbonusstrength = {}
-fo_commonersbonusstrength = {}
-fo_soldiersbonusstrength = {}
+fo_noblesbonusstrength = {
+  game_data = { category = country }
+  global_nobles_estate_power = 1.5
+}
+fo_clergybonusstrength = {
+  game_data = { category = country }
+  global_clergy_estate_power = 1.5
+}
+fo_burghersbonusstrength = {
+  game_data = { category = country }
+  global_burghers_estate_power = 1.5
+}
+fo_commonersbonusstrength = {
+  game_data = { category = country }
+  global_peasants_estate_power = 1.5
+}
+fo_soldiersbonusstrength = {
+  game_data = { category = country }
+  global_soldiers_estate_power = 1.5
+}
 

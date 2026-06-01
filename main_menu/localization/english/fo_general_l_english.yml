@@ -90,6 +90,11 @@
   STATIC_MODIFIER_NAME_fo_goals_burgherbonuses: "Burghers go well with Fries"
   STATIC_MODIFIER_NAME_fo_goals_commonerbonuses: "Kneel Peasants!"
   STATIC_MODIFIER_NAME_fo_goals_soldierbonuses: "An army fit for a colony!"
+  STATIC_MODIFIER_NAME_fo_noblesbonusstrength: "An overabundance of Nobles"
+  STATIC_MODIFIER_NAME_fo_clergybonusstrength: "An overabundance of Clergy"
+  STATIC_MODIFIER_NAME_fo_burghersbonusstrength: "An overabundance of Burghers"
+  STATIC_MODIFIER_NAME_fo_commonersbonusstrength: "An overabundance of Commoners"
+  STATIC_MODIFIER_NAME_fo_soldiersbonusstrength: "An overabundance of Soldiers"
 
   # Cabinet Actions
   fifthodyssey_cabinet: "Recruitment drive"

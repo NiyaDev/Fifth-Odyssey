@@ -6,6 +6,10 @@ fo_fifth_odyssey_list = {
 
   actions = {
     fo_fifthodyssey_buy_ships
+    fo_fifthodyssey_buyknowledge
+    fo_fifthodyssey_stealknowledge
+    fo_fifthodyssey_buysilk
+    fo_fifthodyssey_stealsilk
     fo_fifthodyssey_leave
   }
 }
